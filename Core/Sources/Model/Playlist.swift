@@ -1,6 +1,6 @@
 import Foundation
 
-public struct Playlist: Equatable, Codable {
+public struct Playlist: Codable, Equatable {
     public let id: String
     public let title: String
     public let song: Song

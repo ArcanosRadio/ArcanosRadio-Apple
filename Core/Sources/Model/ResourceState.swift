@@ -1,6 +1,6 @@
 import Foundation
 
-public enum ResourceState: Int, Equatable, Codable {
+public enum ResourceState: Int, Codable, Equatable {
     case pending = 0
     case error = 1
     case notAvailable = 2

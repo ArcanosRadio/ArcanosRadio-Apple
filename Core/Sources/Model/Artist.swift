@@ -1,6 +1,6 @@
 import Foundation
 
-public struct Artist: Equatable, Codable {
+public struct Artist: Codable, Equatable {
     public let id: String
     public let artistName: String
     public let tags: [String]
