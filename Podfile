@@ -35,23 +35,23 @@ target 'ArcanosRadio iOS' do
   platform :ios, '10.0'
   project 'ArcanosRadio/ArcanosRadio.xcodeproj'
   shared_pods
-  pod 'RxDataSources'
-  pod 'RxCocoa', :git => 'https://github.com/ReactiveX/RxSwift.git'
+#   pod 'RxDataSources'
+#   pod 'RxCocoa', :git => 'https://github.com/ReactiveX/RxSwift.git'
 end
 
 target 'ArcanosRadio watchOS Extension' do
   platform :watchos, '4.0'
   project 'ArcanosRadio/ArcanosRadio.xcodeproj'
   shared_pods
-  pod 'RxCocoa', :git => 'https://github.com/ReactiveX/RxSwift.git'
+#   pod 'RxCocoa', :git => 'https://github.com/ReactiveX/RxSwift.git'
 end
 
 target 'ArcanosRadio tvOS' do
   platform :tvos, '10.0'
   project 'ArcanosRadio/ArcanosRadio.xcodeproj'
   shared_pods
-  pod 'RxDataSources'
-  pod 'RxCocoa', :git => 'https://github.com/ReactiveX/RxSwift.git'
+#   pod 'RxDataSources'
+#   pod 'RxCocoa', :git => 'https://github.com/ReactiveX/RxSwift.git'
 end
 
 post_install do |installer|

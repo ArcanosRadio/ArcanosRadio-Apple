@@ -10,6 +10,58 @@
 		2E52DE6F15317CC04AE20D6B /* Pods_Core_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72057BA05828C3C452A6DD93 /* Pods_Core_macOS.framework */; };
 		35149B7D6D7E1E9E05BDAE60 /* Pods_Core_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A9501EB0FC6E9BDE0B1C198 /* Pods_Core_iOS.framework */; };
 		3EC8198A7D963C8DC903E3D4 /* Pods_Core_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E93DBC2D13B2B6E8BE3F6D68 /* Pods_Core_tvOS.framework */; };
+		D50A45D6216D2F930025BC1C /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A45D5216D2F930025BC1C /* Artist.swift */; };
+		D50A45D8216D2F9D0025BC1C /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A45D7216D2F9D0025BC1C /* Song.swift */; };
+		D50A45DA216D2FAD0025BC1C /* Playlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A45D9216D2FAD0025BC1C /* Playlist.swift */; };
+		D50A45DC216D307E0025BC1C /* MainState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A45DB216D307E0025BC1C /* MainState.swift */; };
+		D50A45DF216D31160025BC1C /* MainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A45DE216D31160025BC1C /* MainStore.swift */; };
+		D50A45E0216D31160025BC1C /* MainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A45DE216D31160025BC1C /* MainStore.swift */; };
+		D50A45E1216D31160025BC1C /* MainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A45DE216D31160025BC1C /* MainStore.swift */; };
+		D50A45E2216D31160025BC1C /* MainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A45DE216D31160025BC1C /* MainStore.swift */; };
+		D50A45E4216D316F0025BC1C /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A45D5216D2F930025BC1C /* Artist.swift */; };
+		D50A45E5216D316F0025BC1C /* Playlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A45D9216D2FAD0025BC1C /* Playlist.swift */; };
+		D50A45E6216D316F0025BC1C /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A45D7216D2F9D0025BC1C /* Song.swift */; };
+		D50A45E7216D31700025BC1C /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A45D5216D2F930025BC1C /* Artist.swift */; };
+		D50A45E8216D31700025BC1C /* Playlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A45D9216D2FAD0025BC1C /* Playlist.swift */; };
+		D50A45E9216D31700025BC1C /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A45D7216D2F9D0025BC1C /* Song.swift */; };
+		D50A45EA216D31710025BC1C /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A45D5216D2F930025BC1C /* Artist.swift */; };
+		D50A45EB216D31710025BC1C /* Playlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A45D9216D2FAD0025BC1C /* Playlist.swift */; };
+		D50A45EC216D31710025BC1C /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A45D7216D2F9D0025BC1C /* Song.swift */; };
+		D50A45ED216D31730025BC1C /* MainState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A45DB216D307E0025BC1C /* MainState.swift */; };
+		D50A45EE216D31740025BC1C /* MainState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A45DB216D307E0025BC1C /* MainState.swift */; };
+		D50A45EF216D31750025BC1C /* MainState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A45DB216D307E0025BC1C /* MainState.swift */; };
+		D50A45F1216D319B0025BC1C /* MainStateProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A45F0216D319B0025BC1C /* MainStateProvider.swift */; };
+		D50A45F2216D319B0025BC1C /* MainStateProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A45F0216D319B0025BC1C /* MainStateProvider.swift */; };
+		D50A45F3216D319B0025BC1C /* MainStateProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A45F0216D319B0025BC1C /* MainStateProvider.swift */; };
+		D50A45F4216D319B0025BC1C /* MainStateProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A45F0216D319B0025BC1C /* MainStateProvider.swift */; };
+		D50A45FA216D32C40025BC1C /* MainMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A45F9216D32C40025BC1C /* MainMiddleware.swift */; };
+		D50A45FB216D32C40025BC1C /* MainMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A45F9216D32C40025BC1C /* MainMiddleware.swift */; };
+		D50A45FC216D32C40025BC1C /* MainMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A45F9216D32C40025BC1C /* MainMiddleware.swift */; };
+		D50A45FD216D32C40025BC1C /* MainMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A45F9216D32C40025BC1C /* MainMiddleware.swift */; };
+		D50A45FF216D32F30025BC1C /* LifeCycleMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A45FE216D32F30025BC1C /* LifeCycleMiddleware.swift */; };
+		D50A4600216D32F30025BC1C /* LifeCycleMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A45FE216D32F30025BC1C /* LifeCycleMiddleware.swift */; };
+		D50A4601216D32F30025BC1C /* LifeCycleMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A45FE216D32F30025BC1C /* LifeCycleMiddleware.swift */; };
+		D50A4602216D32F30025BC1C /* LifeCycleMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A45FE216D32F30025BC1C /* LifeCycleMiddleware.swift */; };
+		D50A4604216D383E0025BC1C /* ResourceState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A4603216D383E0025BC1C /* ResourceState.swift */; };
+		D50A4605216D3A240025BC1C /* ResourceState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A4603216D383E0025BC1C /* ResourceState.swift */; };
+		D50A4606216D3A250025BC1C /* ResourceState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A4603216D383E0025BC1C /* ResourceState.swift */; };
+		D50A4607216D3A260025BC1C /* ResourceState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A4603216D383E0025BC1C /* ResourceState.swift */; };
+		D50A4609216D3BB10025BC1C /* AppLifeCycleEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A4608216D3BB10025BC1C /* AppLifeCycleEvent.swift */; };
+		D50A460A216D3BB10025BC1C /* AppLifeCycleEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A4608216D3BB10025BC1C /* AppLifeCycleEvent.swift */; };
+		D50A460B216D3BB10025BC1C /* AppLifeCycleEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A4608216D3BB10025BC1C /* AppLifeCycleEvent.swift */; };
+		D50A460C216D3BB10025BC1C /* AppLifeCycleEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A4608216D3BB10025BC1C /* AppLifeCycleEvent.swift */; };
+		D50A460E216D3FCF0025BC1C /* RouterMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A460D216D3FCF0025BC1C /* RouterMiddleware.swift */; };
+		D50A460F216D3FCF0025BC1C /* RouterMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A460D216D3FCF0025BC1C /* RouterMiddleware.swift */; };
+		D50A4610216D3FCF0025BC1C /* RouterMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A460D216D3FCF0025BC1C /* RouterMiddleware.swift */; };
+		D50A4611216D3FCF0025BC1C /* RouterMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A460D216D3FCF0025BC1C /* RouterMiddleware.swift */; };
+		D50A4613216D40A60025BC1C /* ParseMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A4612216D40A60025BC1C /* ParseMiddleware.swift */; };
+		D50A4614216D40A60025BC1C /* ParseMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A4612216D40A60025BC1C /* ParseMiddleware.swift */; };
+		D50A4615216D40A60025BC1C /* ParseMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A4612216D40A60025BC1C /* ParseMiddleware.swift */; };
+		D50A4616216D40A60025BC1C /* ParseMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A4612216D40A60025BC1C /* ParseMiddleware.swift */; };
+		D50A4618216D422D0025BC1C /* ParseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A4617216D422D0025BC1C /* ParseService.swift */; };
+		D50A4619216D422D0025BC1C /* ParseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A4617216D422D0025BC1C /* ParseService.swift */; };
+		D50A461A216D422D0025BC1C /* ParseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A4617216D422D0025BC1C /* ParseService.swift */; };
+		D50A461B216D422D0025BC1C /* ParseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A4617216D422D0025BC1C /* ParseService.swift */; };
 		D59EF61A216D23F800C25F0A /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = D59EF618216D23F800C25F0A /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D5CDD32B216D26A500BD36C4 /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = D59EF618216D23F800C25F0A /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D5CDD32C216D26A600BD36C4 /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = D59EF618216D23F800C25F0A /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -26,6 +78,19 @@
 		7707400BC8C8FA2EBCD7CFD6 /* Pods_Core_watchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Core_watchOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		880927043EF9282E1EE07A6C /* Pods-Core iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Core iOS.debug.xcconfig"; path = "Target Support Files/Pods-Core iOS/Pods-Core iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		B8EDF74F03E6A849C19A42E4 /* Pods-Core watchOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Core watchOS.release.xcconfig"; path = "Target Support Files/Pods-Core watchOS/Pods-Core watchOS.release.xcconfig"; sourceTree = "<group>"; };
+		D50A45D5216D2F930025BC1C /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
+		D50A45D7216D2F9D0025BC1C /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		D50A45D9216D2FAD0025BC1C /* Playlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Playlist.swift; sourceTree = "<group>"; };
+		D50A45DB216D307E0025BC1C /* MainState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainState.swift; sourceTree = "<group>"; };
+		D50A45DE216D31160025BC1C /* MainStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainStore.swift; sourceTree = "<group>"; };
+		D50A45F0216D319B0025BC1C /* MainStateProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainStateProvider.swift; sourceTree = "<group>"; };
+		D50A45F9216D32C40025BC1C /* MainMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMiddleware.swift; sourceTree = "<group>"; };
+		D50A45FE216D32F30025BC1C /* LifeCycleMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCycleMiddleware.swift; sourceTree = "<group>"; };
+		D50A4603216D383E0025BC1C /* ResourceState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceState.swift; sourceTree = "<group>"; };
+		D50A4608216D3BB10025BC1C /* AppLifeCycleEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLifeCycleEvent.swift; sourceTree = "<group>"; };
+		D50A460D216D3FCF0025BC1C /* RouterMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterMiddleware.swift; sourceTree = "<group>"; };
+		D50A4612216D40A60025BC1C /* ParseMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseMiddleware.swift; sourceTree = "<group>"; };
+		D50A4617216D422D0025BC1C /* ParseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseService.swift; sourceTree = "<group>"; };
 		D59EF615216D23F800C25F0A /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D59EF618216D23F800C25F0A /* Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Core.h; sourceTree = "<group>"; };
 		D59EF619216D23F800C25F0A /* Info-iOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-iOS.plist"; sourceTree = "<group>"; };
@@ -104,6 +169,71 @@
 			path = ../Pods;
 			sourceTree = "<group>";
 		};
+		D50A45D4216D2F7F0025BC1C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D50A45E3216D31340025BC1C /* State */,
+				D50A45D5216D2F930025BC1C /* Artist.swift */,
+				D50A45D9216D2FAD0025BC1C /* Playlist.swift */,
+				D50A4603216D383E0025BC1C /* ResourceState.swift */,
+				D50A45D7216D2F9D0025BC1C /* Song.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D50A45DD216D30FC0025BC1C /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				D50A45F0216D319B0025BC1C /* MainStateProvider.swift */,
+				D50A45DE216D31160025BC1C /* MainStore.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		D50A45E3216D31340025BC1C /* State */ = {
+			isa = PBXGroup;
+			children = (
+				D50A45DB216D307E0025BC1C /* MainState.swift */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		D50A45F5216D31F00025BC1C /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				D50A45F6216D32160025BC1C /* Action */,
+				D50A45F7216D321B0025BC1C /* Event */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		D50A45F6216D32160025BC1C /* Action */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Action;
+			sourceTree = "<group>";
+		};
+		D50A45F7216D321B0025BC1C /* Event */ = {
+			isa = PBXGroup;
+			children = (
+				D50A4608216D3BB10025BC1C /* AppLifeCycleEvent.swift */,
+			);
+			path = Event;
+			sourceTree = "<group>";
+		};
+		D50A45F8216D32A30025BC1C /* Middleware */ = {
+			isa = PBXGroup;
+			children = (
+				D50A45FE216D32F30025BC1C /* LifeCycleMiddleware.swift */,
+				D50A45F9216D32C40025BC1C /* MainMiddleware.swift */,
+				D50A4612216D40A60025BC1C /* ParseMiddleware.swift */,
+				D50A4617216D422D0025BC1C /* ParseService.swift */,
+				D50A460D216D3FCF0025BC1C /* RouterMiddleware.swift */,
+			);
+			path = Middleware;
+			sourceTree = "<group>";
+		};
 		D59EF60B216D23F800C25F0A = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +258,10 @@
 		D5CDD32A216D25D400BD36C4 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				D50A45F5216D31F00025BC1C /* Message */,
+				D50A45F8216D32A30025BC1C /* Middleware */,
+				D50A45D4216D2F7F0025BC1C /* Model */,
+				D50A45DD216D30FC0025BC1C /* Store */,
 				D59EF618216D23F800C25F0A /* Core.h */,
 				D59EF619216D23F800C25F0A /* Info-iOS.plist */,
 				D59EF628216D242C00C25F0A /* Info-watchOS.plist */,
@@ -262,15 +396,19 @@
 				TargetAttributes = {
 					D59EF614216D23F800C25F0A = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
 					};
 					D59EF624216D242C00C25F0A = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
 					};
 					D59EF631216D246500C25F0A = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
 					};
 					D59EF63E216D248300C25F0A = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -421,6 +559,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D50A460E216D3FCF0025BC1C /* RouterMiddleware.swift in Sources */,
+				D50A45FA216D32C40025BC1C /* MainMiddleware.swift in Sources */,
+				D50A45D8216D2F9D0025BC1C /* Song.swift in Sources */,
+				D50A45F1216D319B0025BC1C /* MainStateProvider.swift in Sources */,
+				D50A45FF216D32F30025BC1C /* LifeCycleMiddleware.swift in Sources */,
+				D50A45DF216D31160025BC1C /* MainStore.swift in Sources */,
+				D50A4609216D3BB10025BC1C /* AppLifeCycleEvent.swift in Sources */,
+				D50A45D6216D2F930025BC1C /* Artist.swift in Sources */,
+				D50A45DA216D2FAD0025BC1C /* Playlist.swift in Sources */,
+				D50A4613216D40A60025BC1C /* ParseMiddleware.swift in Sources */,
+				D50A4604216D383E0025BC1C /* ResourceState.swift in Sources */,
+				D50A4618216D422D0025BC1C /* ParseService.swift in Sources */,
+				D50A45DC216D307E0025BC1C /* MainState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,6 +579,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D50A460F216D3FCF0025BC1C /* RouterMiddleware.swift in Sources */,
+				D50A45FB216D32C40025BC1C /* MainMiddleware.swift in Sources */,
+				D50A45EC216D31710025BC1C /* Song.swift in Sources */,
+				D50A45F2216D319B0025BC1C /* MainStateProvider.swift in Sources */,
+				D50A4600216D32F30025BC1C /* LifeCycleMiddleware.swift in Sources */,
+				D50A45ED216D31730025BC1C /* MainState.swift in Sources */,
+				D50A460A216D3BB10025BC1C /* AppLifeCycleEvent.swift in Sources */,
+				D50A45EA216D31710025BC1C /* Artist.swift in Sources */,
+				D50A45E0216D31160025BC1C /* MainStore.swift in Sources */,
+				D50A4614216D40A60025BC1C /* ParseMiddleware.swift in Sources */,
+				D50A4605216D3A240025BC1C /* ResourceState.swift in Sources */,
+				D50A4619216D422D0025BC1C /* ParseService.swift in Sources */,
+				D50A45EB216D31710025BC1C /* Playlist.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,6 +599,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D50A4610216D3FCF0025BC1C /* RouterMiddleware.swift in Sources */,
+				D50A45FC216D32C40025BC1C /* MainMiddleware.swift in Sources */,
+				D50A45E9216D31700025BC1C /* Song.swift in Sources */,
+				D50A45F3216D319B0025BC1C /* MainStateProvider.swift in Sources */,
+				D50A4601216D32F30025BC1C /* LifeCycleMiddleware.swift in Sources */,
+				D50A45EE216D31740025BC1C /* MainState.swift in Sources */,
+				D50A460B216D3BB10025BC1C /* AppLifeCycleEvent.swift in Sources */,
+				D50A45E7216D31700025BC1C /* Artist.swift in Sources */,
+				D50A45E1216D31160025BC1C /* MainStore.swift in Sources */,
+				D50A4615216D40A60025BC1C /* ParseMiddleware.swift in Sources */,
+				D50A4606216D3A250025BC1C /* ResourceState.swift in Sources */,
+				D50A461A216D422D0025BC1C /* ParseService.swift in Sources */,
+				D50A45E8216D31700025BC1C /* Playlist.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,6 +619,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D50A4611216D3FCF0025BC1C /* RouterMiddleware.swift in Sources */,
+				D50A45FD216D32C40025BC1C /* MainMiddleware.swift in Sources */,
+				D50A45E6216D316F0025BC1C /* Song.swift in Sources */,
+				D50A45F4216D319B0025BC1C /* MainStateProvider.swift in Sources */,
+				D50A4602216D32F30025BC1C /* LifeCycleMiddleware.swift in Sources */,
+				D50A45EF216D31750025BC1C /* MainState.swift in Sources */,
+				D50A460C216D3BB10025BC1C /* AppLifeCycleEvent.swift in Sources */,
+				D50A45E4216D316F0025BC1C /* Artist.swift in Sources */,
+				D50A45E2216D31160025BC1C /* MainStore.swift in Sources */,
+				D50A4616216D40A60025BC1C /* ParseMiddleware.swift in Sources */,
+				D50A4607216D3A260025BC1C /* ResourceState.swift in Sources */,
+				D50A461B216D422D0025BC1C /* ParseService.swift in Sources */,
+				D50A45E5216D316F0025BC1C /* Playlist.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -575,6 +765,7 @@
 			baseConfigurationReference = 880927043EF9282E1EE07A6C /* Pods-Core iOS.debug.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -592,6 +783,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "de.developercity.Core-iOS";
 				PRODUCT_NAME = Core;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -602,6 +794,7 @@
 			baseConfigurationReference = F67F5BF90199FA74CB51A39A /* Pods-Core iOS.release.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -629,6 +822,7 @@
 			baseConfigurationReference = D8BD29EDC070D04BC602FCDB /* Pods-Core watchOS.debug.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -646,6 +840,7 @@
 				PRODUCT_NAME = Core;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 4.0;
@@ -657,6 +852,7 @@
 			baseConfigurationReference = B8EDF74F03E6A849C19A42E4 /* Pods-Core watchOS.release.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -685,6 +881,7 @@
 			baseConfigurationReference = F3EB95A34FA8028502F7CFC3 /* Pods-Core tvOS.debug.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -702,6 +899,7 @@
 				PRODUCT_NAME = Core;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 10.0;
@@ -713,6 +911,7 @@
 			baseConfigurationReference = 3746C3CFF5405334D8CD88F2 /* Pods-Core tvOS.release.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -741,6 +940,7 @@
 			baseConfigurationReference = 169CC66174D8E54FB370942D /* Pods-Core macOS.debug.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -761,6 +961,7 @@
 				PRODUCT_NAME = Core;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
@@ -770,6 +971,7 @@
 			baseConfigurationReference = 1E1D91E298EC8EB427F0F7CD /* Pods-Core macOS.release.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
