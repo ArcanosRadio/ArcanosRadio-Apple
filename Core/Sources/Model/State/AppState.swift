@@ -29,6 +29,11 @@ public protocol ApplicationProtocol: class {
 
 public protocol WindowProtocol { }
 
+#if os(iOS)
+extension UIApplication: ApplicationProtocol { }
+extension UIWindow: WindowProtocol { }
+#endif
+
 public enum InterfaceSizeClass: String, Codable, Equatable {
     case unspecified
     case compact

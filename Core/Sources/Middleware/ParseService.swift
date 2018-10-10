@@ -1,22 +1,82 @@
+import RxCocoa
 import RxSwift
 import SwiftRex
 
 final class ParseService: SideEffectProducer {
-//    var event: RepositorySearchEvent
+    var request: () -> Observable<ActionProtocol>
 
-//    init(event: RepositorySearchEvent) {
-//        self.event = event
-//    }
+    init?(event: EventProtocol) {
+        switch event {
+        case AppLifeCycleEvent.boot:
+            request = { requestStreamingServer().map { $0 as ActionProtocol } }
+        case RefreshTimerEvent.tick:
+            request = { requestCurrentSong().map { $0 as ActionProtocol } }
+        default:
+            return nil
+        }
+    }
 
     func execute(getState: @escaping () -> MainState) -> Observable<ActionProtocol> {
-        let state = getState()
-
-        return requestStreamingServer().map { $0 as ActionProtocol }
+        return request()
     }
 }
 
-func requestStreamingServer() -> Observable<StreamingServerResponse> {
-    return .empty()
+func requestStreamingServer() -> Observable<RequestProgress<StreamingServer>> {
+    return Observable.concat(
+        .just(RequestProgress<StreamingServer>.started),
+        execute(type: ParseConfigResponse<StreamingServer>.self,
+                request: ParseEndpoint.config.buildRequest())
+            .map { .success($0.params) }
+            .catchError { .just(.failure($0)) }
+    )
+}
+
+func requestCurrentSong() -> Observable<RequestProgress<Playlist>> {
+    return Observable.concat(
+        .just(RequestProgress<Playlist>.started),
+        execute(type: ParseQueryResponse<Playlist>.self,
+                request: ParseEndpoint.lastSong.buildRequest())
+            .map { $0.results.first.map(RequestProgress<Playlist>.success) ?? .started }
+            .catchError { .just(.failure($0)) }
+    )
+}
+
+func execute<T: Decodable>(type: T.Type, request: URLRequest) -> Observable<T> {
+    Logging.URLRequests = { _ in false }
+    return URLSession.shared
+        .rx.response(request: request)
+        .map { (response, data) in
+            guard 200...299 ~= response.statusCode else {
+                throw NSError(domain: "Invalid status code: \(response.statusCode)", code: 0, userInfo: nil)
+            }
+
+            return try decoder().decode(T.self, from: data)
+        }
+        .retry(3)
+}
+
+func decoder() -> JSONDecoder {
+    let decoder = JSONDecoder()
+    decoder.dateDecodingStrategy = .custom({ (decoder) -> Date in
+        let container = try decoder.singleValueContainer()
+        let dateStr = try container.decode(String.self)
+
+        let formatter = DateFormatter()
+        formatter.calendar = Calendar(identifier: .iso8601)
+        formatter.locale = Locale(identifier: "en_US_POSIX")
+        formatter.timeZone = TimeZone(secondsFromGMT: 0)
+        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSXXXXX"
+        if let date = formatter.date(from: dateStr) {
+            return date
+        }
+        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssXXXXX"
+        if let date = formatter.date(from: dateStr) {
+            return date
+        }
+        throw DecodingError.dataCorruptedError(in: container, debugDescription: "Expected date string to be POSIX")
+    })
+
+    return decoder
 }
 
 enum ParseEndpoint {
@@ -48,13 +108,8 @@ extension ParseEndpoint {
 
     private var requestHeaders: [String: String] {
         return [
-            "X-Parse-Application-Id": "",
-            "X-Parse-Client-Key": "",
-            "X-Parse-Installation-Id": "",
-            "X-Parse-OS-Version": "",
-            "X-Parse-Client-Version": "",
-            "X-Parse-App-Build-Version": "",
-            "X-Parse-App-Display-Version": ""
+            "X-Parse-Application-Id":       "arcanosRadio",
+            "Content-Type":                 "application/json"
         ]
     }
 

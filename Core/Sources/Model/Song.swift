@@ -12,4 +12,9 @@ public struct Song: Codable, Equatable {
     public let tags: [String]
     public let createdAt: Date
     public let updatedAt: Date
+
+    enum CodingKeys: String, CodingKey {
+        case id = "objectId"
+        case songName, artist, albumArt, albumArtState, lyrics, lyricsState, hasRightsContract, tags, createdAt, updatedAt
+    }
 }

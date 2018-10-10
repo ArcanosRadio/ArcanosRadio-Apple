@@ -14,7 +14,7 @@ public final class LifeCycleMiddleware: Middleware {
         guard let appLifeCycleEvent = event as? AppLifeCycleEvent else { return }
 
         switch appLifeCycleEvent {
-        case let .boot(application, _, _):
+        case let .boot(application, _):
             // Theme.apply()
             application.isIdleTimerDisabled = true
         case let .rotate(_, _):

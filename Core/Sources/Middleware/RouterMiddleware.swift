@@ -8,7 +8,7 @@ public final class RouterMiddleware: Middleware {
             next(event, getState)
         }
 
-        if case let .boot(_, window, _)? = event as? AppLifeCycleEvent {
+        if case let .boot(_, _)? = event as? AppLifeCycleEvent {
 //            actionHandler?.trigger(NavigationAction.navigationStarted(.playMode))
 //            RigListWireframe.start(window)
 //            window.makeKeyAndVisible()

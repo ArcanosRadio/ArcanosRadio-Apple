@@ -82,14 +82,34 @@
 		D50A4633216D48B10025BC1C /* StreamingServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A4631216D48B10025BC1C /* StreamingServer.swift */; };
 		D50A4634216D48B10025BC1C /* StreamingServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A4631216D48B10025BC1C /* StreamingServer.swift */; };
 		D50A4635216D48B10025BC1C /* StreamingServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A4631216D48B10025BC1C /* StreamingServer.swift */; };
-		D50A4637216D4C050025BC1C /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A4636216D4C050025BC1C /* APIResponse.swift */; };
-		D50A4638216D4C050025BC1C /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A4636216D4C050025BC1C /* APIResponse.swift */; };
-		D50A4639216D4C050025BC1C /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A4636216D4C050025BC1C /* APIResponse.swift */; };
-		D50A463A216D4C050025BC1C /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A4636216D4C050025BC1C /* APIResponse.swift */; };
-		D50A463C216D552C0025BC1C /* ParseResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A463B216D552C0025BC1C /* ParseResource.swift */; };
-		D50A463D216D552C0025BC1C /* ParseResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A463B216D552C0025BC1C /* ParseResource.swift */; };
-		D50A463E216D552C0025BC1C /* ParseResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A463B216D552C0025BC1C /* ParseResource.swift */; };
-		D50A463F216D552C0025BC1C /* ParseResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A463B216D552C0025BC1C /* ParseResource.swift */; };
+		D50A4637216D4C050025BC1C /* APIProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A4636216D4C050025BC1C /* APIProgress.swift */; };
+		D50A4638216D4C050025BC1C /* APIProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A4636216D4C050025BC1C /* APIProgress.swift */; };
+		D50A4639216D4C050025BC1C /* APIProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A4636216D4C050025BC1C /* APIProgress.swift */; };
+		D50A463A216D4C050025BC1C /* APIProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A4636216D4C050025BC1C /* APIProgress.swift */; };
+		D50A463C216D552C0025BC1C /* Parse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A463B216D552C0025BC1C /* Parse.swift */; };
+		D50A463D216D552C0025BC1C /* Parse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A463B216D552C0025BC1C /* Parse.swift */; };
+		D50A463E216D552C0025BC1C /* Parse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A463B216D552C0025BC1C /* Parse.swift */; };
+		D50A463F216D552C0025BC1C /* Parse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A463B216D552C0025BC1C /* Parse.swift */; };
+		D50A4641216E7F740025BC1C /* APIResponseReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A4640216E7F740025BC1C /* APIResponseReducer.swift */; };
+		D50A4642216E7F740025BC1C /* APIResponseReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A4640216E7F740025BC1C /* APIResponseReducer.swift */; };
+		D50A4643216E7F740025BC1C /* APIResponseReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A4640216E7F740025BC1C /* APIResponseReducer.swift */; };
+		D50A4644216E7F740025BC1C /* APIResponseReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A4640216E7F740025BC1C /* APIResponseReducer.swift */; };
+		D50A4646216E8F950025BC1C /* RefreshTimerEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A4645216E8F950025BC1C /* RefreshTimerEvent.swift */; };
+		D50A4647216E8F950025BC1C /* RefreshTimerEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A4645216E8F950025BC1C /* RefreshTimerEvent.swift */; };
+		D50A4648216E8F950025BC1C /* RefreshTimerEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A4645216E8F950025BC1C /* RefreshTimerEvent.swift */; };
+		D50A4649216E8F950025BC1C /* RefreshTimerEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A4645216E8F950025BC1C /* RefreshTimerEvent.swift */; };
+		D50A464B216E978F0025BC1C /* SongUpdaterMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A464A216E978F0025BC1C /* SongUpdaterMiddleware.swift */; };
+		D50A464C216E978F0025BC1C /* SongUpdaterMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A464A216E978F0025BC1C /* SongUpdaterMiddleware.swift */; };
+		D50A464D216E978F0025BC1C /* SongUpdaterMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A464A216E978F0025BC1C /* SongUpdaterMiddleware.swift */; };
+		D50A464E216E978F0025BC1C /* SongUpdaterMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A464A216E978F0025BC1C /* SongUpdaterMiddleware.swift */; };
+		D50A4650216EAE790025BC1C /* SongUpdaterAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A464F216EAE790025BC1C /* SongUpdaterAction.swift */; };
+		D50A4651216EAE790025BC1C /* SongUpdaterAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A464F216EAE790025BC1C /* SongUpdaterAction.swift */; };
+		D50A4652216EAE790025BC1C /* SongUpdaterAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A464F216EAE790025BC1C /* SongUpdaterAction.swift */; };
+		D50A4653216EAE790025BC1C /* SongUpdaterAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A464F216EAE790025BC1C /* SongUpdaterAction.swift */; };
+		D50A4655216EAF040025BC1C /* SongUpdaterReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A4654216EAF040025BC1C /* SongUpdaterReducer.swift */; };
+		D50A4656216EAF040025BC1C /* SongUpdaterReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A4654216EAF040025BC1C /* SongUpdaterReducer.swift */; };
+		D50A4657216EAF040025BC1C /* SongUpdaterReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A4654216EAF040025BC1C /* SongUpdaterReducer.swift */; };
+		D50A4658216EAF040025BC1C /* SongUpdaterReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A4654216EAF040025BC1C /* SongUpdaterReducer.swift */; };
 		D59EF61A216D23F800C25F0A /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = D59EF618216D23F800C25F0A /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D5CDD32B216D26A500BD36C4 /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = D59EF618216D23F800C25F0A /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D5CDD32C216D26A600BD36C4 /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = D59EF618216D23F800C25F0A /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -124,8 +144,13 @@
 		D50A4627216D443B0025BC1C /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		D50A462C216D453F0025BC1C /* Transient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transient.swift; sourceTree = "<group>"; };
 		D50A4631216D48B10025BC1C /* StreamingServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamingServer.swift; sourceTree = "<group>"; };
-		D50A4636216D4C050025BC1C /* APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
-		D50A463B216D552C0025BC1C /* ParseResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseResource.swift; sourceTree = "<group>"; };
+		D50A4636216D4C050025BC1C /* APIProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIProgress.swift; sourceTree = "<group>"; };
+		D50A463B216D552C0025BC1C /* Parse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parse.swift; sourceTree = "<group>"; };
+		D50A4640216E7F740025BC1C /* APIResponseReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponseReducer.swift; sourceTree = "<group>"; };
+		D50A4645216E8F950025BC1C /* RefreshTimerEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshTimerEvent.swift; sourceTree = "<group>"; };
+		D50A464A216E978F0025BC1C /* SongUpdaterMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongUpdaterMiddleware.swift; sourceTree = "<group>"; };
+		D50A464F216EAE790025BC1C /* SongUpdaterAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongUpdaterAction.swift; sourceTree = "<group>"; };
+		D50A4654216EAF040025BC1C /* SongUpdaterReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongUpdaterReducer.swift; sourceTree = "<group>"; };
 		D59EF615216D23F800C25F0A /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D59EF618216D23F800C25F0A /* Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Core.h; sourceTree = "<group>"; };
 		D59EF619216D23F800C25F0A /* Info-iOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-iOS.plist"; sourceTree = "<group>"; };
@@ -209,7 +234,7 @@
 			children = (
 				D50A45E3216D31340025BC1C /* State */,
 				D50A45D5216D2F930025BC1C /* Artist.swift */,
-				D50A463B216D552C0025BC1C /* ParseResource.swift */,
+				D50A463B216D552C0025BC1C /* Parse.swift */,
 				D50A45D9216D2FAD0025BC1C /* Playlist.swift */,
 				D50A4603216D383E0025BC1C /* ResourceState.swift */,
 				D50A45D7216D2F9D0025BC1C /* Song.swift */,
@@ -248,7 +273,8 @@
 		D50A45F6216D32160025BC1C /* Action */ = {
 			isa = PBXGroup;
 			children = (
-				D50A4636216D4C050025BC1C /* APIResponse.swift */,
+				D50A4636216D4C050025BC1C /* APIProgress.swift */,
+				D50A464F216EAE790025BC1C /* SongUpdaterAction.swift */,
 			);
 			path = Action;
 			sourceTree = "<group>";
@@ -257,6 +283,7 @@
 			isa = PBXGroup;
 			children = (
 				D50A4608216D3BB10025BC1C /* AppLifeCycleEvent.swift */,
+				D50A4645216E8F950025BC1C /* RefreshTimerEvent.swift */,
 			);
 			path = Event;
 			sourceTree = "<group>";
@@ -269,6 +296,7 @@
 				D50A4612216D40A60025BC1C /* ParseMiddleware.swift */,
 				D50A4617216D422D0025BC1C /* ParseService.swift */,
 				D50A460D216D3FCF0025BC1C /* RouterMiddleware.swift */,
+				D50A464A216E978F0025BC1C /* SongUpdaterMiddleware.swift */,
 			);
 			path = Middleware;
 			sourceTree = "<group>";
@@ -276,8 +304,10 @@
 		D50A461C216D43CB0025BC1C /* Reducer */ = {
 			isa = PBXGroup;
 			children = (
-				D50A461D216D43D90025BC1C /* MainReducer.swift */,
+				D50A4640216E7F740025BC1C /* APIResponseReducer.swift */,
 				D50A4622216D441A0025BC1C /* AppLifeCycleReducer.swift */,
+				D50A461D216D43D90025BC1C /* MainReducer.swift */,
+				D50A4654216EAF040025BC1C /* SongUpdaterReducer.swift */,
 			);
 			path = Reducer;
 			sourceTree = "<group>";
@@ -610,25 +640,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				D50A460E216D3FCF0025BC1C /* RouterMiddleware.swift in Sources */,
-				D50A463C216D552C0025BC1C /* ParseResource.swift in Sources */,
+				D50A463C216D552C0025BC1C /* Parse.swift in Sources */,
 				D50A461E216D43D90025BC1C /* MainReducer.swift in Sources */,
 				D50A4623216D441A0025BC1C /* AppLifeCycleReducer.swift in Sources */,
+				D50A464B216E978F0025BC1C /* SongUpdaterMiddleware.swift in Sources */,
 				D50A45FA216D32C40025BC1C /* MainMiddleware.swift in Sources */,
 				D50A45D8216D2F9D0025BC1C /* Song.swift in Sources */,
 				D50A45F1216D319B0025BC1C /* MainStateProvider.swift in Sources */,
+				D50A4641216E7F740025BC1C /* APIResponseReducer.swift in Sources */,
 				D50A45FF216D32F30025BC1C /* LifeCycleMiddleware.swift in Sources */,
 				D50A4632216D48B10025BC1C /* StreamingServer.swift in Sources */,
 				D50A45DF216D31160025BC1C /* MainStore.swift in Sources */,
 				D50A4609216D3BB10025BC1C /* AppLifeCycleEvent.swift in Sources */,
 				D50A45D6216D2F930025BC1C /* Artist.swift in Sources */,
 				D50A45DA216D2FAD0025BC1C /* Playlist.swift in Sources */,
+				D50A4646216E8F950025BC1C /* RefreshTimerEvent.swift in Sources */,
 				D50A4628216D443B0025BC1C /* AppState.swift in Sources */,
 				D50A4613216D40A60025BC1C /* ParseMiddleware.swift in Sources */,
 				D50A4604216D383E0025BC1C /* ResourceState.swift in Sources */,
 				D50A462D216D453F0025BC1C /* Transient.swift in Sources */,
+				D50A4650216EAE790025BC1C /* SongUpdaterAction.swift in Sources */,
 				D50A4618216D422D0025BC1C /* ParseService.swift in Sources */,
+				D50A4655216EAF040025BC1C /* SongUpdaterReducer.swift in Sources */,
 				D50A45DC216D307E0025BC1C /* MainState.swift in Sources */,
-				D50A4637216D4C050025BC1C /* APIResponse.swift in Sources */,
+				D50A4637216D4C050025BC1C /* APIProgress.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -637,25 +672,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				D50A460F216D3FCF0025BC1C /* RouterMiddleware.swift in Sources */,
-				D50A463D216D552C0025BC1C /* ParseResource.swift in Sources */,
+				D50A463D216D552C0025BC1C /* Parse.swift in Sources */,
 				D50A461F216D43D90025BC1C /* MainReducer.swift in Sources */,
 				D50A4624216D441A0025BC1C /* AppLifeCycleReducer.swift in Sources */,
+				D50A464C216E978F0025BC1C /* SongUpdaterMiddleware.swift in Sources */,
 				D50A45FB216D32C40025BC1C /* MainMiddleware.swift in Sources */,
 				D50A45EC216D31710025BC1C /* Song.swift in Sources */,
 				D50A45F2216D319B0025BC1C /* MainStateProvider.swift in Sources */,
+				D50A4642216E7F740025BC1C /* APIResponseReducer.swift in Sources */,
 				D50A4600216D32F30025BC1C /* LifeCycleMiddleware.swift in Sources */,
 				D50A4633216D48B10025BC1C /* StreamingServer.swift in Sources */,
 				D50A45ED216D31730025BC1C /* MainState.swift in Sources */,
 				D50A460A216D3BB10025BC1C /* AppLifeCycleEvent.swift in Sources */,
 				D50A45EA216D31710025BC1C /* Artist.swift in Sources */,
 				D50A45E0216D31160025BC1C /* MainStore.swift in Sources */,
+				D50A4647216E8F950025BC1C /* RefreshTimerEvent.swift in Sources */,
 				D50A4629216D443B0025BC1C /* AppState.swift in Sources */,
 				D50A4614216D40A60025BC1C /* ParseMiddleware.swift in Sources */,
 				D50A4605216D3A240025BC1C /* ResourceState.swift in Sources */,
 				D50A462E216D453F0025BC1C /* Transient.swift in Sources */,
+				D50A4651216EAE790025BC1C /* SongUpdaterAction.swift in Sources */,
 				D50A4619216D422D0025BC1C /* ParseService.swift in Sources */,
+				D50A4656216EAF040025BC1C /* SongUpdaterReducer.swift in Sources */,
 				D50A45EB216D31710025BC1C /* Playlist.swift in Sources */,
-				D50A4638216D4C050025BC1C /* APIResponse.swift in Sources */,
+				D50A4638216D4C050025BC1C /* APIProgress.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -664,25 +704,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				D50A4610216D3FCF0025BC1C /* RouterMiddleware.swift in Sources */,
-				D50A463E216D552C0025BC1C /* ParseResource.swift in Sources */,
+				D50A463E216D552C0025BC1C /* Parse.swift in Sources */,
 				D50A4620216D43D90025BC1C /* MainReducer.swift in Sources */,
 				D50A4625216D441A0025BC1C /* AppLifeCycleReducer.swift in Sources */,
+				D50A464D216E978F0025BC1C /* SongUpdaterMiddleware.swift in Sources */,
 				D50A45FC216D32C40025BC1C /* MainMiddleware.swift in Sources */,
 				D50A45E9216D31700025BC1C /* Song.swift in Sources */,
 				D50A45F3216D319B0025BC1C /* MainStateProvider.swift in Sources */,
+				D50A4643216E7F740025BC1C /* APIResponseReducer.swift in Sources */,
 				D50A4601216D32F30025BC1C /* LifeCycleMiddleware.swift in Sources */,
 				D50A4634216D48B10025BC1C /* StreamingServer.swift in Sources */,
 				D50A45EE216D31740025BC1C /* MainState.swift in Sources */,
 				D50A460B216D3BB10025BC1C /* AppLifeCycleEvent.swift in Sources */,
 				D50A45E7216D31700025BC1C /* Artist.swift in Sources */,
 				D50A45E1216D31160025BC1C /* MainStore.swift in Sources */,
+				D50A4648216E8F950025BC1C /* RefreshTimerEvent.swift in Sources */,
 				D50A462A216D443B0025BC1C /* AppState.swift in Sources */,
 				D50A4615216D40A60025BC1C /* ParseMiddleware.swift in Sources */,
 				D50A4606216D3A250025BC1C /* ResourceState.swift in Sources */,
 				D50A462F216D453F0025BC1C /* Transient.swift in Sources */,
+				D50A4652216EAE790025BC1C /* SongUpdaterAction.swift in Sources */,
 				D50A461A216D422D0025BC1C /* ParseService.swift in Sources */,
+				D50A4657216EAF040025BC1C /* SongUpdaterReducer.swift in Sources */,
 				D50A45E8216D31700025BC1C /* Playlist.swift in Sources */,
-				D50A4639216D4C050025BC1C /* APIResponse.swift in Sources */,
+				D50A4639216D4C050025BC1C /* APIProgress.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -691,25 +736,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				D50A4611216D3FCF0025BC1C /* RouterMiddleware.swift in Sources */,
-				D50A463F216D552C0025BC1C /* ParseResource.swift in Sources */,
+				D50A463F216D552C0025BC1C /* Parse.swift in Sources */,
 				D50A4621216D43D90025BC1C /* MainReducer.swift in Sources */,
 				D50A4626216D441A0025BC1C /* AppLifeCycleReducer.swift in Sources */,
+				D50A464E216E978F0025BC1C /* SongUpdaterMiddleware.swift in Sources */,
 				D50A45FD216D32C40025BC1C /* MainMiddleware.swift in Sources */,
 				D50A45E6216D316F0025BC1C /* Song.swift in Sources */,
 				D50A45F4216D319B0025BC1C /* MainStateProvider.swift in Sources */,
+				D50A4644216E7F740025BC1C /* APIResponseReducer.swift in Sources */,
 				D50A4602216D32F30025BC1C /* LifeCycleMiddleware.swift in Sources */,
 				D50A4635216D48B10025BC1C /* StreamingServer.swift in Sources */,
 				D50A45EF216D31750025BC1C /* MainState.swift in Sources */,
 				D50A460C216D3BB10025BC1C /* AppLifeCycleEvent.swift in Sources */,
 				D50A45E4216D316F0025BC1C /* Artist.swift in Sources */,
 				D50A45E2216D31160025BC1C /* MainStore.swift in Sources */,
+				D50A4649216E8F950025BC1C /* RefreshTimerEvent.swift in Sources */,
 				D50A462B216D443B0025BC1C /* AppState.swift in Sources */,
 				D50A4616216D40A60025BC1C /* ParseMiddleware.swift in Sources */,
 				D50A4607216D3A260025BC1C /* ResourceState.swift in Sources */,
 				D50A4630216D453F0025BC1C /* Transient.swift in Sources */,
+				D50A4653216EAE790025BC1C /* SongUpdaterAction.swift in Sources */,
 				D50A461B216D422D0025BC1C /* ParseService.swift in Sources */,
+				D50A4658216EAF040025BC1C /* SongUpdaterReducer.swift in Sources */,
 				D50A45E5216D316F0025BC1C /* Playlist.swift in Sources */,
-				D50A463A216D4C050025BC1C /* APIResponse.swift in Sources */,
+				D50A463A216D4C050025BC1C /* APIProgress.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -4,6 +4,7 @@ use_frameworks!
 
 def shared_pods
   pod 'RxSwift', :git => 'https://github.com/ReactiveX/RxSwift.git'
+  pod 'RxCocoa', :git => 'https://github.com/ReactiveX/RxSwift.git'
   pod 'SwiftRex', :git => 'https://github.com/SwiftRex/SwiftRex.git', :branch => 'swift-42'
 end
 
@@ -36,7 +37,6 @@ target 'ArcanosRadio iOS' do
   project 'ArcanosRadio/ArcanosRadio.xcodeproj'
   shared_pods
 #   pod 'RxDataSources'
-#   pod 'RxCocoa', :git => 'https://github.com/ReactiveX/RxSwift.git'
 end
 
 target 'ArcanosRadio watchOS Extension' do
