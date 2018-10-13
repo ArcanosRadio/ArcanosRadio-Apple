@@ -8,7 +8,7 @@ public final class SongUpdaterMiddleware: Middleware {
         return actionHandler as? EventHandler
     }
     private let disposeBag = DisposeBag()
-    private var timer: Timer?
+    private var timerSubscription: Disposable?
 
     public func handle(event: EventProtocol, getState: @escaping () -> MainState, next: @escaping (EventProtocol, @escaping () -> MainState) -> Void) {
         defer {
@@ -21,22 +21,60 @@ public final class SongUpdaterMiddleware: Middleware {
             next(action, getState)
         }
 
-        if case RequestProgress<Playlist>.success(let playlist) = action, playlist != getState().currentSong {
-            actionHandler?.trigger(SongUpdaterAction.songHasChanged(playlist))
+        switch action {
+        case let playlistAction as RequestProgress<Playlist>:
+            handle(playlistAction: playlistAction, getState: getState, next: next)
+        case let streamingServerAction as RequestProgress<StreamingServer>:
+            handle(serverAction: streamingServerAction, getState: getState, next: next)
+        default:
+            break
         }
+    }
 
-        guard case RequestProgress<StreamingServer>.success(let streamingServer) = action else { return }
+    private func handle(playlistAction: RequestProgress<Playlist>, getState: @escaping () -> MainState, next: @escaping (ActionProtocol, @escaping () -> MainState) -> Void) {
+        playlistAction.analysis(
+            onSuccess: { playlist in
+                guard playlist != getState().currentSong else { return }
+                actionHandler?.trigger(SongUpdaterAction.songHasChanged(playlist))
+            }, onFailure: handleError(playlistAction))
+    }
 
-        createTimer(timeInterval: streamingServer.poolingTimeActive)
+    private func handle(serverAction: RequestProgress<StreamingServer>, getState: @escaping () -> MainState, next: @escaping (ActionProtocol, @escaping () -> MainState) -> Void) {
+        serverAction.analysis(
+            onSuccess: { server in
+                createTimer(timeInterval: server.poolingTimeActive)
+            },
+            onFailure: handleError(serverAction))
     }
 
     public init() { }
 
     private func createTimer(timeInterval: TimeInterval) {
-        timer?.invalidate()
-        timer = Timer.scheduledTimer(withTimeInterval: timeInterval, repeats: true) { [weak self] _ in
-            self?.eventHandler?.dispatch(RefreshTimerEvent.tick)
+        timerSubscription?.dispose()
+        timerSubscription =
+            Observable<Void>
+                .concat(
+                    .just(()),
+                    Observable<Int>
+                        .interval(timeInterval,
+                                  scheduler: ConcurrentDispatchQueueScheduler(qos: .background))
+                        .map { _ in }
+                ).subscribe(onNext: { [weak self] in
+                    self?.eventHandler?.dispatch(RefreshTimerEvent.tick)
+                })
+    }
+}
+
+extension Middleware {
+    public func handleError(_ event: EventProtocol) -> (Error) -> Void {
+        return { [weak self] error in
+            self?.actionHandler?.trigger(ErrorAction(error: error, message: .left(event)))
         }
-        timer?.fire()
+    }
+
+    public func handleError(_ action: ActionProtocol) -> (Error) -> Void {
+        return { [weak self] error in
+            self?.actionHandler?.trigger(ErrorAction(error: error, message: .right(action)))
+        }
     }
 }

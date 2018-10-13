@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,63 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ArcanosRadio" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EcI-En-Sff">
+                                <rect key="frame" x="16" y="20" width="215" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aPx-6J-Nb7">
+                                <rect key="frame" x="16" y="49" width="215" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lyrics" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GlB-xy-cuy">
+                                <rect key="frame" x="16" y="148" width="343" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1og-QG-QQD">
+                                <rect key="frame" x="239" y="20" width="120" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="AlA-Fn-YcM"/>
+                                    <constraint firstAttribute="width" secondItem="1og-QG-QQD" secondAttribute="height" id="ITB-Bu-9aQ"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="aPx-6J-Nb7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="1wv-Mj-RD1"/>
+                            <constraint firstItem="1og-QG-QQD" firstAttribute="leading" secondItem="EcI-En-Sff" secondAttribute="trailing" constant="8" id="5mi-Mi-uMv"/>
+                            <constraint firstItem="aPx-6J-Nb7" firstAttribute="top" secondItem="EcI-En-Sff" secondAttribute="bottom" constant="8" id="6NV-Y3-CMg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GlB-xy-cuy" secondAttribute="trailing" constant="16" id="IPz-jw-uSp"/>
+                            <constraint firstItem="EcI-En-Sff" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="aBF-0c-CVx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1og-QG-QQD" secondAttribute="trailing" constant="16" id="brl-KC-IdV"/>
+                            <constraint firstItem="1og-QG-QQD" firstAttribute="leading" secondItem="aPx-6J-Nb7" secondAttribute="trailing" constant="8" id="j3B-0o-v71"/>
+                            <constraint firstItem="GlB-xy-cuy" firstAttribute="top" secondItem="1og-QG-QQD" secondAttribute="bottom" constant="8" id="mQ5-HE-nOY"/>
+                            <constraint firstItem="1og-QG-QQD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="oeA-Nn-pAk"/>
+                            <constraint firstItem="EcI-En-Sff" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="rNa-yJ-p3s"/>
+                            <constraint firstItem="GlB-xy-cuy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="sva-CM-1br"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="albumArtImageView" destination="1og-QG-QQD" id="Hiy-aH-eBb"/>
+                        <outlet property="artistLabel" destination="aPx-6J-Nb7" id="sbl-DH-7Xp"/>
+                        <outlet property="lyricsLabel" destination="GlB-xy-cuy" id="IXS-p9-gev"/>
+                        <outlet property="songLabel" destination="EcI-En-Sff" id="Yem-Fe-lmH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="89.505247376311857"/>
         </scene>
     </scenes>
 </document>

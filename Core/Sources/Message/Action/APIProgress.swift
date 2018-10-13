@@ -7,6 +7,23 @@ public enum RequestProgress<T: Codable & Equatable>: ActionProtocol, Equatable {
     case failure(Error)
 }
 
+extension RequestProgress {
+    var value: T? { if case let .success(value) = self { return value } else { return nil } }
+    var error: Error? { if case let .failure(error) = self { return error } else { return nil } }
+
+    @discardableResult
+    func analysis(onSuccess: (T) -> Void = { _ in },
+                  onFailure: (Error) -> Void = { _ in },
+                  onStarted: () -> Void = { }) -> RequestProgress {
+        switch self {
+        case .started: onStarted()
+        case let .success(value): onSuccess(value)
+        case let .failure(error): onFailure(error)
+        }
+        return self
+    }
+}
+
 public func == <T>(lhs: RequestProgress<T>, rhs: RequestProgress<T>) -> Bool {
     switch (lhs, rhs) {
     case (.started, .started):
