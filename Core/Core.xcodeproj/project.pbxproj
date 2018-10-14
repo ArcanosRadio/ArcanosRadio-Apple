@@ -38,10 +38,10 @@
 		D50A45FB216D32C40025BC1C /* MainMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A45F9216D32C40025BC1C /* MainMiddleware.swift */; };
 		D50A45FC216D32C40025BC1C /* MainMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A45F9216D32C40025BC1C /* MainMiddleware.swift */; };
 		D50A45FD216D32C40025BC1C /* MainMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A45F9216D32C40025BC1C /* MainMiddleware.swift */; };
-		D50A45FF216D32F30025BC1C /* LifeCycleMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A45FE216D32F30025BC1C /* LifeCycleMiddleware.swift */; };
-		D50A4600216D32F30025BC1C /* LifeCycleMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A45FE216D32F30025BC1C /* LifeCycleMiddleware.swift */; };
-		D50A4601216D32F30025BC1C /* LifeCycleMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A45FE216D32F30025BC1C /* LifeCycleMiddleware.swift */; };
-		D50A4602216D32F30025BC1C /* LifeCycleMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A45FE216D32F30025BC1C /* LifeCycleMiddleware.swift */; };
+		D50A45FF216D32F30025BC1C /* AppLifeCycleMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A45FE216D32F30025BC1C /* AppLifeCycleMiddleware.swift */; };
+		D50A4600216D32F30025BC1C /* AppLifeCycleMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A45FE216D32F30025BC1C /* AppLifeCycleMiddleware.swift */; };
+		D50A4601216D32F30025BC1C /* AppLifeCycleMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A45FE216D32F30025BC1C /* AppLifeCycleMiddleware.swift */; };
+		D50A4602216D32F30025BC1C /* AppLifeCycleMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A45FE216D32F30025BC1C /* AppLifeCycleMiddleware.swift */; };
 		D50A4604216D383E0025BC1C /* ResourceState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A4603216D383E0025BC1C /* ResourceState.swift */; };
 		D50A4605216D3A240025BC1C /* ResourceState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A4603216D383E0025BC1C /* ResourceState.swift */; };
 		D50A4606216D3A250025BC1C /* ResourceState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A4603216D383E0025BC1C /* ResourceState.swift */; };
@@ -145,7 +145,7 @@
 		D50A45DE216D31160025BC1C /* MainStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainStore.swift; sourceTree = "<group>"; };
 		D50A45F0216D319B0025BC1C /* MainStateProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainStateProvider.swift; sourceTree = "<group>"; };
 		D50A45F9216D32C40025BC1C /* MainMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMiddleware.swift; sourceTree = "<group>"; };
-		D50A45FE216D32F30025BC1C /* LifeCycleMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCycleMiddleware.swift; sourceTree = "<group>"; };
+		D50A45FE216D32F30025BC1C /* AppLifeCycleMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLifeCycleMiddleware.swift; sourceTree = "<group>"; };
 		D50A4603216D383E0025BC1C /* ResourceState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceState.swift; sourceTree = "<group>"; };
 		D50A4608216D3BB10025BC1C /* AppLifeCycleEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLifeCycleEvent.swift; sourceTree = "<group>"; };
 		D50A460D216D3FCF0025BC1C /* RouterMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterMiddleware.swift; sourceTree = "<group>"; };
@@ -307,8 +307,8 @@
 		D50A45F8216D32A30025BC1C /* Middleware */ = {
 			isa = PBXGroup;
 			children = (
+				D50A45FE216D32F30025BC1C /* AppLifeCycleMiddleware.swift */,
 				D57716E721720DD0005C1229 /* CatchErrorMiddleware.swift */,
-				D50A45FE216D32F30025BC1C /* LifeCycleMiddleware.swift */,
 				D57716EC217211E6005C1229 /* LoggerMiddleware.swift */,
 				D50A45F9216D32C40025BC1C /* MainMiddleware.swift */,
 				D50A4612216D40A60025BC1C /* ParseMiddleware.swift */,
@@ -667,7 +667,7 @@
 				D50A45D8216D2F9D0025BC1C /* Song.swift in Sources */,
 				D50A45F1216D319B0025BC1C /* MainStateProvider.swift in Sources */,
 				D50A4641216E7F740025BC1C /* APIResponseReducer.swift in Sources */,
-				D50A45FF216D32F30025BC1C /* LifeCycleMiddleware.swift in Sources */,
+				D50A45FF216D32F30025BC1C /* AppLifeCycleMiddleware.swift in Sources */,
 				D50A4632216D48B10025BC1C /* StreamingServer.swift in Sources */,
 				D57716E321720AEA005C1229 /* ErrorAction.swift in Sources */,
 				D50A45DF216D31160025BC1C /* MainStore.swift in Sources */,
@@ -702,7 +702,7 @@
 				D50A45EC216D31710025BC1C /* Song.swift in Sources */,
 				D50A45F2216D319B0025BC1C /* MainStateProvider.swift in Sources */,
 				D50A4642216E7F740025BC1C /* APIResponseReducer.swift in Sources */,
-				D50A4600216D32F30025BC1C /* LifeCycleMiddleware.swift in Sources */,
+				D50A4600216D32F30025BC1C /* AppLifeCycleMiddleware.swift in Sources */,
 				D50A4633216D48B10025BC1C /* StreamingServer.swift in Sources */,
 				D57716E421720AEA005C1229 /* ErrorAction.swift in Sources */,
 				D50A45ED216D31730025BC1C /* MainState.swift in Sources */,
@@ -737,7 +737,7 @@
 				D50A45E9216D31700025BC1C /* Song.swift in Sources */,
 				D50A45F3216D319B0025BC1C /* MainStateProvider.swift in Sources */,
 				D50A4643216E7F740025BC1C /* APIResponseReducer.swift in Sources */,
-				D50A4601216D32F30025BC1C /* LifeCycleMiddleware.swift in Sources */,
+				D50A4601216D32F30025BC1C /* AppLifeCycleMiddleware.swift in Sources */,
 				D50A4634216D48B10025BC1C /* StreamingServer.swift in Sources */,
 				D57716E521720AEA005C1229 /* ErrorAction.swift in Sources */,
 				D50A45EE216D31740025BC1C /* MainState.swift in Sources */,
@@ -772,7 +772,7 @@
 				D50A45E6216D316F0025BC1C /* Song.swift in Sources */,
 				D50A45F4216D319B0025BC1C /* MainStateProvider.swift in Sources */,
 				D50A4644216E7F740025BC1C /* APIResponseReducer.swift in Sources */,
-				D50A4602216D32F30025BC1C /* LifeCycleMiddleware.swift in Sources */,
+				D50A4602216D32F30025BC1C /* AppLifeCycleMiddleware.swift in Sources */,
 				D50A4635216D48B10025BC1C /* StreamingServer.swift in Sources */,
 				D57716E621720AEA005C1229 /* ErrorAction.swift in Sources */,
 				D50A45EF216D31750025BC1C /* MainState.swift in Sources */,

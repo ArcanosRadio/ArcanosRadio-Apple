@@ -10,13 +10,13 @@ public final class SongUpdaterMiddleware: Middleware {
     private let disposeBag = DisposeBag()
     private var timerSubscription: Disposable?
 
-    public func handle(event: EventProtocol, getState: @escaping () -> MainState, next: @escaping (EventProtocol, @escaping () -> MainState) -> Void) {
+    public func handle(event: EventProtocol, getState: @escaping () -> Playlist?, next: @escaping (EventProtocol, @escaping () -> Playlist?) -> Void) {
         defer {
             next(event, getState)
         }
     }
 
-    public func handle(action: ActionProtocol, getState: @escaping () -> MainState, next: @escaping (ActionProtocol, @escaping () -> MainState) -> Void) {
+    public func handle(action: ActionProtocol, getState: @escaping () -> Playlist?, next: @escaping (ActionProtocol, @escaping () -> Playlist?) -> Void) {
         defer {
             next(action, getState)
         }
@@ -31,15 +31,15 @@ public final class SongUpdaterMiddleware: Middleware {
         }
     }
 
-    private func handle(playlistAction: RequestProgress<Playlist>, getState: @escaping () -> MainState, next: @escaping (ActionProtocol, @escaping () -> MainState) -> Void) {
+    private func handle(playlistAction: RequestProgress<Playlist>, getState: @escaping () -> Playlist?, next: @escaping (ActionProtocol, @escaping () -> Playlist?) -> Void) {
         playlistAction.analysis(
             onSuccess: { playlist in
-                guard playlist != getState().currentSong else { return }
+                guard playlist != getState() else { return }
                 actionHandler?.trigger(SongUpdaterAction.songHasChanged(playlist))
             }, onFailure: handleError(playlistAction))
     }
 
-    private func handle(serverAction: RequestProgress<StreamingServer>, getState: @escaping () -> MainState, next: @escaping (ActionProtocol, @escaping () -> MainState) -> Void) {
+    private func handle(serverAction: RequestProgress<StreamingServer>, getState: @escaping () -> Playlist?, next: @escaping (ActionProtocol, @escaping () -> Playlist?) -> Void) {
         serverAction.analysis(
             onSuccess: { server in
                 createTimer(timeInterval: server.poolingTimeActive)

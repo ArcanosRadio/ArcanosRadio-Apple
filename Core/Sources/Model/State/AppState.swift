@@ -1,4 +1,20 @@
+#if os(iOS)
 import UIKit
+#elseif os(watchOS)
+import WatchKit
+#elseif os(tvOS)
+import UIKit
+#elseif os(macOS)
+import AppKit
+#endif
+
+#if os(iOS)
+extension UIInterfaceOrientation: Codable, Equatable { }
+extension UIUserInterfaceSizeClass: Codable, Equatable { }
+extension UIApplication.State: Codable, Equatable { }
+extension UIDeviceOrientation: Codable { }
+extension UIDevice.BatteryState: Codable { }
+extension UIUserInterfaceIdiom: Codable { }
 
 extension UIEdgeInsets: Codable {
     enum CodingKeys: CodingKey {
@@ -23,50 +39,54 @@ extension UIEdgeInsets: Codable {
     }
 }
 
-public protocol ApplicationProtocol: class {
-    var isIdleTimerDisabled: Bool { get set }
+public struct BatteryMonitor: Codable, Equatable {
+    public let level: Float
+    public let state: UIDevice.BatteryState
+
+    public init(level: Float, state: UIDevice.BatteryState) {
+        self.level = level
+        self.state = state
+    }
 }
 
-public protocol WindowProtocol { }
+public struct ProximityMonitor: Codable, Equatable {
+    public let isNear: Bool
 
-#if os(iOS)
-extension UIApplication: ApplicationProtocol { }
-extension UIWindow: WindowProtocol { }
+    public init(isNear: Bool) {
+        self.isNear = isNear
+    }
+}
+
+public struct SizeClass: Codable, Equatable {
+    public let vertical: UIUserInterfaceSizeClass
+    public let horizontal: UIUserInterfaceSizeClass
+
+    public init(horizontal: UIUserInterfaceSizeClass = .unspecified, vertical: UIUserInterfaceSizeClass = .unspecified) {
+        self.horizontal = horizontal
+        self.vertical = vertical
+    }
+}
 #endif
 
-public enum InterfaceSizeClass: String, Codable, Equatable {
-    case unspecified
-    case compact
-    case regular
-}
-
-public enum InterfaceOrientation: String, Codable, Equatable {
-    case unknown
-    case portrait
-    case portraitUpsideDown
-    case landscapeLeft
-    case landscapeRight
-}
-
-public enum WindowActiveState: Int, Codable, Equatable {
-    case inactive = 0
-    case active = 1
-}
-
-public enum WindowForegroundState: Int, Codable, Equatable {
-    case background = 0
-    case foreground = 1
-}
-
 public struct AppState: Codable, Equatable {
-    public var application: Transient<ApplicationProtocol> = .none
-    public var orientation: InterfaceOrientation = .unknown
-    public var windowActiveState: WindowActiveState = .active
-    public var windowForegroundState: WindowForegroundState = .foreground
-    public var verticalSizeClass: InterfaceSizeClass = .unspecified
-    public var horizontalSizeClass: InterfaceSizeClass = .unspecified
+#if os(iOS)
+    public var application: Transient<UIApplication> = .none
+    public var launchOptions: Transient<[UIApplication.LaunchOptionsKey: Any?]> = .none
+    public var interfaceOrientation: UIInterfaceOrientation = .unknown
+    public var deviceOrientation: UIDeviceOrientation = .unknown
+    public var applicationState: UIApplication.State = .inactive
     public var bounds: CGRect = .zero
     public var safeAreaInsets: UIEdgeInsets = .zero
+    public var keyboardHeight: CGFloat = 0
+    public var batteryMonitor: BatteryMonitor? = nil
+    public var proximityMonitor: ProximityMonitor? = nil
+    public var device: UIUserInterfaceIdiom = .unspecified
+    public var sizeClass: SizeClass = .init()
+
+#elseif os(watchOS)
+#elseif os(tvOS)
+#elseif os(macOS)
+#endif
 
     public init() { }
 }

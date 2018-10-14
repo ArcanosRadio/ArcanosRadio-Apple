@@ -8,12 +8,12 @@ public final class RouterMiddleware: Middleware {
             next(event, getState)
         }
 
-        if case let .boot(_, _)? = event as? AppLifeCycleEvent {
+//        if .boot(_, _)? = event as? AppLifeCycleEvent {
 //            actionHandler?.trigger(NavigationAction.navigationStarted(.playMode))
 //            RigListWireframe.start(window)
 //            window.makeKeyAndVisible()
 //            actionHandler?.trigger(NavigationAction.navigationCompleted(.playMode))
-        }
+//        }
     }
 
     public func handle(action: ActionProtocol, getState: @escaping () -> MainState, next: @escaping (ActionProtocol, @escaping () -> MainState) -> Void) {

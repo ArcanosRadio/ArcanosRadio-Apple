@@ -1,10 +1,38 @@
 import Foundation
 import SwiftRex
 
-public enum AppLifeCycleEvent: EventProtocol {
-    case boot(application: ApplicationProtocol,
-              launchOptions: [String: Any]?)
-    case rotate(window: WindowProtocol, orientation: InterfaceOrientation)
-    case windowActiveChanged(window: WindowProtocol, active: Bool)
-    case windowForegroundChanged(window: WindowProtocol, foreground: Bool)
+#if os(iOS)
+import UIKit
+
+public enum AppLifeCycleEvent {
+    case boot(application: UIApplication, launchOptions: [UIApplication.LaunchOptionsKey: Any]?)
+    case keyWindowSet(UIWindow)
+    case applicationStateDidChange
+    case didChangeBounds
+    case didRotateDevice
+    case didChangeBatteryLevel
+    case proximityStateDidChange
+    case keyboardToggle(height: CGFloat)
 }
+
+#elseif os(watchOS)
+import WatchKit
+
+public enum AppLifeCycleEvent {
+    case boot
+}
+
+#elseif os(tvOS)
+public enum AppLifeCycleEvent {
+    case boot
+}
+
+#elseif os(macOS)
+import AppKit
+
+public enum AppLifeCycleEvent {
+    case boot
+}
+#endif
+
+extension AppLifeCycleEvent: EventProtocol, ActionProtocol { }

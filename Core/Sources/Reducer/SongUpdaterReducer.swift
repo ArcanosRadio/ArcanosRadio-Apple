@@ -1,12 +1,10 @@
 import Foundation
 import SwiftRex
 
-public let songUpdaterReducer = Reducer<MainState> { state, action in
+public let songUpdaterReducer = Reducer<Playlist?> { state, action in
     switch action {
     case SongUpdaterAction.songHasChanged(let newSong):
-        var stateCopy = state
-        stateCopy.currentSong = newSong
-        return stateCopy
+        return newSong
     default:
         break
     }

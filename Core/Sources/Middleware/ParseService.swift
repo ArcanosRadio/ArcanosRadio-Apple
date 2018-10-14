@@ -16,7 +16,7 @@ final class ParseService: SideEffectProducer {
         }
     }
 
-    func execute(getState: @escaping () -> MainState) -> Observable<ActionProtocol> {
+    func execute(getState: @escaping () -> Playlist?) -> Observable<ActionProtocol> {
         return request()
     }
 }

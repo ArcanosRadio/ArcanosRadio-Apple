@@ -2,12 +2,12 @@ import RxSwift
 import SwiftRex
 
 public final class ParseMiddleware: SideEffectMiddleware {
-    public typealias StateType = MainState
+    public typealias StateType = Playlist?
     public var actionHandler: ActionHandler?
     public var allowEventToPropagate = false
     public var disposeBag = DisposeBag()
 
-    public func sideEffect(for event: EventProtocol) -> AnySideEffectProducer<MainState>? {
+    public func sideEffect(for event: EventProtocol) -> AnySideEffectProducer<Playlist?>? {
         return ParseService(event: event).map(AnySideEffectProducer.init)
     }
 }
