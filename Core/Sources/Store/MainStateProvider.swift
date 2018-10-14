@@ -36,3 +36,11 @@ extension MainStore: MainStateProvider {
                 }.subscribe(onNext: handler, onError: nil, onCompleted: nil, onDisposed: nil)
     }
 }
+
+public protocol HasStateProvider {
+    var stateProvider: MainStateProvider { get }
+}
+
+public protocol HasEventHandler {
+    var eventHandler: EventHandler { get }
+}

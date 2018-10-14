@@ -10,7 +10,6 @@
 		046EC706CF96E2C692BBFA0D /* Pods_ArcanosRadio_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF3AFCAA5917A03E0350131B /* Pods_ArcanosRadio_iOS.framework */; };
 		0CA88393E9D229938A92AC23 /* Pods_ArcanosRadio_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BA629040A2998DA57AC7C22 /* Pods_ArcanosRadio_tvOS.framework */; };
 		9D105224306376F7106C478B /* Pods_ArcanosRadio_watchOS_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B38959C0B28E87E87D114625 /* Pods_ArcanosRadio_watchOS_Extension.framework */; };
-		D50A45CF216D2EB30025BC1C /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D50A45CE216D2EB30025BC1C /* Core.framework */; };
 		D50A45D1216D2EBB0025BC1C /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D50A45D0216D2EBB0025BC1C /* Core.framework */; };
 		D50A45D3216D2EC20025BC1C /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D50A45D2216D2EC20025BC1C /* Core.framework */; };
 		D521A998216D27BA00261BE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D521A997216D27BA00261BE3 /* AppDelegate.swift */; };
@@ -30,6 +29,9 @@
 		D521A9D8216D287600261BE3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D521A9D7216D287600261BE3 /* ViewController.swift */; };
 		D521A9DB216D287600261BE3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D521A9D9216D287600261BE3 /* Main.storyboard */; };
 		D521A9DD216D287700261BE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D521A9DC216D287700261BE3 /* Assets.xcassets */; };
+		D53725762173860300C7400B /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D53725752173860300C7400B /* Core.framework */; };
+		D53725772173860300C7400B /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D53725752173860300C7400B /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D537257A21738EA500C7400B /* Redux.swift in Sources */ = {isa = PBXBuildFile; fileRef = D537257921738EA500C7400B /* Redux.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +74,17 @@
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D53725782173860400C7400B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D53725772173860300C7400B /* Core.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -112,6 +125,8 @@
 		D521A9DA216D287600261BE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D521A9DC216D287700261BE3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D521A9DE216D287700261BE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D53725752173860300C7400B /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D537257921738EA500C7400B /* Redux.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Redux.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,8 +141,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D50A45CF216D2EB30025BC1C /* Core.framework in Frameworks */,
 				046EC706CF96E2C692BBFA0D /* Pods_ArcanosRadio_iOS.framework in Frameworks */,
+				D53725762173860300C7400B /* Core.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,6 +187,7 @@
 				D50A45D2216D2EC20025BC1C /* Core.framework */,
 				D50A45D0216D2EBB0025BC1C /* Core.framework */,
 				D50A45CE216D2EB30025BC1C /* Core.framework */,
+				D53725752173860300C7400B /* Core.framework */,
 				AF3AFCAA5917A03E0350131B /* Pods_ArcanosRadio_iOS.framework */,
 				5BA629040A2998DA57AC7C22 /* Pods_ArcanosRadio_tvOS.framework */,
 				BF5B6190CF839339D2478823 /* Pods_ArcanosRadio_watchOS.framework */,
@@ -195,6 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				D521A997216D27BA00261BE3 /* AppDelegate.swift */,
+				D537257921738EA500C7400B /* Redux.swift */,
 				D521A999216D27BA00261BE3 /* ViewController.swift */,
 				D521A99B216D27BA00261BE3 /* Main.storyboard */,
 				D521A99E216D27BC00261BE3 /* Assets.xcassets */,
@@ -265,6 +282,7 @@
 				D521A992216D27BA00261BE3 /* Resources */,
 				D521A9CE216D284400261BE3 /* Embed Watch Content */,
 				08F66969A5C35FC436438AC9 /* [CP] Embed Pods Frameworks */,
+				D53725782173860400C7400B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -567,6 +585,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D537257A21738EA500C7400B /* Redux.swift in Sources */,
 				D521A99A216D27BA00261BE3 /* ViewController.swift in Sources */,
 				D521A998216D27BA00261BE3 /* AppDelegate.swift in Sources */,
 			);

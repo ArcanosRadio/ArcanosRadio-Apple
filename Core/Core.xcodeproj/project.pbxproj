@@ -34,10 +34,6 @@
 		D50A45F2216D319B0025BC1C /* MainStateProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A45F0216D319B0025BC1C /* MainStateProvider.swift */; };
 		D50A45F3216D319B0025BC1C /* MainStateProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A45F0216D319B0025BC1C /* MainStateProvider.swift */; };
 		D50A45F4216D319B0025BC1C /* MainStateProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A45F0216D319B0025BC1C /* MainStateProvider.swift */; };
-		D50A45FA216D32C40025BC1C /* MainMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A45F9216D32C40025BC1C /* MainMiddleware.swift */; };
-		D50A45FB216D32C40025BC1C /* MainMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A45F9216D32C40025BC1C /* MainMiddleware.swift */; };
-		D50A45FC216D32C40025BC1C /* MainMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A45F9216D32C40025BC1C /* MainMiddleware.swift */; };
-		D50A45FD216D32C40025BC1C /* MainMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A45F9216D32C40025BC1C /* MainMiddleware.swift */; };
 		D50A45FF216D32F30025BC1C /* AppLifeCycleMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A45FE216D32F30025BC1C /* AppLifeCycleMiddleware.swift */; };
 		D50A4600216D32F30025BC1C /* AppLifeCycleMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A45FE216D32F30025BC1C /* AppLifeCycleMiddleware.swift */; };
 		D50A4601216D32F30025BC1C /* AppLifeCycleMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A45FE216D32F30025BC1C /* AppLifeCycleMiddleware.swift */; };
@@ -62,10 +58,6 @@
 		D50A4619216D422D0025BC1C /* ParseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A4617216D422D0025BC1C /* ParseService.swift */; };
 		D50A461A216D422D0025BC1C /* ParseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A4617216D422D0025BC1C /* ParseService.swift */; };
 		D50A461B216D422D0025BC1C /* ParseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A4617216D422D0025BC1C /* ParseService.swift */; };
-		D50A461E216D43D90025BC1C /* MainReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A461D216D43D90025BC1C /* MainReducer.swift */; };
-		D50A461F216D43D90025BC1C /* MainReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A461D216D43D90025BC1C /* MainReducer.swift */; };
-		D50A4620216D43D90025BC1C /* MainReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A461D216D43D90025BC1C /* MainReducer.swift */; };
-		D50A4621216D43D90025BC1C /* MainReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A461D216D43D90025BC1C /* MainReducer.swift */; };
 		D50A4623216D441A0025BC1C /* AppLifeCycleReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A4622216D441A0025BC1C /* AppLifeCycleReducer.swift */; };
 		D50A4624216D441A0025BC1C /* AppLifeCycleReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A4622216D441A0025BC1C /* AppLifeCycleReducer.swift */; };
 		D50A4625216D441A0025BC1C /* AppLifeCycleReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A4622216D441A0025BC1C /* AppLifeCycleReducer.swift */; };
@@ -110,6 +102,8 @@
 		D50A4656216EAF040025BC1C /* SongUpdaterReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A4654216EAF040025BC1C /* SongUpdaterReducer.swift */; };
 		D50A4657216EAF040025BC1C /* SongUpdaterReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A4654216EAF040025BC1C /* SongUpdaterReducer.swift */; };
 		D50A4658216EAF040025BC1C /* SongUpdaterReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A4654216EAF040025BC1C /* SongUpdaterReducer.swift */; };
+		D537257F2173925200C7400B /* UIKit+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D537257E2173925200C7400B /* UIKit+Extensions.swift */; };
+		D53725832173928000C7400B /* UIKit+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D537257E2173925200C7400B /* UIKit+Extensions.swift */; };
 		D57716E321720AEA005C1229 /* ErrorAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57716E221720AEA005C1229 /* ErrorAction.swift */; };
 		D57716E421720AEA005C1229 /* ErrorAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57716E221720AEA005C1229 /* ErrorAction.swift */; };
 		D57716E521720AEA005C1229 /* ErrorAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57716E221720AEA005C1229 /* ErrorAction.swift */; };
@@ -144,14 +138,12 @@
 		D50A45DB216D307E0025BC1C /* MainState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainState.swift; sourceTree = "<group>"; };
 		D50A45DE216D31160025BC1C /* MainStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainStore.swift; sourceTree = "<group>"; };
 		D50A45F0216D319B0025BC1C /* MainStateProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainStateProvider.swift; sourceTree = "<group>"; };
-		D50A45F9216D32C40025BC1C /* MainMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMiddleware.swift; sourceTree = "<group>"; };
 		D50A45FE216D32F30025BC1C /* AppLifeCycleMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLifeCycleMiddleware.swift; sourceTree = "<group>"; };
 		D50A4603216D383E0025BC1C /* ResourceState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceState.swift; sourceTree = "<group>"; };
 		D50A4608216D3BB10025BC1C /* AppLifeCycleEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLifeCycleEvent.swift; sourceTree = "<group>"; };
 		D50A460D216D3FCF0025BC1C /* RouterMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterMiddleware.swift; sourceTree = "<group>"; };
 		D50A4612216D40A60025BC1C /* ParseMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseMiddleware.swift; sourceTree = "<group>"; };
 		D50A4617216D422D0025BC1C /* ParseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseService.swift; sourceTree = "<group>"; };
-		D50A461D216D43D90025BC1C /* MainReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainReducer.swift; sourceTree = "<group>"; };
 		D50A4622216D441A0025BC1C /* AppLifeCycleReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLifeCycleReducer.swift; sourceTree = "<group>"; };
 		D50A4627216D443B0025BC1C /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		D50A462C216D453F0025BC1C /* Transient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transient.swift; sourceTree = "<group>"; };
@@ -163,6 +155,7 @@
 		D50A464A216E978F0025BC1C /* SongUpdaterMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongUpdaterMiddleware.swift; sourceTree = "<group>"; };
 		D50A464F216EAE790025BC1C /* SongUpdaterAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongUpdaterAction.swift; sourceTree = "<group>"; };
 		D50A4654216EAF040025BC1C /* SongUpdaterReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongUpdaterReducer.swift; sourceTree = "<group>"; };
+		D537257E2173925200C7400B /* UIKit+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKit+Extensions.swift"; sourceTree = "<group>"; };
 		D57716E221720AEA005C1229 /* ErrorAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorAction.swift; sourceTree = "<group>"; };
 		D57716E721720DD0005C1229 /* CatchErrorMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatchErrorMiddleware.swift; sourceTree = "<group>"; };
 		D57716EC217211E6005C1229 /* LoggerMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerMiddleware.swift; sourceTree = "<group>"; };
@@ -310,7 +303,6 @@
 				D50A45FE216D32F30025BC1C /* AppLifeCycleMiddleware.swift */,
 				D57716E721720DD0005C1229 /* CatchErrorMiddleware.swift */,
 				D57716EC217211E6005C1229 /* LoggerMiddleware.swift */,
-				D50A45F9216D32C40025BC1C /* MainMiddleware.swift */,
 				D50A4612216D40A60025BC1C /* ParseMiddleware.swift */,
 				D50A4617216D422D0025BC1C /* ParseService.swift */,
 				D50A460D216D3FCF0025BC1C /* RouterMiddleware.swift */,
@@ -324,10 +316,18 @@
 			children = (
 				D50A4640216E7F740025BC1C /* APIResponseReducer.swift */,
 				D50A4622216D441A0025BC1C /* AppLifeCycleReducer.swift */,
-				D50A461D216D43D90025BC1C /* MainReducer.swift */,
 				D50A4654216EAF040025BC1C /* SongUpdaterReducer.swift */,
 			);
 			path = Reducer;
+			sourceTree = "<group>";
+		};
+		D537257D2173923100C7400B /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				D50A462C216D453F0025BC1C /* Transient.swift */,
+				D537257E2173925200C7400B /* UIKit+Extensions.swift */,
+			);
+			path = Foundation;
 			sourceTree = "<group>";
 		};
 		D59EF60B216D23F800C25F0A = {
@@ -354,6 +354,7 @@
 		D5CDD32A216D25D400BD36C4 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				D537257D2173923100C7400B /* Foundation */,
 				D50A45F5216D31F00025BC1C /* Message */,
 				D50A45F8216D32A30025BC1C /* Middleware */,
 				D50A45D4216D2F7F0025BC1C /* Model */,
@@ -364,7 +365,6 @@
 				D59EF628216D242C00C25F0A /* Info-watchOS.plist */,
 				D59EF635216D246500C25F0A /* Info-tvOS.plist */,
 				D59EF642216D248300C25F0A /* Info-macOS.plist */,
-				D50A462C216D453F0025BC1C /* Transient.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -658,12 +658,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D50A460E216D3FCF0025BC1C /* RouterMiddleware.swift in Sources */,
+				D537257F2173925200C7400B /* UIKit+Extensions.swift in Sources */,
 				D50A463C216D552C0025BC1C /* Parse.swift in Sources */,
-				D50A461E216D43D90025BC1C /* MainReducer.swift in Sources */,
 				D57716ED217211E6005C1229 /* LoggerMiddleware.swift in Sources */,
 				D50A4623216D441A0025BC1C /* AppLifeCycleReducer.swift in Sources */,
 				D50A464B216E978F0025BC1C /* SongUpdaterMiddleware.swift in Sources */,
-				D50A45FA216D32C40025BC1C /* MainMiddleware.swift in Sources */,
 				D50A45D8216D2F9D0025BC1C /* Song.swift in Sources */,
 				D50A45F1216D319B0025BC1C /* MainStateProvider.swift in Sources */,
 				D50A4641216E7F740025BC1C /* APIResponseReducer.swift in Sources */,
@@ -694,11 +693,9 @@
 			files = (
 				D50A460F216D3FCF0025BC1C /* RouterMiddleware.swift in Sources */,
 				D50A463D216D552C0025BC1C /* Parse.swift in Sources */,
-				D50A461F216D43D90025BC1C /* MainReducer.swift in Sources */,
 				D57716EE217211E6005C1229 /* LoggerMiddleware.swift in Sources */,
 				D50A4624216D441A0025BC1C /* AppLifeCycleReducer.swift in Sources */,
 				D50A464C216E978F0025BC1C /* SongUpdaterMiddleware.swift in Sources */,
-				D50A45FB216D32C40025BC1C /* MainMiddleware.swift in Sources */,
 				D50A45EC216D31710025BC1C /* Song.swift in Sources */,
 				D50A45F2216D319B0025BC1C /* MainStateProvider.swift in Sources */,
 				D50A4642216E7F740025BC1C /* APIResponseReducer.swift in Sources */,
@@ -729,11 +726,9 @@
 			files = (
 				D50A4610216D3FCF0025BC1C /* RouterMiddleware.swift in Sources */,
 				D50A463E216D552C0025BC1C /* Parse.swift in Sources */,
-				D50A4620216D43D90025BC1C /* MainReducer.swift in Sources */,
 				D57716EF217211E6005C1229 /* LoggerMiddleware.swift in Sources */,
 				D50A4625216D441A0025BC1C /* AppLifeCycleReducer.swift in Sources */,
 				D50A464D216E978F0025BC1C /* SongUpdaterMiddleware.swift in Sources */,
-				D50A45FC216D32C40025BC1C /* MainMiddleware.swift in Sources */,
 				D50A45E9216D31700025BC1C /* Song.swift in Sources */,
 				D50A45F3216D319B0025BC1C /* MainStateProvider.swift in Sources */,
 				D50A4643216E7F740025BC1C /* APIResponseReducer.swift in Sources */,
@@ -743,6 +738,7 @@
 				D50A45EE216D31740025BC1C /* MainState.swift in Sources */,
 				D50A460B216D3BB10025BC1C /* AppLifeCycleEvent.swift in Sources */,
 				D50A45E7216D31700025BC1C /* Artist.swift in Sources */,
+				D53725832173928000C7400B /* UIKit+Extensions.swift in Sources */,
 				D50A45E1216D31160025BC1C /* MainStore.swift in Sources */,
 				D50A4648216E8F950025BC1C /* RefreshTimerEvent.swift in Sources */,
 				D50A462A216D443B0025BC1C /* AppState.swift in Sources */,
@@ -764,11 +760,9 @@
 			files = (
 				D50A4611216D3FCF0025BC1C /* RouterMiddleware.swift in Sources */,
 				D50A463F216D552C0025BC1C /* Parse.swift in Sources */,
-				D50A4621216D43D90025BC1C /* MainReducer.swift in Sources */,
 				D57716F0217211E6005C1229 /* LoggerMiddleware.swift in Sources */,
 				D50A4626216D441A0025BC1C /* AppLifeCycleReducer.swift in Sources */,
 				D50A464E216E978F0025BC1C /* SongUpdaterMiddleware.swift in Sources */,
-				D50A45FD216D32C40025BC1C /* MainMiddleware.swift in Sources */,
 				D50A45E6216D316F0025BC1C /* Song.swift in Sources */,
 				D50A45F4216D319B0025BC1C /* MainStateProvider.swift in Sources */,
 				D50A4644216E7F740025BC1C /* APIResponseReducer.swift in Sources */,

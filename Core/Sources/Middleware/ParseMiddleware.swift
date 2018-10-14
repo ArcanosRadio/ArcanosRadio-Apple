@@ -10,4 +10,6 @@ public final class ParseMiddleware: SideEffectMiddleware {
     public func sideEffect(for event: EventProtocol) -> AnySideEffectProducer<Playlist?>? {
         return ParseService(event: event).map(AnySideEffectProducer.init)
     }
+
+    public init() { }
 }
