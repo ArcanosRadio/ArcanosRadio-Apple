@@ -29,11 +29,11 @@ extension MainStore: MainStateProvider {
         return
             scan((MainState?.none, MainState?.none)) { previous, newValue in
                 return (previous.1, newValue)
-                }.filter { pair in
-                    condition(pair.0, pair.1!)
-                }.map {
-                    $0.1!
-                }.subscribe(onNext: handler, onError: nil, onCompleted: nil, onDisposed: nil)
+            }.filter { pair in
+                condition(pair.0, pair.1!)
+            }.map {
+                $0.1!
+            }.subscribe(onNext: handler, onError: nil, onCompleted: nil, onDisposed: nil)
     }
 }
 

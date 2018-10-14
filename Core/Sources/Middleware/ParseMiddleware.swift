@@ -4,7 +4,7 @@ import SwiftRex
 public final class ParseMiddleware: SideEffectMiddleware {
     public typealias StateType = Playlist?
     public var actionHandler: ActionHandler?
-    public var allowEventToPropagate = false
+    public var allowEventToPropagate = true
     public var disposeBag = DisposeBag()
 
     public func sideEffect(for event: EventProtocol) -> AnySideEffectProducer<Playlist?>? {

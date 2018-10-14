@@ -13,8 +13,7 @@
 		D50A45D1216D2EBB0025BC1C /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D50A45D0216D2EBB0025BC1C /* Core.framework */; };
 		D50A45D3216D2EC20025BC1C /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D50A45D2216D2EC20025BC1C /* Core.framework */; };
 		D521A998216D27BA00261BE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D521A997216D27BA00261BE3 /* AppDelegate.swift */; };
-		D521A99A216D27BA00261BE3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D521A999216D27BA00261BE3 /* ViewController.swift */; };
-		D521A99D216D27BA00261BE3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D521A99B216D27BA00261BE3 /* Main.storyboard */; };
+		D521A99A216D27BA00261BE3 /* CurrentSongViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D521A999216D27BA00261BE3 /* CurrentSongViewController.swift */; };
 		D521A99F216D27BC00261BE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D521A99E216D27BC00261BE3 /* Assets.xcassets */; };
 		D521A9A2216D27BC00261BE3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D521A9A0216D27BC00261BE3 /* LaunchScreen.storyboard */; };
 		D521A9AD216D284200261BE3 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D521A9AB216D284200261BE3 /* Interface.storyboard */; };
@@ -32,6 +31,8 @@
 		D53725762173860300C7400B /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D53725752173860300C7400B /* Core.framework */; };
 		D53725772173860300C7400B /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D53725752173860300C7400B /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D537257A21738EA500C7400B /* Redux.swift in Sources */ = {isa = PBXBuildFile; fileRef = D537257921738EA500C7400B /* Redux.swift */; };
+		D537258D21739D2400C7400B /* CurrentSongViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D537258C21739D2400C7400B /* CurrentSongViewController.xib */; };
+		D537258F2173A0F700C7400B /* RouterMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D537258E2173A0F700C7400B /* RouterMiddleware.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,8 +104,7 @@
 		D50A45D2216D2EC20025BC1C /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D521A994216D27BA00261BE3 /* ArcanosRadio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArcanosRadio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D521A997216D27BA00261BE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D521A999216D27BA00261BE3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D521A99C216D27BA00261BE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D521A999216D27BA00261BE3 /* CurrentSongViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentSongViewController.swift; sourceTree = "<group>"; };
 		D521A99E216D27BC00261BE3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D521A9A1216D27BC00261BE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D521A9A3216D27BC00261BE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -127,6 +127,8 @@
 		D521A9DE216D287700261BE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D53725752173860300C7400B /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D537257921738EA500C7400B /* Redux.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Redux.swift; sourceTree = "<group>"; };
+		D537258C21739D2400C7400B /* CurrentSongViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrentSongViewController.xib; sourceTree = "<group>"; };
+		D537258E2173A0F700C7400B /* RouterMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterMiddleware.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,13 +212,8 @@
 		D521A996216D27BA00261BE3 /* ArcanosRadio iOS */ = {
 			isa = PBXGroup;
 			children = (
-				D521A997216D27BA00261BE3 /* AppDelegate.swift */,
-				D537257921738EA500C7400B /* Redux.swift */,
-				D521A999216D27BA00261BE3 /* ViewController.swift */,
-				D521A99B216D27BA00261BE3 /* Main.storyboard */,
-				D521A99E216D27BC00261BE3 /* Assets.xcassets */,
-				D521A9A0216D27BC00261BE3 /* LaunchScreen.storyboard */,
-				D521A9A3216D27BC00261BE3 /* Info.plist */,
+				D537258A21739CA500C7400B /* Bootstrap */,
+				D537258B21739D0200C7400B /* CurrentSong */,
 			);
 			path = "ArcanosRadio iOS";
 			sourceTree = "<group>";
@@ -254,6 +251,28 @@
 				D521A9DE216D287700261BE3 /* Info.plist */,
 			);
 			path = "ArcanosRadio tvOS";
+			sourceTree = "<group>";
+		};
+		D537258A21739CA500C7400B /* Bootstrap */ = {
+			isa = PBXGroup;
+			children = (
+				D521A997216D27BA00261BE3 /* AppDelegate.swift */,
+				D521A99E216D27BC00261BE3 /* Assets.xcassets */,
+				D521A9A3216D27BC00261BE3 /* Info.plist */,
+				D521A9A0216D27BC00261BE3 /* LaunchScreen.storyboard */,
+				D537257921738EA500C7400B /* Redux.swift */,
+				D537258E2173A0F700C7400B /* RouterMiddleware.swift */,
+			);
+			path = Bootstrap;
+			sourceTree = "<group>";
+		};
+		D537258B21739D0200C7400B /* CurrentSong */ = {
+			isa = PBXGroup;
+			children = (
+				D521A999216D27BA00261BE3 /* CurrentSongViewController.swift */,
+				D537258C21739D2400C7400B /* CurrentSongViewController.xib */,
+			);
+			path = CurrentSong;
 			sourceTree = "<group>";
 		};
 		D5CDD32E216D276E00BD36C4 = {
@@ -399,9 +418,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D537258D21739D2400C7400B /* CurrentSongViewController.xib in Resources */,
 				D521A9A2216D27BC00261BE3 /* LaunchScreen.storyboard in Resources */,
 				D521A99F216D27BC00261BE3 /* Assets.xcassets in Resources */,
-				D521A99D216D27BA00261BE3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -585,8 +604,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D537258F2173A0F700C7400B /* RouterMiddleware.swift in Sources */,
 				D537257A21738EA500C7400B /* Redux.swift in Sources */,
-				D521A99A216D27BA00261BE3 /* ViewController.swift in Sources */,
+				D521A99A216D27BA00261BE3 /* CurrentSongViewController.swift in Sources */,
 				D521A998216D27BA00261BE3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -626,14 +646,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		D521A99B216D27BA00261BE3 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D521A99C216D27BA00261BE3 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D521A9A0216D27BC00261BE3 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -716,7 +728,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "ArcanosRadio iOS/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/ArcanosRadio iOS/Bootstrap/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -784,7 +796,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "ArcanosRadio iOS/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/ArcanosRadio iOS/Bootstrap/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

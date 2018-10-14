@@ -3,7 +3,7 @@ import RxSwift
 import SwiftRex
 import UIKit
 
-class ViewController: UIViewController {
+class CurrentSongViewController: UIViewController {
     @IBOutlet private weak var songLabel: UILabel!
     @IBOutlet private weak var artistLabel: UILabel!
     @IBOutlet private weak var lyricsLabel: UILabel!
@@ -39,9 +39,6 @@ class ViewController: UIViewController {
 //                print("Battery: \(app.batteryLevel) (\(app.batteryState))")
                 print("************************************")
             }).disposed(by: disposeBag)
-
-        eventHandler.dispatch(AppLifeCycleEvent.boot(application: UIApplication.shared,
-                                                     launchOptions: nil))
     }
 
     private func updateUI(_ playlist: Playlist) {
@@ -51,5 +48,5 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: HasStateProvider { }
-extension ViewController: HasEventHandler { }
+extension CurrentSongViewController: HasStateProvider { }
+extension CurrentSongViewController: HasEventHandler { }

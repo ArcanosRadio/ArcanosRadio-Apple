@@ -5,7 +5,7 @@ import SwiftRex
 public let MainMiddleware: () -> ComposedMiddleware<MainState> = {
     return // LoggerMiddleware()
            AppLifeCycleMiddleware(trackDeviceOrientation: true, trackBattery: true, trackProximityState: true).lift(\.app)
-        <> RouterMiddleware()
+        <> RouterMiddleware().lift(\.navigation)
         <> SongUpdaterMiddleware().lift(\.currentSong)
         <> ParseMiddleware().lift(\.currentSong)
         <> DirectLineMiddleware()
@@ -19,12 +19,10 @@ public let MainReducer: () -> Reducer<MainState> = {
     return appLifeCycleReducer.lift(\.app)
         <> apiResponseReducer
         <> songUpdaterReducer.lift(\.currentSong)
-    //        <> navigationReducer
+        <> navigationReducer.lift(\.navigation)
 }
 
 extension MainStore {
-    public static let shared = MainStore()
-    
     public convenience init() {
         self.init(initialState: .init(),
                   reducer: MainReducer(),
@@ -34,12 +32,12 @@ extension MainStore {
 
 extension HasStateProvider {
     var stateProvider: MainStateProvider {
-        return MainStore.shared
+        return inject(MainStateProvider.self)
     }
 }
 
 extension HasEventHandler {
     var eventHandler: EventHandler {
-        return MainStore.shared
+        return inject(EventHandler.self)
     }
 }

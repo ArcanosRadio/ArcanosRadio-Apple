@@ -4,6 +4,9 @@ import SwiftRex
 
 public final class AppLifeCycleMiddleware: Middleware {
     public var actionHandler: ActionHandler?
+    private var eventHandler: EventHandler? {
+        return actionHandler as? EventHandler
+    }
     private let disposeBag = DisposeBag()
 
     public func handle(event: EventProtocol, getState: @escaping () -> AppState, next: @escaping (EventProtocol, @escaping () -> AppState) -> Void) {
@@ -114,7 +117,7 @@ extension AppLifeCycleMiddleware {
                     }
                 }
 
-                self?.actionHandler?.trigger(AppLifeCycleEvent.boot(application: application, launchOptions: launchOptions))
+                self?.eventHandler?.dispatch(AppLifeCycleEvent.boot(application: application, launchOptions: launchOptions))
             }).disposed(by: disposeBag)
     }
 }
