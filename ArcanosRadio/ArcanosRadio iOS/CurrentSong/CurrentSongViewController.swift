@@ -25,19 +25,7 @@ class CurrentSongViewController: UIViewController {
             .distinctUntilChanged()
             .asDriver(onErrorJustReturn: AppState())
             .drive(onNext: { app in
-                print("************************************")
-                dump(app)
-//                print("State: \(app.applicationState), active: \(app.active), foreground: \(app.foreground)")
-//                print("Bounds: \(app.bounds)")
-//                print("KB: \(app.keyboardHeight)")
-//                print("SA: \(app.safeAreaInsets)")
-//                print("HSC: \(app.horizontalSizeClass) x VSC: \(app.verticalSizeClass)")
-//                print("Interface Orientation: \(app.interfaceOrientation)")
-//                print("Device Orientation: \(app.deviceOrientation)")
-//                print("Proximity: \(app.proximityState)")
-//                print("Device: \(app.device)")
-//                print("Battery: \(app.batteryLevel) (\(app.batteryState))")
-                print("************************************")
+
             }).disposed(by: disposeBag)
     }
 
