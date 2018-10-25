@@ -112,6 +112,13 @@
 		D537259C2173A31B00C7400B /* NavigationReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D537259A2173A31B00C7400B /* NavigationReducer.swift */; };
 		D537259D2173A31B00C7400B /* NavigationReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D537259A2173A31B00C7400B /* NavigationReducer.swift */; };
 		D537259E2173A31B00C7400B /* NavigationReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D537259A2173A31B00C7400B /* NavigationReducer.swift */; };
+		D53DBCCC2173DE6C00F213A9 /* RadioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53DBCC92173DE6C00F213A9 /* RadioPlayer.swift */; };
+		D53DBCCD2173DE6C00F213A9 /* RadioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53DBCC92173DE6C00F213A9 /* RadioPlayer.swift */; };
+		D53DBCCF2173DEBB00F213A9 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D53DBCCE2173DEBB00F213A9 /* AVFoundation.framework */; };
+		D53DBCD12173DEC200F213A9 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D53DBCD02173DEC200F213A9 /* AVFoundation.framework */; };
+		D53DBCD32173DEC700F213A9 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D53DBCD22173DEC700F213A9 /* AVFoundation.framework */; };
+		D53DBCD52173DECE00F213A9 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D53DBCD42173DECE00F213A9 /* AVFoundation.framework */; };
+		D551DD982173E03E0086636D /* RadioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53DBCC92173DE6C00F213A9 /* RadioPlayer.swift */; };
 		D57716E321720AEA005C1229 /* ErrorAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57716E221720AEA005C1229 /* ErrorAction.swift */; };
 		D57716E421720AEA005C1229 /* ErrorAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57716E221720AEA005C1229 /* ErrorAction.swift */; };
 		D57716E521720AEA005C1229 /* ErrorAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57716E221720AEA005C1229 /* ErrorAction.swift */; };
@@ -166,6 +173,11 @@
 		D53725902173A1B900C7400B /* NavigationEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationEvent.swift; sourceTree = "<group>"; };
 		D53725952173A21400C7400B /* Sitemap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sitemap.swift; sourceTree = "<group>"; };
 		D537259A2173A31B00C7400B /* NavigationReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationReducer.swift; sourceTree = "<group>"; };
+		D53DBCC92173DE6C00F213A9 /* RadioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioPlayer.swift; sourceTree = "<group>"; };
+		D53DBCCE2173DEBB00F213A9 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		D53DBCD02173DEC200F213A9 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS5.0.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		D53DBCD22173DEC700F213A9 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		D53DBCD42173DECE00F213A9 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
 		D57716E221720AEA005C1229 /* ErrorAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorAction.swift; sourceTree = "<group>"; };
 		D57716E721720DD0005C1229 /* CatchErrorMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatchErrorMiddleware.swift; sourceTree = "<group>"; };
 		D57716EC217211E6005C1229 /* LoggerMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerMiddleware.swift; sourceTree = "<group>"; };
@@ -189,6 +201,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D53DBCCF2173DEBB00F213A9 /* AVFoundation.framework in Frameworks */,
 				35149B7D6D7E1E9E05BDAE60 /* Pods_Core_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -197,6 +210,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D53DBCD12173DEC200F213A9 /* AVFoundation.framework in Frameworks */,
 				FB85AE1358A0DA1EE69E8B0D /* Pods_Core_watchOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -205,6 +219,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D53DBCD32173DEC700F213A9 /* AVFoundation.framework in Frameworks */,
 				3EC8198A7D963C8DC903E3D4 /* Pods_Core_tvOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -213,6 +228,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D53DBCD52173DECE00F213A9 /* AVFoundation.framework in Frameworks */,
 				2E52DE6F15317CC04AE20D6B /* Pods_Core_macOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -223,6 +239,10 @@
 		064E59619041EE10291B737D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D53DBCCE2173DEBB00F213A9 /* AVFoundation.framework */,
+				D53DBCD02173DEC200F213A9 /* AVFoundation.framework */,
+				D53DBCD22173DEC700F213A9 /* AVFoundation.framework */,
+				D53DBCD42173DECE00F213A9 /* AVFoundation.framework */,
 				2A9501EB0FC6E9BDE0B1C198 /* Pods_Core_iOS.framework */,
 				72057BA05828C3C452A6DD93 /* Pods_Core_macOS.framework */,
 				E93DBC2D13B2B6E8BE3F6D68 /* Pods_Core_tvOS.framework */,
@@ -342,6 +362,14 @@
 			path = Foundation;
 			sourceTree = "<group>";
 		};
+		D53DBCC82173DE5800F213A9 /* Media */ = {
+			isa = PBXGroup;
+			children = (
+				D53DBCC92173DE6C00F213A9 /* RadioPlayer.swift */,
+			);
+			path = Media;
+			sourceTree = "<group>";
+		};
 		D59EF60B216D23F800C25F0A = {
 			isa = PBXGroup;
 			children = (
@@ -367,6 +395,7 @@
 			isa = PBXGroup;
 			children = (
 				D537257D2173923100C7400B /* Foundation */,
+				D53DBCC82173DE5800F213A9 /* Media */,
 				D50A45F5216D31F00025BC1C /* Message */,
 				D50A45F8216D32A30025BC1C /* Middleware */,
 				D50A45D4216D2F7F0025BC1C /* Model */,
@@ -693,6 +722,7 @@
 				D50A462D216D453F0025BC1C /* Transient.swift in Sources */,
 				D50A4650216EAE790025BC1C /* SongUpdaterAction.swift in Sources */,
 				D50A4618216D422D0025BC1C /* ParseService.swift in Sources */,
+				D551DD982173E03E0086636D /* RadioPlayer.swift in Sources */,
 				D53725912173A1B900C7400B /* NavigationEvent.swift in Sources */,
 				D50A4655216EAF040025BC1C /* SongUpdaterReducer.swift in Sources */,
 				D50A45DC216D307E0025BC1C /* MainState.swift in Sources */,
@@ -764,6 +794,7 @@
 				D50A462F216D453F0025BC1C /* Transient.swift in Sources */,
 				D50A4652216EAE790025BC1C /* SongUpdaterAction.swift in Sources */,
 				D50A461A216D422D0025BC1C /* ParseService.swift in Sources */,
+				D53DBCCC2173DE6C00F213A9 /* RadioPlayer.swift in Sources */,
 				D53725932173A1B900C7400B /* NavigationEvent.swift in Sources */,
 				D50A4657216EAF040025BC1C /* SongUpdaterReducer.swift in Sources */,
 				D50A45E8216D31700025BC1C /* Playlist.swift in Sources */,
@@ -791,6 +822,7 @@
 				D50A45EF216D31750025BC1C /* MainState.swift in Sources */,
 				D50A460C216D3BB10025BC1C /* AppLifeCycleEvent.swift in Sources */,
 				D50A45E4216D316F0025BC1C /* Artist.swift in Sources */,
+				D53DBCCD2173DE6C00F213A9 /* RadioPlayer.swift in Sources */,
 				D50A45E2216D31160025BC1C /* MainStore.swift in Sources */,
 				D50A4649216E8F950025BC1C /* RefreshTimerEvent.swift in Sources */,
 				D50A462B216D443B0025BC1C /* AppState.swift in Sources */,

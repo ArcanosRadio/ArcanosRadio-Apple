@@ -33,6 +33,9 @@
 		D537257A21738EA500C7400B /* Redux.swift in Sources */ = {isa = PBXBuildFile; fileRef = D537257921738EA500C7400B /* Redux.swift */; };
 		D537258D21739D2400C7400B /* CurrentSongViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D537258C21739D2400C7400B /* CurrentSongViewController.xib */; };
 		D537258F2173A0F700C7400B /* RouterMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D537258E2173A0F700C7400B /* RouterMiddleware.swift */; };
+		D551DD932173DF350086636D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D551DD922173DF340086636D /* AVFoundation.framework */; };
+		D551DD952173DF410086636D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D551DD942173DF410086636D /* AVFoundation.framework */; };
+		D551DD972173DF470086636D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D551DD962173DF470086636D /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,6 +132,9 @@
 		D537257921738EA500C7400B /* Redux.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Redux.swift; sourceTree = "<group>"; };
 		D537258C21739D2400C7400B /* CurrentSongViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrentSongViewController.xib; sourceTree = "<group>"; };
 		D537258E2173A0F700C7400B /* RouterMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterMiddleware.swift; sourceTree = "<group>"; };
+		D551DD922173DF340086636D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		D551DD942173DF410086636D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS5.0.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		D551DD962173DF470086636D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +149,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D551DD932173DF350086636D /* AVFoundation.framework in Frameworks */,
 				046EC706CF96E2C692BBFA0D /* Pods_ArcanosRadio_iOS.framework in Frameworks */,
 				D53725762173860300C7400B /* Core.framework in Frameworks */,
 			);
@@ -152,6 +159,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D551DD952173DF410086636D /* AVFoundation.framework in Frameworks */,
 				D50A45D1216D2EBB0025BC1C /* Core.framework in Frameworks */,
 				9D105224306376F7106C478B /* Pods_ArcanosRadio_watchOS_Extension.framework in Frameworks */,
 			);
@@ -161,6 +169,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D551DD972173DF470086636D /* AVFoundation.framework in Frameworks */,
 				D50A45D3216D2EC20025BC1C /* Core.framework in Frameworks */,
 				0CA88393E9D229938A92AC23 /* Pods_ArcanosRadio_tvOS.framework in Frameworks */,
 			);
@@ -186,6 +195,9 @@
 		9717CB35DDE7C3F3C1DE4F51 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D551DD922173DF340086636D /* AVFoundation.framework */,
+				D551DD942173DF410086636D /* AVFoundation.framework */,
+				D551DD962173DF470086636D /* AVFoundation.framework */,
 				D50A45D2216D2EC20025BC1C /* Core.framework */,
 				D50A45D0216D2EBB0025BC1C /* Core.framework */,
 				D50A45CE216D2EB30025BC1C /* Core.framework */,
@@ -380,15 +392,30 @@
 				TargetAttributes = {
 					D521A993216D27BA00261BE3 = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					D521A9A8216D284200261BE3 = {
 						CreatedOnToolsVersion = 10.0;
 					};
 					D521A9B4216D284300261BE3 = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.BackgroundModes.watchos.extension = {
+								enabled = 1;
+							};
+						};
 					};
 					D521A9D2216D287500261BE3 = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.BackgroundModes.appletvos = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};

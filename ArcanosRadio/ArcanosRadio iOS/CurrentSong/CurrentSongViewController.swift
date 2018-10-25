@@ -9,9 +9,21 @@ class CurrentSongViewController: UIViewController {
     @IBOutlet private weak var lyricsLabel: UILabel!
     @IBOutlet private weak var albumArtImageView: UIImageView!
     private let disposeBag = DisposeBag()
+    private let radioPlayer = RadioPlayer()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        stateProvider[\.streamingServer]
+            .distinctUntilChanged()
+            .subscribe(onNext: { [weak self] server in
+                if case let .success(streamingServer)? = server {
+                    self?.radioPlayer.configure(url: streamingServer.streamingUrl)
+                    self?.radioPlayer.play()
+                } else {
+                    self?.radioPlayer.stop()
+                }
+            }).disposed(by: disposeBag)
 
         stateProvider[\.currentSong]
             .distinctUntilChanged()
