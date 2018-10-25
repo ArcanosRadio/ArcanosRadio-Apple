@@ -2,13 +2,13 @@ PODS:
   - RxCocoa (4.3.1):
     - RxSwift (~> 4.0)
   - RxSwift (4.3.1)
-  - SwiftRex (0.2.3):
+  - SwiftRex (0.3.1):
     - RxSwift
 
 DEPENDENCIES:
   - RxCocoa (from `https://github.com/ReactiveX/RxSwift.git`)
   - RxSwift (from `https://github.com/ReactiveX/RxSwift.git`)
-  - SwiftRex (from `https://github.com/SwiftRex/SwiftRex.git`, branch `swift-42`)
+  - SwiftRex (from `https://github.com/SwiftRex/SwiftRex.git`)
 
 EXTERNAL SOURCES:
   RxCocoa:
@@ -16,7 +16,6 @@ EXTERNAL SOURCES:
   RxSwift:
     :git: https://github.com/ReactiveX/RxSwift.git
   SwiftRex:
-    :branch: swift-42
     :git: https://github.com/SwiftRex/SwiftRex.git
 
 CHECKOUT OPTIONS:
@@ -27,14 +26,14 @@ CHECKOUT OPTIONS:
     :commit: 0df62b4d562f8620d4b795b18e4adf0b631527a1
     :git: https://github.com/ReactiveX/RxSwift.git
   SwiftRex:
-    :commit: 3550d66215cd4a7cbcdcaadf878fcee70997a3e5
+    :commit: cae6469087c262040ed51934fdeaac1133f1516e
     :git: https://github.com/SwiftRex/SwiftRex.git
 
 SPEC CHECKSUMS:
   RxCocoa: 78763c7b07d02455598d9fc3c1ad091a28b73635
   RxSwift: fe0fd770a43acdb7d0a53da411c9b892e69bb6e4
-  SwiftRex: a12fa15a5d3d90cb32d87a2bb154306a6c30e958
+  SwiftRex: 2ccc28580990ba76d3e9396dd3c9a39332634abf
 
-PODFILE CHECKSUM: 97fc734bd0f7ea687c998fb4b272130ee3109967
+PODFILE CHECKSUM: cb9897edd2f4bd7e1db7c6ef95b38af05369ebe6
 
-COCOAPODS: 1.6.0.beta.1
+COCOAPODS: 1.6.0.beta.2
