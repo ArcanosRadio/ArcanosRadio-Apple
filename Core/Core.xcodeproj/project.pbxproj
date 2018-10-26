@@ -98,6 +98,10 @@
 		D50A4656216EAF040025BC1C /* SongUpdaterReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A4654216EAF040025BC1C /* SongUpdaterReducer.swift */; };
 		D50A4657216EAF040025BC1C /* SongUpdaterReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A4654216EAF040025BC1C /* SongUpdaterReducer.swift */; };
 		D50A4658216EAF040025BC1C /* SongUpdaterReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A4654216EAF040025BC1C /* SongUpdaterReducer.swift */; };
+		D52FE7302183D47C000DA781 /* FP.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52FE72F2183D47C000DA781 /* FP.swift */; };
+		D52FE7312183D47C000DA781 /* FP.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52FE72F2183D47C000DA781 /* FP.swift */; };
+		D52FE7322183D47C000DA781 /* FP.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52FE72F2183D47C000DA781 /* FP.swift */; };
+		D52FE7332183D47C000DA781 /* FP.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52FE72F2183D47C000DA781 /* FP.swift */; };
 		D537257F2173925200C7400B /* UIKit+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D537257E2173925200C7400B /* UIKit+Extensions.swift */; };
 		D53725832173928000C7400B /* UIKit+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D537257E2173925200C7400B /* UIKit+Extensions.swift */; };
 		D53725912173A1B900C7400B /* NavigationEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53725902173A1B900C7400B /* NavigationEvent.swift */; };
@@ -169,6 +173,7 @@
 		D50A464A216E978F0025BC1C /* SongUpdaterMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongUpdaterMiddleware.swift; sourceTree = "<group>"; };
 		D50A464F216EAE790025BC1C /* SongUpdaterAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongUpdaterAction.swift; sourceTree = "<group>"; };
 		D50A4654216EAF040025BC1C /* SongUpdaterReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongUpdaterReducer.swift; sourceTree = "<group>"; };
+		D52FE72F2183D47C000DA781 /* FP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FP.swift; sourceTree = "<group>"; };
 		D537257E2173925200C7400B /* UIKit+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKit+Extensions.swift"; sourceTree = "<group>"; };
 		D53725902173A1B900C7400B /* NavigationEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationEvent.swift; sourceTree = "<group>"; };
 		D53725952173A21400C7400B /* Sitemap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sitemap.swift; sourceTree = "<group>"; };
@@ -356,6 +361,7 @@
 		D537257D2173923100C7400B /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				D52FE72F2183D47C000DA781 /* FP.swift */,
 				D50A462C216D453F0025BC1C /* Transient.swift */,
 				D537257E2173925200C7400B /* UIKit+Extensions.swift */,
 			);
@@ -718,6 +724,7 @@
 				D50A4646216E8F950025BC1C /* RefreshTimerEvent.swift in Sources */,
 				D50A4628216D443B0025BC1C /* AppState.swift in Sources */,
 				D50A4613216D40A60025BC1C /* ParseMiddleware.swift in Sources */,
+				D52FE7302183D47C000DA781 /* FP.swift in Sources */,
 				D50A4604216D383E0025BC1C /* ResourceState.swift in Sources */,
 				D50A462D216D453F0025BC1C /* Transient.swift in Sources */,
 				D50A4650216EAE790025BC1C /* SongUpdaterAction.swift in Sources */,
@@ -737,6 +744,7 @@
 			files = (
 				D53725972173A21400C7400B /* Sitemap.swift in Sources */,
 				D50A463D216D552C0025BC1C /* Parse.swift in Sources */,
+				D52FE7312183D47C000DA781 /* FP.swift in Sources */,
 				D57716EE217211E6005C1229 /* LoggerMiddleware.swift in Sources */,
 				D50A4624216D441A0025BC1C /* AppLifeCycleReducer.swift in Sources */,
 				D50A464C216E978F0025BC1C /* SongUpdaterMiddleware.swift in Sources */,
@@ -790,6 +798,7 @@
 				D50A4648216E8F950025BC1C /* RefreshTimerEvent.swift in Sources */,
 				D50A462A216D443B0025BC1C /* AppState.swift in Sources */,
 				D50A4615216D40A60025BC1C /* ParseMiddleware.swift in Sources */,
+				D52FE7322183D47C000DA781 /* FP.swift in Sources */,
 				D50A4606216D3A250025BC1C /* ResourceState.swift in Sources */,
 				D50A462F216D453F0025BC1C /* Transient.swift in Sources */,
 				D50A4652216EAE790025BC1C /* SongUpdaterAction.swift in Sources */,
@@ -816,6 +825,7 @@
 				D50A45F4216D319B0025BC1C /* MainStateProvider.swift in Sources */,
 				D53725942173A1B900C7400B /* NavigationEvent.swift in Sources */,
 				D50A4644216E7F740025BC1C /* APIResponseReducer.swift in Sources */,
+				D52FE7332183D47C000DA781 /* FP.swift in Sources */,
 				D50A4602216D32F30025BC1C /* AppLifeCycleMiddleware.swift in Sources */,
 				D50A4635216D48B10025BC1C /* StreamingServer.swift in Sources */,
 				D57716E621720AEA005C1229 /* ErrorAction.swift in Sources */,

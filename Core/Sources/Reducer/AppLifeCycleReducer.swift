@@ -4,55 +4,73 @@ import SwiftRex
 public let appLifeCycleReducer = Reducer<AppState> { state, action in
     guard let lifeCycleAction = action as? AppLifeCycleEvent else { return state }
 
-    var stateCopy = state
-
     #if os(iOS)
     switch lifeCycleAction {
     case let .boot(application, launchOptions):
-        stateCopy.application = .some(application)
-        stateCopy.launchOptions = launchOptions.map(Transient.some) ?? . none
-        stateCopy.device = UIDevice.current.userInterfaceIdiom
-    case .applicationStateDidChange:
-        stateCopy.applicationState = stateCopy.application.value?.applicationState ?? .background
-    case let .keyboardToggle(height):
-        stateCopy.keyboardHeight = height
-    case .didChangeBatteryLevel:
-        stateCopy.batteryMonitor = UIDevice.current.isBatteryMonitoringEnabled
-            ? .init(level: UIDevice.current.batteryLevel,
-                    state: UIDevice.current.batteryState)
-            : nil
-    case .proximityStateDidChange:
-        stateCopy.proximityMonitor = UIDevice.current.isProximityMonitoringEnabled
-            ? .init(isNear: UIDevice.current.proximityState)
-            : nil
-    case .didChangeBounds, .keyWindowSet, .didRotateDevice:
-        break
-    }
-    #elseif os(watchOS)
-    #elseif os(tvOS)
-    #elseif os(macOS)
-    #endif
+        return mset(state) {
+            $0.application = .some(application)
+            $0.launchOptions = launchOptions.map(Transient.some) ?? . none
+            $0.device = UIDevice.current.userInterfaceIdiom
+            $0 = boundsReducer(state: $0)
+        }
 
-    return boundsReducer(state: stateCopy)
+    case .applicationStateDidChange:
+        return mset(state) {
+            $0.applicationState = $0.application.value?.applicationState ?? .background
+            $0 = boundsReducer(state: $0)
+        }
+
+    case let .keyboardToggle(height):
+        return mset(state) {
+            $0.keyboardHeight = height
+            $0 = boundsReducer(state: $0)
+        }
+
+    case .didChangeBatteryLevel:
+        return mset(state) {
+            $0.batteryMonitor = UIDevice.current.isBatteryMonitoringEnabled
+                ? .init(level: UIDevice.current.batteryLevel,
+                        state: UIDevice.current.batteryState)
+                : nil
+            $0 = boundsReducer(state: $0)
+        }
+
+    case .proximityStateDidChange:
+        return mset(state) {
+            $0.proximityMonitor = UIDevice.current.isProximityMonitoringEnabled
+                ? .init(isNear: UIDevice.current.proximityState)
+                : nil
+            $0 = boundsReducer(state: $0)
+        }
+
+    case .didChangeBounds, .keyWindowSet, .didRotateDevice:
+        return set(state, boundsReducer)
+    }
+
+    #elseif os(watchOS)
+    return state
+    #elseif os(tvOS)
+    return state
+    #elseif os(macOS)
+    return state
+    #endif
 }
 
 #if os(iOS)
 private func boundsReducer(state: AppState) -> AppState {
-    var stateCopy = state
+    return mset(state) {
+        guard let application = $0.application.value else { return }
+        $0.interfaceOrientation = application.statusBarOrientation
+        $0.deviceOrientation = UIDevice.current.isGeneratingDeviceOrientationNotifications ? UIDevice.current.orientation : .unknown
 
-    guard let application = state.application.value else { return stateCopy }
-    stateCopy.interfaceOrientation = application.statusBarOrientation
-    stateCopy.deviceOrientation = UIDevice.current.isGeneratingDeviceOrientationNotifications ? UIDevice.current.orientation : .unknown
-
-    guard let window = application.keyWindow else { return stateCopy }
-    stateCopy.bounds = window.bounds
-    stateCopy.sizeClass = .init(horizontal: window.traitCollection.horizontalSizeClass,
-                                vertical: window.traitCollection.verticalSizeClass)
-    if #available(iOS 11, *) {
-        stateCopy.safeAreaInsets = window.safeAreaInsets
+        guard let window = application.keyWindow else { return }
+        $0.bounds = window.bounds
+        $0.sizeClass = .init(horizontal: window.traitCollection.horizontalSizeClass,
+                             vertical: window.traitCollection.verticalSizeClass)
+        if #available(iOS 11, *) {
+            $0.safeAreaInsets = window.safeAreaInsets
+        }
     }
-
-    return stateCopy
 }
 
 #elseif os(watchOS)
