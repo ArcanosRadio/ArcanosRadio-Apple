@@ -1,6 +1,7 @@
 import Foundation
 import UIKit
 
+#if os(iOS)
 extension UIInterfaceOrientation: CustomDebugStringConvertible {
     public var debugDescription: String {
         switch self {
@@ -9,26 +10,6 @@ extension UIInterfaceOrientation: CustomDebugStringConvertible {
         case .portrait: return "portrait"
         case .portraitUpsideDown: return "portraitUpsideDown"
         case .unknown: return "unknown"
-        }
-    }
-}
-
-extension UIUserInterfaceSizeClass: CustomDebugStringConvertible {
-    public var debugDescription: String {
-        switch self {
-        case .compact: return "compact"
-        case .regular: return "regular"
-        case .unspecified: return "unspecified"
-        }
-    }
-}
-
-extension UIApplication.State: CustomDebugStringConvertible {
-    public var debugDescription: String {
-        switch self {
-        case .active: return "active"
-        case .background: return "background"
-        case .inactive: return "inactive"
         }
     }
 }
@@ -58,6 +39,49 @@ extension UIDevice.BatteryState: CustomDebugStringConvertible {
     }
 }
 
+public struct BatteryMonitor: Codable, Equatable {
+    public let level: Float
+    public let state: UIDevice.BatteryState
+
+    public init(level: Float, state: UIDevice.BatteryState) {
+        self.level = level
+        self.state = state
+    }
+}
+
+public struct ProximityMonitor: Codable, Equatable {
+    public let isNear: Bool
+
+    public init(isNear: Bool) {
+        self.isNear = isNear
+    }
+}
+
+extension UIInterfaceOrientation: Codable, Equatable { }
+extension UIDeviceOrientation: Codable { }
+extension UIDevice.BatteryState: Codable { }
+#endif
+
+extension UIUserInterfaceSizeClass: CustomDebugStringConvertible {
+    public var debugDescription: String {
+        switch self {
+        case .compact: return "compact"
+        case .regular: return "regular"
+        case .unspecified: return "unspecified"
+        }
+    }
+}
+
+extension UIApplication.State: CustomDebugStringConvertible {
+    public var debugDescription: String {
+        switch self {
+        case .active: return "active"
+        case .background: return "background"
+        case .inactive: return "inactive"
+        }
+    }
+}
+
 extension UIUserInterfaceIdiom: CustomDebugStringConvertible {
     public var debugDescription: String {
         switch self {
@@ -70,11 +94,8 @@ extension UIUserInterfaceIdiom: CustomDebugStringConvertible {
     }
 }
 
-extension UIInterfaceOrientation: Codable, Equatable { }
 extension UIUserInterfaceSizeClass: Codable, Equatable { }
 extension UIApplication.State: Codable, Equatable { }
-extension UIDeviceOrientation: Codable { }
-extension UIDevice.BatteryState: Codable { }
 extension UIUserInterfaceIdiom: Codable { }
 
 extension UIEdgeInsets: Codable {
@@ -97,24 +118,6 @@ extension UIEdgeInsets: Codable {
         try container.encode(left, forKey: .left)
         try container.encode(bottom, forKey: .bottom)
         try container.encode(right, forKey: .right)
-    }
-}
-
-public struct BatteryMonitor: Codable, Equatable {
-    public let level: Float
-    public let state: UIDevice.BatteryState
-
-    public init(level: Float, state: UIDevice.BatteryState) {
-        self.level = level
-        self.state = state
-    }
-}
-
-public struct ProximityMonitor: Codable, Equatable {
-    public let isNear: Bool
-
-    public init(isNear: Bool) {
-        self.isNear = isNear
     }
 }
 

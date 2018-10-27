@@ -1,6 +1,14 @@
 import Foundation
 import SwiftRex
 
+#if os(iOS) || os(tvOS)
+import UIKit
+#elseif os(watchOS)
+import WatchKit
+#elseif os(macOS)
+import AppKit
+#endif
+
 public let appLifeCycleReducer = Reducer<AppState> { state, action in
     guard let lifeCycleAction = action as? AppLifeCycleEvent else { return state }
 
@@ -48,9 +56,64 @@ public let appLifeCycleReducer = Reducer<AppState> { state, action in
     }
 
     #elseif os(watchOS)
-    return state
+
+    switch lifeCycleAction {
+    case .boot, .applicationStateDidChange:
+        let application = WKExtension.shared()
+        let device = WKInterfaceDevice.current()
+        return mset(state) {
+            $0.application = .some(application)
+            $0.applicationState = application.applicationState
+            $0.isApplicationRunningInDock = application.isApplicationRunningInDock
+            if #available(watchOS 4.2, *) {
+                $0.isAutorotated = application.isAutorotated
+            }
+            $0.isAutorotating = application.isAutorotating
+            $0.isFrontmostTimeoutExtended = application.isFrontmostTimeoutExtended
+            $0.batteryLevel = device.batteryLevel
+            $0.batteryState = device.batteryState
+            $0.crownOrientation = device.crownOrientation
+            $0.isBatteryMonitoringEnabled = device.isBatteryMonitoringEnabled
+            $0.layoutDirection = device.layoutDirection
+            $0.localizedModel = device.localizedModel
+            $0.model = device.model
+            $0.name = device.name
+            $0.preferredContentSizeCategory = device.preferredContentSizeCategory
+            $0.screenBounds = device.screenBounds
+            $0.screenScale = device.screenScale
+            $0.systemName = device.systemName
+            $0.systemVersion = device.systemVersion
+            $0.waterResistanceRating = device.waterResistanceRating
+            $0.wristLocation = device.wristLocation
+        }
+    case .didChangeBatteryLevel:
+        let device = WKInterfaceDevice.current()
+        return mset(state) {
+            $0.batteryLevel = device.batteryLevel
+            $0.batteryState = device.batteryState
+        }
+    }
+
     #elseif os(tvOS)
-    return state
+    switch lifeCycleAction {
+    case let .boot(application, launchOptions):
+        return mset(state) {
+            $0.application = .some(application)
+            $0.launchOptions = launchOptions.map(Transient.some) ?? . none
+            $0.device = UIDevice.current.userInterfaceIdiom
+            $0 = boundsReducer(state: $0)
+        }
+
+    case .applicationStateDidChange:
+        return mset(state) {
+            $0.applicationState = $0.application.value?.applicationState ?? .background
+            $0 = boundsReducer(state: $0)
+        }
+
+    case .didChangeBounds, .keyWindowSet:
+        return set(state, boundsReducer)
+    }
+
     #elseif os(macOS)
     return state
     #endif
@@ -72,13 +135,17 @@ private func boundsReducer(state: AppState) -> AppState {
         }
     }
 }
+#endif
 
-#elseif os(watchOS)
-private func boundsReducer(state: AppState) -> AppState { return state }
-
-#elseif os(tvOS)
-private func boundsReducer(state: AppState) -> AppState { return state }
-
-#elseif os(macOS)
-private func boundsReducer(state: AppState) -> AppState { return state }
+#if os(tvOS)
+private func boundsReducer(state: AppState) -> AppState {
+    return mset(state) {
+        guard let application = $0.application.value else { return }
+        guard let window = application.keyWindow else { return }
+        $0.bounds = window.bounds
+        if #available(tvOS 11, *) {
+            $0.safeAreaInsets = window.safeAreaInsets
+        }
+    }
+}
 #endif

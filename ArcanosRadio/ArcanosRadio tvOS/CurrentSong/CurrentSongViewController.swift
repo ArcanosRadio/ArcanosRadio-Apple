@@ -42,6 +42,7 @@ final class CurrentSongViewController: UIViewController {
     }
 
     private func updateUI(_ playlist: Playlist) {
+        dump(playlist)
         artistLabel.text = playlist.song.artist.artistName
         songLabel.text = playlist.song.songName
         lyricsLabel.text = playlist.song.lyrics?.name

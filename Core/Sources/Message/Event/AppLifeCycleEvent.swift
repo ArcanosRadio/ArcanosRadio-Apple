@@ -20,11 +20,16 @@ import WatchKit
 
 public enum AppLifeCycleEvent {
     case boot
+    case applicationStateDidChange
+    case didChangeBatteryLevel
 }
 
 #elseif os(tvOS)
 public enum AppLifeCycleEvent {
-    case boot
+    case boot(application: UIApplication, launchOptions: [UIApplication.LaunchOptionsKey: Any]?)
+    case keyWindowSet(UIWindow)
+    case applicationStateDidChange
+    case didChangeBounds
 }
 
 #elseif os(macOS)

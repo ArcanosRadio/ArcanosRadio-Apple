@@ -1,13 +1,10 @@
-//
-//  ExtensionDelegate.swift
-//  ArcanosRadio watchOS Extension
-//
-//  Created by Luiz Rodrigo Martins Barbosa on 09.10.18.
-//
-
+import Core
+import SwiftRex
 import WatchKit
 
 class ExtensionDelegate: NSObject, WKExtensionDelegate {
+
+    fileprivate let store = MainStore()
 
     func applicationDidFinishLaunching() {
         // Perform any final initialization of your application.
@@ -23,6 +20,9 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate {
     }
 
     func handle(_ backgroundTasks: Set<WKRefreshBackgroundTask>) {
+        backgroundTasks.forEach {
+            $0.setTaskCompleted()
+        }
         // Sent when the system needs to launch the application in the background to process tasks. Tasks arrive in a set, so loop through and process each one.
 //        for task in backgroundTasks {
 //            // Use a switch statement to check the task type
@@ -50,5 +50,62 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate {
 //                task.setTaskCompletedWithSnapshot(false)
 //            }
 //        }
+    }
+}
+
+func inject<T>(_ type: T.Type) -> T {
+    let appDelegate = WKExtension.shared().delegate as! ExtensionDelegate
+
+    if type == MainStateProvider.self {
+        return appDelegate.store as! T
+    }
+
+    if type == EventHandler.self {
+        return appDelegate.store as! T
+    }
+
+    fatalError("Oops, dependency not mapped")
+}
+
+public let MainMiddleware: () -> ComposedMiddleware<MainState> = {
+    return AppLifeCycleMiddleware(trackDeviceOrientation: true, trackBattery: true, trackProximityState: true).lift(\.app)
+//        <> RouterMiddleware().lift(\.navigation)
+//        <> SongUpdaterMiddleware().lift(\.currentSong)
+//        <> ParseMiddleware().lift(\.currentSong)
+        <> DirectLineMiddleware()
+        <> LoggerMiddleware(eventFilter: { _, _ in true },
+                            actionFilter: { _, _ in true },
+                            debugOnly: true,
+                            stateTransformer: { _ in "" })
+        <> CatchErrorMiddleware { errorAction, state in
+            print("Error: \(errorAction.error) on \(errorAction.message)")
+            return .cauterize
+    }
+}
+
+public let MainReducer: () -> Reducer<MainState> = {
+    return appLifeCycleReducer.lift(\.app)
+//        <> apiResponseReducer
+//        <> songUpdaterReducer.lift(\.currentSong)
+//        <> navigationReducer.lift(\.navigation)
+}
+
+extension MainStore {
+    public convenience init() {
+        self.init(initialState: .init(),
+                  reducer: MainReducer(),
+                  middleware: MainMiddleware())
+    }
+}
+
+extension HasStateProvider {
+    var stateProvider: MainStateProvider {
+        return inject(MainStateProvider.self)
+    }
+}
+
+extension HasEventHandler {
+    var eventHandler: EventHandler {
+        return inject(EventHandler.self)
     }
 }
