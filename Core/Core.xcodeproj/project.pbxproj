@@ -141,6 +141,10 @@
 		D5CDD32D216D26A700BD36C4 /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = D59EF618216D23F800C25F0A /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D5DEB1C7218424130050BA0B /* WatchKit+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DEB1C6218424130050BA0B /* WatchKit+Extensions.swift */; };
 		D5DEB1D22184B5BF0050BA0B /* UIKit+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D537257E2173925200C7400B /* UIKit+Extensions.swift */; };
+		D5F34E86218F9FD700773247 /* EmptyInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F34E85218F9FD700773247 /* EmptyInitializer.swift */; };
+		D5F34E87218F9FD700773247 /* EmptyInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F34E85218F9FD700773247 /* EmptyInitializer.swift */; };
+		D5F34E88218F9FD700773247 /* EmptyInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F34E85218F9FD700773247 /* EmptyInitializer.swift */; };
+		D5F34E89218F9FD700773247 /* EmptyInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F34E85218F9FD700773247 /* EmptyInitializer.swift */; };
 		FB85AE1358A0DA1EE69E8B0D /* Pods_Core_watchOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7707400BC8C8FA2EBCD7CFD6 /* Pods_Core_watchOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -199,6 +203,7 @@
 		D59EF63F216D248300C25F0A /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D59EF642216D248300C25F0A /* Info-macOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-macOS.plist"; sourceTree = "<group>"; };
 		D5DEB1C6218424130050BA0B /* WatchKit+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WatchKit+Extensions.swift"; sourceTree = "<group>"; };
+		D5F34E85218F9FD700773247 /* EmptyInitializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyInitializer.swift; sourceTree = "<group>"; };
 		D8BD29EDC070D04BC602FCDB /* Pods-Core watchOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Core watchOS.debug.xcconfig"; path = "Target Support Files/Pods-Core watchOS/Pods-Core watchOS.debug.xcconfig"; sourceTree = "<group>"; };
 		E93DBC2D13B2B6E8BE3F6D68 /* Pods_Core_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Core_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3EB95A34FA8028502F7CFC3 /* Pods-Core tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Core tvOS.debug.xcconfig"; path = "Target Support Files/Pods-Core tvOS/Pods-Core tvOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -367,6 +372,7 @@
 		D537257D2173923100C7400B /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				D5F34E85218F9FD700773247 /* EmptyInitializer.swift */,
 				D52FE72F2183D47C000DA781 /* FP.swift */,
 				D50A462C216D453F0025BC1C /* Transient.swift */,
 				D537257E2173925200C7400B /* UIKit+Extensions.swift */,
@@ -715,6 +721,7 @@
 				D50A463C216D552C0025BC1C /* Parse.swift in Sources */,
 				D57716ED217211E6005C1229 /* LoggerMiddleware.swift in Sources */,
 				D50A4623216D441A0025BC1C /* AppLifeCycleReducer.swift in Sources */,
+				D5F34E86218F9FD700773247 /* EmptyInitializer.swift in Sources */,
 				D50A464B216E978F0025BC1C /* SongUpdaterMiddleware.swift in Sources */,
 				D50A45D8216D2F9D0025BC1C /* Song.swift in Sources */,
 				D50A45F1216D319B0025BC1C /* MainStateProvider.swift in Sources */,
@@ -761,6 +768,7 @@
 				D53725922173A1B900C7400B /* NavigationEvent.swift in Sources */,
 				D50A4642216E7F740025BC1C /* APIResponseReducer.swift in Sources */,
 				D50A4600216D32F30025BC1C /* AppLifeCycleMiddleware.swift in Sources */,
+				D5F34E87218F9FD700773247 /* EmptyInitializer.swift in Sources */,
 				D50A4633216D48B10025BC1C /* StreamingServer.swift in Sources */,
 				D57716E421720AEA005C1229 /* ErrorAction.swift in Sources */,
 				D50A45ED216D31730025BC1C /* MainState.swift in Sources */,
@@ -790,6 +798,7 @@
 				D57716EF217211E6005C1229 /* LoggerMiddleware.swift in Sources */,
 				D50A4625216D441A0025BC1C /* AppLifeCycleReducer.swift in Sources */,
 				D50A464D216E978F0025BC1C /* SongUpdaterMiddleware.swift in Sources */,
+				D5F34E88218F9FD700773247 /* EmptyInitializer.swift in Sources */,
 				D50A45E9216D31700025BC1C /* Song.swift in Sources */,
 				D50A45F3216D319B0025BC1C /* MainStateProvider.swift in Sources */,
 				D50A4643216E7F740025BC1C /* APIResponseReducer.swift in Sources */,
@@ -836,6 +845,7 @@
 				D52FE7332183D47C000DA781 /* FP.swift in Sources */,
 				D50A4602216D32F30025BC1C /* AppLifeCycleMiddleware.swift in Sources */,
 				D50A4635216D48B10025BC1C /* StreamingServer.swift in Sources */,
+				D5F34E89218F9FD700773247 /* EmptyInitializer.swift in Sources */,
 				D57716E621720AEA005C1229 /* ErrorAction.swift in Sources */,
 				D50A45EF216D31750025BC1C /* MainState.swift in Sources */,
 				D50A460C216D3BB10025BC1C /* AppLifeCycleEvent.swift in Sources */,

@@ -8,8 +8,8 @@ import AppKit
 
 public struct AppState: Codable, Equatable {
 #if os(iOS)
-    public var application: Transient<UIApplication> = .none
-    public var launchOptions: Transient<[UIApplication.LaunchOptionsKey: Any?]> = .none
+    public var application: Transient<UIApplication?> = .init(nil)
+    public var launchOptions: Transient<[UIApplication.LaunchOptionsKey: Any?]> = .init([:])
     public var interfaceOrientation: UIInterfaceOrientation = .unknown
     public var deviceOrientation: UIDeviceOrientation = .unknown
     public var applicationState: UIApplication.State = .inactive
@@ -22,7 +22,7 @@ public struct AppState: Codable, Equatable {
     public var sizeClass: SizeClass = .init()
 
 #elseif os(watchOS)
-    public var application: Transient<WKExtension> = .none
+    public var application: Transient<WKExtension?> = .init(nil)
     public var applicationState: WKApplicationState = .inactive
     public var isApplicationRunningInDock: Bool = false
     public var isAutorotated: Bool = false
@@ -45,8 +45,8 @@ public struct AppState: Codable, Equatable {
     public var wristLocation: WKInterfaceDeviceWristLocation = .left
 
 #elseif os(tvOS)
-    public var application: Transient<UIApplication> = .none
-    public var launchOptions: Transient<[UIApplication.LaunchOptionsKey: Any?]> = .none
+    public var application: Transient<UIApplication?> = .init(nil)
+    public var launchOptions: Transient<[UIApplication.LaunchOptionsKey: Any?]> = .init([:])
     public var applicationState: UIApplication.State = .inactive
     public var bounds: CGRect = .zero
     public var safeAreaInsets: UIEdgeInsets = .zero

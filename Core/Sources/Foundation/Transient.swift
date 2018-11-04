@@ -2,10 +2,8 @@
 /// of automatic Equatable, Hashable, and Codable synthesis. This allows one to
 /// declare a "cache"-like property in a value type without giving up the rest
 /// of the benefits of synthesis.
-public enum Transient<Wrapped>: Equatable, Hashable, Codable {
-
-    case none
-    case some(Wrapped)
+public struct Transient<Wrapped>: Equatable, Hashable, Encodable {
+    let value: Wrapped
 
     public static func == (lhs: Transient<Wrapped>, rhs: Transient<Wrapped>) -> Bool {
         // By always returning true, transient values never produce false negatives
@@ -20,26 +18,19 @@ public enum Transient<Wrapped>: Equatable, Hashable, Codable {
         return 0
     }
 
-    public init(from decoder: Decoder) {
-        // Since the value is transient, it's not encoded, so at decode-time we
-        // merely clear it.
-        self = .none
+    public init(_ value: Wrapped) {
+        self.value = value
     }
 
     public func encode(to encoder: Encoder) throws {
         // Transient properties do not get encoded.
     }
+}
 
-    public var value: Wrapped? {
-        get {
-            if case let .some(wrapped) = self {
-                return wrapped
-            }
-
-            return nil
-        }
-        set {
-            self = newValue.map(Transient.some) ?? .none
-        }
+extension Transient: Decodable where Wrapped: EmptyInitializer {
+    public init(from decoder: Decoder) {
+        // Since the value is transient, it's not encoded, so at decode-time we
+        // merely clear it.
+        self.value = .init()
     }
 }

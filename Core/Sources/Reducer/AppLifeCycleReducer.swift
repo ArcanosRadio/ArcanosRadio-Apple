@@ -16,8 +16,8 @@ public let appLifeCycleReducer = Reducer<AppState> { state, action in
     switch lifeCycleAction {
     case let .boot(application, launchOptions):
         return mset(state) {
-            $0.application = .some(application)
-            $0.launchOptions = launchOptions.map(Transient.some) ?? . none
+            $0.application = .init(application)
+            $0.launchOptions = Transient(launchOptions ?? [:])
             $0.device = UIDevice.current.userInterfaceIdiom
             $0 = boundsReducer(state: $0)
         }
@@ -62,7 +62,7 @@ public let appLifeCycleReducer = Reducer<AppState> { state, action in
         let application = WKExtension.shared()
         let device = WKInterfaceDevice.current()
         return mset(state) {
-            $0.application = .some(application)
+            $0.application = .init(application)
             $0.applicationState = application.applicationState
             $0.isApplicationRunningInDock = application.isApplicationRunningInDock
             if #available(watchOS 4.2, *) {
@@ -98,8 +98,8 @@ public let appLifeCycleReducer = Reducer<AppState> { state, action in
     switch lifeCycleAction {
     case let .boot(application, launchOptions):
         return mset(state) {
-            $0.application = .some(application)
-            $0.launchOptions = launchOptions.map(Transient.some) ?? . none
+            $0.application = .init(application)
+            $0.launchOptions = .init(launchOptions ?? [:])
             $0.device = UIDevice.current.userInterfaceIdiom
             $0 = boundsReducer(state: $0)
         }
