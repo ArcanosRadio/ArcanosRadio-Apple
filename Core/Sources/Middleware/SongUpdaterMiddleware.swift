@@ -36,6 +36,23 @@ public final class SongUpdaterMiddleware: Middleware {
             onSuccess: { playlist in
                 guard playlist != getState() else { return }
                 actionHandler?.trigger(SongUpdaterAction.songHasChanged(playlist))
+
+                guard let eventHandler = eventHandler else { return }
+
+                playlist
+                    .song
+                    .albumArt
+                    .map { $0.url }
+                    .map(CachedFileEvent.fileRequested(url:))
+                    .map(eventHandler.dispatch)
+
+                playlist
+                    .song
+                    .lyrics
+                    .map { $0.url }
+                    .map(CachedFileEvent.fileRequested(url:))
+                    .map(eventHandler.dispatch)
+
             }, onFailure: handleError(playlistAction))
     }
 

@@ -6,6 +6,7 @@ public let MainMiddleware: () -> ComposedMiddleware<MainState> = {
     return AppLifeCycleMiddleware(trackDeviceOrientation: true, trackBattery: true, trackProximityState: true).lift(\.app)
         <> RouterMiddleware().lift(\.navigation)
         <> SongUpdaterMiddleware().lift(\.currentSong)
+        <> CachedFileMiddleware().lift(\.fileCache.value)
         <> ParseMiddleware().lift(\.currentSong)
         <> DirectLineMiddleware()
         <> LoggerMiddleware(eventFilter: { _, _ in true },
@@ -22,6 +23,7 @@ public let MainReducer: () -> Reducer<MainState> = {
     return appLifeCycleReducer.lift(\.app)
         <> apiResponseReducer
         <> songUpdaterReducer.lift(\.currentSong)
+        <> cachedFileReducer.lift(\.fileCache.value)
         <> navigationReducer.lift(\.navigation)
 }
 

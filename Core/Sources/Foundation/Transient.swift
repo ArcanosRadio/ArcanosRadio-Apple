@@ -3,7 +3,7 @@
 /// declare a "cache"-like property in a value type without giving up the rest
 /// of the benefits of synthesis.
 public struct Transient<Wrapped>: Equatable, Hashable, Encodable {
-    let value: Wrapped
+    public var value: Wrapped
 
     public static func == (lhs: Transient<Wrapped>, rhs: Transient<Wrapped>) -> Bool {
         // By always returning true, transient values never produce false negatives

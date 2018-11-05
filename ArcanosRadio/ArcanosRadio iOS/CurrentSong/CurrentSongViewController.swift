@@ -25,12 +25,20 @@ final class CurrentSongViewController: UIViewController {
                 }
             }).disposed(by: disposeBag)
 
-        stateProvider[\.currentSong]
-            .distinctUntilChanged()
-            .asDriver(onErrorJustReturn: nil)
-            .drive(onNext: { [weak self] playlist in
+        let songChanges = stateProvider[\.currentSong].distinctUntilChanged()
+        let cacheChanges = stateProvider[\.fileCache.value].distinctUntilChanged { $0.count }
+
+        Observable.combineLatest(songChanges, cacheChanges)
+            .asDriver(onErrorJustReturn: (nil, [:]))
+            .drive(onNext: { [weak self] (playlist, cache) in
                 guard let playlist = playlist else { return }
-                self?.updateUI(playlist)
+                let lyrics = (playlist.song.lyrics?.url.absoluteString)
+                    .flatMap { cache[$0]?() }
+                    .flatMap { String(data: $0, encoding: .utf8) }
+                let albumArt = (playlist.song.albumArt?.url.absoluteString)
+                    .flatMap { cache[$0]?() }
+                    .flatMap(UIImage.init(data:))
+                self?.updateUI(playlist, lyrics: lyrics, albumArt: albumArt)
             }).disposed(by: disposeBag)
 
         stateProvider[\.app]
@@ -41,10 +49,11 @@ final class CurrentSongViewController: UIViewController {
             }).disposed(by: disposeBag)
     }
 
-    private func updateUI(_ playlist: Playlist) {
+    private func updateUI(_ playlist: Playlist, lyrics: String?, albumArt: UIImage?) {
         artistLabel.text = playlist.song.artist.artistName
         songLabel.text = playlist.song.songName
-        lyricsLabel.text = playlist.song.lyrics?.name
+        lyricsLabel.text = lyrics
+        albumArtImageView.image = albumArt
     }
 }
 
