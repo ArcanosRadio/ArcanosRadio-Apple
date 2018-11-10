@@ -9,7 +9,7 @@ public let MainMiddleware: () -> ComposedMiddleware<MainState> = {
         <> CachedFileMiddleware().lift(\.fileCache.value)
         <> ParseMiddleware().lift(\.currentSong)
         <> DirectLineMiddleware()
-        <> LoggerMiddleware(eventFilter: { _, _ in false },
+        <> LoggerMiddleware(eventFilter: { _, event in event is ReachabilityEvent },
                             actionFilter: { _, _ in false },
                             debugOnly: true,
                             stateTransformer: { _ in "" })

@@ -1,15 +1,15 @@
 import Foundation
 import SwiftRex
 
-public let reachabilityReducer = Reducer<ReachabilityStatus> { state, action in
+public let reachabilityReducer = Reducer<Reachability.Connection> { state, action in
     guard let reachabilityAction = action as? ReachabilityEvent else { return state }
 
     switch reachabilityAction {
     case .wifi, .notConfigure:
-        return .reachable(viaWiFi: true)
+        return .wifi
     case .cellular:
-        return .reachable(viaWiFi: false)
+        return .cellular
     case .error, .offline:
-        return .unreachable
+        return .none
     }
 }

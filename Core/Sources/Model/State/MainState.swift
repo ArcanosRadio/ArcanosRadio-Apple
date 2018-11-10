@@ -7,7 +7,7 @@ public struct MainState: Equatable, Codable {
     public var streamingServer: RequestProgress<StreamingServer>?
     public var fileCache: Transient<[String: () -> Data]> = .init([:])
     #if os(iOS) || os(macOS) || os(tvOS)
-    public var connectionState: ReachabilityStatus = .unreachable
+    public var connectionState: Reachability.Connection = Reachability.Connection.none
     #endif
 
     public init() { }

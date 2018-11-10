@@ -10,6 +10,7 @@
 		046EC706CF96E2C692BBFA0D /* Pods_ArcanosRadio_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF3AFCAA5917A03E0350131B /* Pods_ArcanosRadio_iOS.framework */; };
 		0CA88393E9D229938A92AC23 /* Pods_ArcanosRadio_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BA629040A2998DA57AC7C22 /* Pods_ArcanosRadio_tvOS.framework */; };
 		9D105224306376F7106C478B /* Pods_ArcanosRadio_watchOS_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B38959C0B28E87E87D114625 /* Pods_ArcanosRadio_watchOS_Extension.framework */; };
+		D508B1C421979386005A3CB5 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D508B1C321979385005A3CB5 /* CoreTelephony.framework */; };
 		D50A45D1216D2EBB0025BC1C /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D50A45D0216D2EBB0025BC1C /* Core.framework */; };
 		D50A45D3216D2EC20025BC1C /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D50A45D2216D2EC20025BC1C /* Core.framework */; };
 		D521A998216D27BA00261BE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D521A997216D27BA00261BE3 /* AppDelegate.swift */; };
@@ -103,6 +104,8 @@
 		BF5B6190CF839339D2478823 /* Pods_ArcanosRadio_watchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ArcanosRadio_watchOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFBA09D4D8AFFE8C27FD3047 /* Pods-ArcanosRadio tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArcanosRadio tvOS.debug.xcconfig"; path = "Target Support Files/Pods-ArcanosRadio tvOS/Pods-ArcanosRadio tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		C73C34FDBA3059B5CEFAA3F2 /* Pods-ArcanosRadio watchOS Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArcanosRadio watchOS Extension.debug.xcconfig"; path = "Target Support Files/Pods-ArcanosRadio watchOS Extension/Pods-ArcanosRadio watchOS Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		D508B1C321979385005A3CB5 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/CoreTelephony.framework; sourceTree = DEVELOPER_DIR; };
+		D508B1C5219793DC005A3CB5 /* ArcanosRadio.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ArcanosRadio.entitlements; sourceTree = "<group>"; };
 		D50A45CE216D2EB30025BC1C /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D50A45D0216D2EBB0025BC1C /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D50A45D2216D2EC20025BC1C /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -151,6 +154,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D508B1C421979386005A3CB5 /* CoreTelephony.framework in Frameworks */,
 				D551DD932173DF350086636D /* AVFoundation.framework in Frameworks */,
 				046EC706CF96E2C692BBFA0D /* Pods_ArcanosRadio_iOS.framework in Frameworks */,
 				D53725762173860300C7400B /* Core.framework in Frameworks */,
@@ -197,6 +201,7 @@
 		9717CB35DDE7C3F3C1DE4F51 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D508B1C321979385005A3CB5 /* CoreTelephony.framework */,
 				D551DD922173DF340086636D /* AVFoundation.framework */,
 				D551DD942173DF410086636D /* AVFoundation.framework */,
 				D551DD962173DF470086636D /* AVFoundation.framework */,
@@ -226,6 +231,7 @@
 		D521A996216D27BA00261BE3 /* ArcanosRadio iOS */ = {
 			isa = PBXGroup;
 			children = (
+				D508B1C5219793DC005A3CB5 /* ArcanosRadio.entitlements */,
 				D537258A21739CA500C7400B /* Bootstrap */,
 				D537258B21739D0200C7400B /* CurrentSong */,
 			);
@@ -412,6 +418,9 @@
 					D521A993216D27BA00261BE3 = {
 						CreatedOnToolsVersion = 10.0;
 						SystemCapabilities = {
+							com.apple.AccessWiFi = {
+								enabled = 0;
+							};
 							com.apple.BackgroundModes = {
 								enabled = 1;
 							};
@@ -768,7 +777,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = de.developercity.ArcanosRadio;
+				PRODUCT_BUNDLE_IDENTIFIER = de.developercity.beta.ArcanosRadio;
 				PRODUCT_NAME = ArcanosRadio;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -835,7 +844,7 @@
 				);
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = de.developercity.ArcanosRadio;
+				PRODUCT_BUNDLE_IDENTIFIER = de.developercity.beta.ArcanosRadio;
 				PRODUCT_NAME = ArcanosRadio;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -909,7 +918,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = de.developercity.ArcanosRadio.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = de.developercity.beta.ArcanosRadio.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "ArcanosRadio Extension";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -977,7 +986,7 @@
 				);
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = de.developercity.ArcanosRadio.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = de.developercity.beta.ArcanosRadio.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "ArcanosRadio Extension";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1050,7 +1059,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = de.developercity.ArcanosRadio.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = de.developercity.beta.ArcanosRadio.watchkitapp;
 				PRODUCT_NAME = ArcanosRadio;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1115,7 +1124,7 @@
 				INFOPLIST_FILE = "ArcanosRadio watchOS/Info.plist";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = de.developercity.ArcanosRadio.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = de.developercity.beta.ArcanosRadio.watchkitapp;
 				PRODUCT_NAME = ArcanosRadio;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1191,7 +1200,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "de.developercity.ArcanosRadio-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "de.developercity.beta.ArcanosRadio-tvOS";
 				PRODUCT_NAME = ArcanosRadio;
 				SDKROOT = appletvos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -1258,7 +1267,7 @@
 				);
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "de.developercity.ArcanosRadio-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "de.developercity.beta.ArcanosRadio-tvOS";
 				PRODUCT_NAME = ArcanosRadio;
 				SDKROOT = appletvos;
 				SWIFT_COMPILATION_MODE = wholemodule;

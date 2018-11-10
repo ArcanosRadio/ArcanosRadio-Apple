@@ -4,7 +4,6 @@ import Foundation
 public class RadioPlayer {
     private var streaming: AVPlayerItem?
     private var player: AVPlayer?
-    private var volume: Float = 0.0
     private var session: AVAudioSession?
 
     public init() { }
@@ -13,19 +12,20 @@ public class RadioPlayer {
         streaming = .init(url: url)
         player = AVPlayer(playerItem: streaming)
         session = AVAudioSession.sharedInstance()
-    }
-
-    public func play() {
-        guard let player = player, let session = session, let streaming = streaming else { return }
 
         do {
-            try session.setCategory(AVAudioSession.Category.playback,
-                                    mode: .default,
-                                    options: [.mixWithOthers])
+            try session!.setCategory(.playback,
+                                     mode: .default,
+                                     options: [.mixWithOthers])
+            try session!.setActive(true, options: [])
         } catch {
             print(error)
             // dispatch error
         }
+    }
+
+    public func play() {
+        guard let player = player, let streaming = streaming else { return }
 
         player.allowsExternalPlayback = true
         player.replaceCurrentItem(with: nil)
