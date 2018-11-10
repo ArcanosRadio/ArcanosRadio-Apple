@@ -9,8 +9,8 @@ public let MainMiddleware: () -> ComposedMiddleware<MainState> = {
         <> CachedFileMiddleware().lift(\.fileCache.value)
         <> ParseMiddleware().lift(\.currentSong)
         <> DirectLineMiddleware()
-        <> LoggerMiddleware(eventFilter: { _, _ in true },
-                            actionFilter: { _, _ in true },
+        <> LoggerMiddleware(eventFilter: { _, _ in false },
+                            actionFilter: { _, _ in false },
                             debugOnly: true,
                             stateTransformer: { _ in "" })
         <> CatchErrorMiddleware { errorAction, state in
