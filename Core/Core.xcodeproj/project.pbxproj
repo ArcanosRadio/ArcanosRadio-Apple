@@ -10,6 +10,28 @@
 		2E52DE6F15317CC04AE20D6B /* Pods_Core_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72057BA05828C3C452A6DD93 /* Pods_Core_macOS.framework */; };
 		35149B7D6D7E1E9E05BDAE60 /* Pods_Core_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A9501EB0FC6E9BDE0B1C198 /* Pods_Core_iOS.framework */; };
 		3EC8198A7D963C8DC903E3D4 /* Pods_Core_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E93DBC2D13B2B6E8BE3F6D68 /* Pods_Core_tvOS.framework */; };
+		D508B19F21976314005A3CB5 /* ReachabilityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D508B19E21976314005A3CB5 /* ReachabilityService.swift */; };
+		D508B1A121976314005A3CB5 /* ReachabilityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D508B19E21976314005A3CB5 /* ReachabilityService.swift */; };
+		D508B1A221976314005A3CB5 /* ReachabilityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D508B19E21976314005A3CB5 /* ReachabilityService.swift */; };
+		D508B1A421976359005A3CB5 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = D508B1A321976359005A3CB5 /* Reachability.swift */; };
+		D508B1A621976359005A3CB5 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = D508B1A321976359005A3CB5 /* Reachability.swift */; };
+		D508B1A721976359005A3CB5 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = D508B1A321976359005A3CB5 /* Reachability.swift */; };
+		D508B1A9219763A9005A3CB5 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D508B1A8219763A9005A3CB5 /* SystemConfiguration.framework */; };
+		D508B1AB219763BC005A3CB5 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D508B1AA219763BC005A3CB5 /* SystemConfiguration.framework */; };
+		D508B1AD219763C4005A3CB5 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D508B1AC219763C4005A3CB5 /* SystemConfiguration.framework */; };
+		D508B1AF2197641F005A3CB5 /* ReachabilityMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D508B1AE2197641F005A3CB5 /* ReachabilityMiddleware.swift */; };
+		D508B1B02197641F005A3CB5 /* ReachabilityMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D508B1AE2197641F005A3CB5 /* ReachabilityMiddleware.swift */; };
+		D508B1B12197641F005A3CB5 /* ReachabilityMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D508B1AE2197641F005A3CB5 /* ReachabilityMiddleware.swift */; };
+		D508B1B7219775CC005A3CB5 /* ReachabilityEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D508B1B6219775CC005A3CB5 /* ReachabilityEvent.swift */; };
+		D508B1B8219775CC005A3CB5 /* ReachabilityEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D508B1B6219775CC005A3CB5 /* ReachabilityEvent.swift */; };
+		D508B1B9219775CC005A3CB5 /* ReachabilityEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D508B1B6219775CC005A3CB5 /* ReachabilityEvent.swift */; };
+		D508B1BB2197760B005A3CB5 /* ReachabilityReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D508B1BA2197760B005A3CB5 /* ReachabilityReducer.swift */; };
+		D508B1BC2197760B005A3CB5 /* ReachabilityReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D508B1BA2197760B005A3CB5 /* ReachabilityReducer.swift */; };
+		D508B1BD2197760B005A3CB5 /* ReachabilityReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D508B1BA2197760B005A3CB5 /* ReachabilityReducer.swift */; };
+		D508B1BF21977651005A3CB5 /* NavigationAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D508B1BE21977651005A3CB5 /* NavigationAction.swift */; };
+		D508B1C021977651005A3CB5 /* NavigationAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D508B1BE21977651005A3CB5 /* NavigationAction.swift */; };
+		D508B1C121977651005A3CB5 /* NavigationAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D508B1BE21977651005A3CB5 /* NavigationAction.swift */; };
+		D508B1C221977651005A3CB5 /* NavigationAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D508B1BE21977651005A3CB5 /* NavigationAction.swift */; };
 		D50A45D6216D2F930025BC1C /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A45D5216D2F930025BC1C /* Artist.swift */; };
 		D50A45D8216D2F9D0025BC1C /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A45D7216D2F9D0025BC1C /* Song.swift */; };
 		D50A45DA216D2FAD0025BC1C /* Playlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A45D9216D2FAD0025BC1C /* Playlist.swift */; };
@@ -177,6 +199,15 @@
 		7707400BC8C8FA2EBCD7CFD6 /* Pods_Core_watchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Core_watchOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		880927043EF9282E1EE07A6C /* Pods-Core iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Core iOS.debug.xcconfig"; path = "Target Support Files/Pods-Core iOS/Pods-Core iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		B8EDF74F03E6A849C19A42E4 /* Pods-Core watchOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Core watchOS.release.xcconfig"; path = "Target Support Files/Pods-Core watchOS/Pods-Core watchOS.release.xcconfig"; sourceTree = "<group>"; };
+		D508B19E21976314005A3CB5 /* ReachabilityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityService.swift; sourceTree = "<group>"; };
+		D508B1A321976359005A3CB5 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		D508B1A8219763A9005A3CB5 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		D508B1AA219763BC005A3CB5 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.1.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
+		D508B1AC219763C4005A3CB5 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
+		D508B1AE2197641F005A3CB5 /* ReachabilityMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityMiddleware.swift; sourceTree = "<group>"; };
+		D508B1B6219775CC005A3CB5 /* ReachabilityEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityEvent.swift; sourceTree = "<group>"; };
+		D508B1BA2197760B005A3CB5 /* ReachabilityReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityReducer.swift; sourceTree = "<group>"; };
+		D508B1BE21977651005A3CB5 /* NavigationAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationAction.swift; sourceTree = "<group>"; };
 		D50A45D5216D2F930025BC1C /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		D50A45D7216D2F9D0025BC1C /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		D50A45D9216D2FAD0025BC1C /* Playlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Playlist.swift; sourceTree = "<group>"; };
@@ -240,6 +271,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D508B1A9219763A9005A3CB5 /* SystemConfiguration.framework in Frameworks */,
 				D53DBCCF2173DEBB00F213A9 /* AVFoundation.framework in Frameworks */,
 				35149B7D6D7E1E9E05BDAE60 /* Pods_Core_iOS.framework in Frameworks */,
 			);
@@ -259,6 +291,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D508B1AB219763BC005A3CB5 /* SystemConfiguration.framework in Frameworks */,
 				D53DBCD32173DEC700F213A9 /* AVFoundation.framework in Frameworks */,
 				3EC8198A7D963C8DC903E3D4 /* Pods_Core_tvOS.framework in Frameworks */,
 			);
@@ -268,6 +301,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D508B1AD219763C4005A3CB5 /* SystemConfiguration.framework in Frameworks */,
 				D53DBCD52173DECE00F213A9 /* AVFoundation.framework in Frameworks */,
 				2E52DE6F15317CC04AE20D6B /* Pods_Core_macOS.framework in Frameworks */,
 			);
@@ -279,6 +313,9 @@
 		064E59619041EE10291B737D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D508B1A8219763A9005A3CB5 /* SystemConfiguration.framework */,
+				D508B1AA219763BC005A3CB5 /* SystemConfiguration.framework */,
+				D508B1AC219763C4005A3CB5 /* SystemConfiguration.framework */,
 				D52FE7382183FE95000DA781 /* WatchKit.framework */,
 				D53DBCCE2173DEBB00F213A9 /* AVFoundation.framework */,
 				D53DBCD02173DEC200F213A9 /* AVFoundation.framework */,
@@ -356,6 +393,7 @@
 				D50A4636216D4C050025BC1C /* APIProgress.swift */,
 				D5F34E94218FB1AC00773247 /* CachedFileAction.swift */,
 				D57716E221720AEA005C1229 /* ErrorAction.swift */,
+				D508B1BE21977651005A3CB5 /* NavigationAction.swift */,
 				D50A464F216EAE790025BC1C /* SongUpdaterAction.swift */,
 			);
 			path = Action;
@@ -367,6 +405,7 @@
 				D50A4608216D3BB10025BC1C /* AppLifeCycleEvent.swift */,
 				D5F34E8F218FB13800773247 /* CachedFileEvent.swift */,
 				D53725902173A1B900C7400B /* NavigationEvent.swift */,
+				D508B1B6219775CC005A3CB5 /* ReachabilityEvent.swift */,
 				D50A4645216E8F950025BC1C /* RefreshTimerEvent.swift */,
 			);
 			path = Event;
@@ -382,6 +421,9 @@
 				D57716EC217211E6005C1229 /* LoggerMiddleware.swift */,
 				D50A4612216D40A60025BC1C /* ParseMiddleware.swift */,
 				D50A4617216D422D0025BC1C /* ParseService.swift */,
+				D508B1A321976359005A3CB5 /* Reachability.swift */,
+				D508B1AE2197641F005A3CB5 /* ReachabilityMiddleware.swift */,
+				D508B19E21976314005A3CB5 /* ReachabilityService.swift */,
 				D50A464A216E978F0025BC1C /* SongUpdaterMiddleware.swift */,
 			);
 			path = Middleware;
@@ -394,6 +436,7 @@
 				D50A4622216D441A0025BC1C /* AppLifeCycleReducer.swift */,
 				D5F34E9E218FC02B00773247 /* CachedFileReducer.swift */,
 				D537259A2173A31B00C7400B /* NavigationReducer.swift */,
+				D508B1BA2197760B005A3CB5 /* ReachabilityReducer.swift */,
 				D50A4654216EAF040025BC1C /* SongUpdaterReducer.swift */,
 			);
 			path = Reducer;
@@ -759,6 +802,7 @@
 				D50A4641216E7F740025BC1C /* APIResponseReducer.swift in Sources */,
 				D50A45FF216D32F30025BC1C /* AppLifeCycleMiddleware.swift in Sources */,
 				D50A4632216D48B10025BC1C /* StreamingServer.swift in Sources */,
+				D508B19F21976314005A3CB5 /* ReachabilityService.swift in Sources */,
 				D57716E321720AEA005C1229 /* ErrorAction.swift in Sources */,
 				D50A45DF216D31160025BC1C /* MainStore.swift in Sources */,
 				D50A4609216D3BB10025BC1C /* AppLifeCycleEvent.swift in Sources */,
@@ -766,11 +810,13 @@
 				D537259B2173A31B00C7400B /* NavigationReducer.swift in Sources */,
 				D50A45DA216D2FAD0025BC1C /* Playlist.swift in Sources */,
 				D53725962173A21400C7400B /* Sitemap.swift in Sources */,
+				D508B1BF21977651005A3CB5 /* NavigationAction.swift in Sources */,
 				D5F34E95218FB1AC00773247 /* CachedFileAction.swift in Sources */,
 				D5F34E9A218FB37300773247 /* CachedFileService.swift in Sources */,
 				D50A4646216E8F950025BC1C /* RefreshTimerEvent.swift in Sources */,
 				D50A4628216D443B0025BC1C /* AppState.swift in Sources */,
 				D50A4613216D40A60025BC1C /* ParseMiddleware.swift in Sources */,
+				D508B1BB2197760B005A3CB5 /* ReachabilityReducer.swift in Sources */,
 				D52FE7302183D47C000DA781 /* FP.swift in Sources */,
 				D50A4604216D383E0025BC1C /* ResourceState.swift in Sources */,
 				D50A462D216D453F0025BC1C /* Transient.swift in Sources */,
@@ -784,6 +830,9 @@
 				D50A4637216D4C050025BC1C /* APIProgress.swift in Sources */,
 				D57716E821720DD0005C1229 /* CatchErrorMiddleware.swift in Sources */,
 				D5F34E8B218FB0B800773247 /* CachedFileMiddleware.swift in Sources */,
+				D508B1B7219775CC005A3CB5 /* ReachabilityEvent.swift in Sources */,
+				D508B1AF2197641F005A3CB5 /* ReachabilityMiddleware.swift in Sources */,
+				D508B1A421976359005A3CB5 /* Reachability.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -803,6 +852,7 @@
 				D53725922173A1B900C7400B /* NavigationEvent.swift in Sources */,
 				D50A4642216E7F740025BC1C /* APIResponseReducer.swift in Sources */,
 				D5F34E8C218FB0B800773247 /* CachedFileMiddleware.swift in Sources */,
+				D508B1C021977651005A3CB5 /* NavigationAction.swift in Sources */,
 				D50A4600216D32F30025BC1C /* AppLifeCycleMiddleware.swift in Sources */,
 				D5F34E87218F9FD700773247 /* EmptyInitializer.swift in Sources */,
 				D50A4633216D48B10025BC1C /* StreamingServer.swift in Sources */,
@@ -846,6 +896,7 @@
 				D50A4601216D32F30025BC1C /* AppLifeCycleMiddleware.swift in Sources */,
 				D50A4634216D48B10025BC1C /* StreamingServer.swift in Sources */,
 				D57716E521720AEA005C1229 /* ErrorAction.swift in Sources */,
+				D508B1A121976314005A3CB5 /* ReachabilityService.swift in Sources */,
 				D50A45EE216D31740025BC1C /* MainState.swift in Sources */,
 				D50A460B216D3BB10025BC1C /* AppLifeCycleEvent.swift in Sources */,
 				D50A45E7216D31700025BC1C /* Artist.swift in Sources */,
@@ -853,11 +904,13 @@
 				D50A45E1216D31160025BC1C /* MainStore.swift in Sources */,
 				D53725982173A21400C7400B /* Sitemap.swift in Sources */,
 				D50A4648216E8F950025BC1C /* RefreshTimerEvent.swift in Sources */,
+				D508B1C121977651005A3CB5 /* NavigationAction.swift in Sources */,
 				D5F34E97218FB1AC00773247 /* CachedFileAction.swift in Sources */,
 				D5F34E9C218FB37300773247 /* CachedFileService.swift in Sources */,
 				D50A462A216D443B0025BC1C /* AppState.swift in Sources */,
 				D5DEB1D22184B5BF0050BA0B /* UIKit+Extensions.swift in Sources */,
 				D50A4615216D40A60025BC1C /* ParseMiddleware.swift in Sources */,
+				D508B1BC2197760B005A3CB5 /* ReachabilityReducer.swift in Sources */,
 				D52FE7322183D47C000DA781 /* FP.swift in Sources */,
 				D50A4606216D3A250025BC1C /* ResourceState.swift in Sources */,
 				D50A462F216D453F0025BC1C /* Transient.swift in Sources */,
@@ -871,6 +924,9 @@
 				D50A4639216D4C050025BC1C /* APIProgress.swift in Sources */,
 				D57716EA21720DD0005C1229 /* CatchErrorMiddleware.swift in Sources */,
 				D5F34E8D218FB0B800773247 /* CachedFileMiddleware.swift in Sources */,
+				D508B1B8219775CC005A3CB5 /* ReachabilityEvent.swift in Sources */,
+				D508B1B02197641F005A3CB5 /* ReachabilityMiddleware.swift in Sources */,
+				D508B1A621976359005A3CB5 /* Reachability.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -880,6 +936,7 @@
 			files = (
 				D53725992173A21400C7400B /* Sitemap.swift in Sources */,
 				D50A463F216D552C0025BC1C /* Parse.swift in Sources */,
+				D508B1A721976359005A3CB5 /* Reachability.swift in Sources */,
 				D57716F0217211E6005C1229 /* LoggerMiddleware.swift in Sources */,
 				D50A4626216D441A0025BC1C /* AppLifeCycleReducer.swift in Sources */,
 				D50A464E216E978F0025BC1C /* SongUpdaterMiddleware.swift in Sources */,
@@ -889,6 +946,8 @@
 				D50A4644216E7F740025BC1C /* APIResponseReducer.swift in Sources */,
 				D52FE7332183D47C000DA781 /* FP.swift in Sources */,
 				D50A4602216D32F30025BC1C /* AppLifeCycleMiddleware.swift in Sources */,
+				D508B1A221976314005A3CB5 /* ReachabilityService.swift in Sources */,
+				D508B1B9219775CC005A3CB5 /* ReachabilityEvent.swift in Sources */,
 				D5F34E8E218FB0B800773247 /* CachedFileMiddleware.swift in Sources */,
 				D50A4635216D48B10025BC1C /* StreamingServer.swift in Sources */,
 				D5F34E89218F9FD700773247 /* EmptyInitializer.swift in Sources */,
@@ -902,10 +961,13 @@
 				D50A45E2216D31160025BC1C /* MainStore.swift in Sources */,
 				D50A4649216E8F950025BC1C /* RefreshTimerEvent.swift in Sources */,
 				D5F34E93218FB13800773247 /* CachedFileEvent.swift in Sources */,
+				D508B1B12197641F005A3CB5 /* ReachabilityMiddleware.swift in Sources */,
+				D508B1BD2197760B005A3CB5 /* ReachabilityReducer.swift in Sources */,
 				D5F34EA2218FC02B00773247 /* CachedFileReducer.swift in Sources */,
 				D50A462B216D443B0025BC1C /* AppState.swift in Sources */,
 				D50A4616216D40A60025BC1C /* ParseMiddleware.swift in Sources */,
 				D50A4607216D3A260025BC1C /* ResourceState.swift in Sources */,
+				D508B1C221977651005A3CB5 /* NavigationAction.swift in Sources */,
 				D537259E2173A31B00C7400B /* NavigationReducer.swift in Sources */,
 				D50A4630216D453F0025BC1C /* Transient.swift in Sources */,
 				D50A4653216EAE790025BC1C /* SongUpdaterAction.swift in Sources */,

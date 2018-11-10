@@ -17,6 +17,7 @@ public let MainMiddleware: () -> ComposedMiddleware<MainState> = {
                print("Error: \(errorAction.error) on \(errorAction.message)")
                return .cauterize
            }
+        <> ReachabilityMiddleware().lift(\.connectionState)
 }
 
 public let MainReducer: () -> Reducer<MainState> = {
@@ -25,6 +26,7 @@ public let MainReducer: () -> Reducer<MainState> = {
         <> songUpdaterReducer.lift(\.currentSong)
         <> cachedFileReducer.lift(\.fileCache.value)
         <> navigationReducer.lift(\.navigation)
+        <> reachabilityReducer.lift(\.connectionState)
 }
 
 extension MainStore {
