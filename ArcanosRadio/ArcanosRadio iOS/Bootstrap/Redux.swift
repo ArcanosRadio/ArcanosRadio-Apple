@@ -8,6 +8,7 @@ public let MainMiddleware: () -> ComposedMiddleware<MainState> = {
         <> SongUpdaterMiddleware().lift(\.currentSong)
         <> CachedFileMiddleware().lift(\.fileCache.value)
         <> ParseMiddleware().lift(\.currentSong)
+        <> RadioPlayerMiddleware()
         <> DirectLineMiddleware()
         <> LoggerMiddleware(eventFilter: { _, event in event is ReachabilityEvent },
                             actionFilter: { _, _ in false },
@@ -27,6 +28,7 @@ public let MainReducer: () -> Reducer<MainState> = {
         <> cachedFileReducer.lift(\.fileCache.value)
         <> navigationReducer.lift(\.navigation)
         <> reachabilityReducer.lift(\.connectionState)
+        <> radioPlayerReducer
 }
 
 extension MainStore {

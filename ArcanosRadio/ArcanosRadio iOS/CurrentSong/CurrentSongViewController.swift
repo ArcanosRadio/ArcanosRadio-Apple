@@ -9,23 +9,9 @@ final class CurrentSongViewController: UIViewController {
     @IBOutlet private weak var lyricsLabel: UILabel!
     @IBOutlet private weak var albumArtImageView: UIImageView!
     private let disposeBag = DisposeBag()
-    private let radioPlayer = RadioPlayer()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        radioPlayer
-            .subscribe(onNext: { _ in })
-            .disposed(by: disposeBag)
-
-        stateProvider[\.streamingServer]
-            .distinctUntilChanged()
-            .subscribe(onNext: { [weak self] server in
-                if case let .success(streamingServer)? = server {
-                    self?.play(url: streamingServer.streamingUrl)
-                } else {
-                    self?.stop()
-                }
-            }).disposed(by: disposeBag)
 
         let songChanges = stateProvider[\.currentSong].distinctUntilChanged()
         let cacheChanges = stateProvider[\.fileCache.value].distinctUntilChanged { $0.count }
@@ -43,7 +29,8 @@ final class CurrentSongViewController: UIViewController {
                 self?.updateUI(playlist, lyrics: lyrics, albumArt: albumArt)
             }).disposed(by: disposeBag)
 
-        stateProvider[\.app]
+        stateProvider
+            .map(get(\.app))
             .distinctUntilChanged()
             .asDriver(onErrorJustReturn: AppState())
             .drive(onNext: { app in
@@ -56,15 +43,6 @@ final class CurrentSongViewController: UIViewController {
         songLabel.text = playlist.song.songName
         lyricsLabel.text = lyrics
         albumArtImageView.image = albumArt
-    }
-
-    private func play(url: URL) {
-        radioPlayer.configure(url: url)
-        radioPlayer.play()
-    }
-
-    private func stop() {
-        radioPlayer.stop()
     }
 }
 

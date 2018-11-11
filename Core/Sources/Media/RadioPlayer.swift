@@ -1,8 +1,9 @@
 import AVFoundation
 import Foundation
 import RxSwift
+import SwiftRex
 
-public enum RadioPlayerEvent: Equatable {
+public enum RadioPlayerEvent: EventProtocol, Equatable {
     case stopped
     case failure(Error?)
     case playing
