@@ -3,7 +3,7 @@ import Foundation
 import SwiftRex
 
 public let MainMiddleware: () -> ComposedMiddleware<MainState> = {
-    return AppLifeCycleMiddleware(trackDeviceOrientation: true, trackBattery: true, trackProximityState: true).lift(\.app)
+    return AppLifeCycleMiddleware(trackDeviceOrientation: false, trackBattery: false, trackProximityState: false).lift(\.app)
         <> RouterMiddleware().lift(\.navigation)
         <> SongUpdaterMiddleware()
         <> MediaRemoteControlMiddleware()
