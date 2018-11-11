@@ -4,13 +4,15 @@ import SwiftRex
 
 final class ParseService: SideEffectProducer {
     var request: () -> Observable<ActionProtocol>
+    private let session: URLSession
 
-    init?(event: EventProtocol) {
+    init?(event: EventProtocol, session: URLSession) {
+        self.session = session
         switch event {
         case AppLifeCycleEvent.boot:
-            request = { requestStreamingServer().map { $0 as ActionProtocol } }
+            request = { requestStreamingServer(session: session).map { $0 as ActionProtocol } }
         case RefreshTimerEvent.tick:
-            request = { requestCurrentSong().map { $0 as ActionProtocol } }
+            request = { requestCurrentSong(session: session).map { $0 as ActionProtocol } }
         default:
             return nil
         }
@@ -21,29 +23,31 @@ final class ParseService: SideEffectProducer {
     }
 }
 
-func requestStreamingServer() -> Observable<RequestProgress<StreamingServer>> {
+func requestStreamingServer(session: URLSession) -> Observable<RequestProgress<StreamingServer>> {
     return Observable.concat(
         .just(RequestProgress<StreamingServer>.started),
         execute(type: ParseConfigResponse<StreamingServer>.self,
-                request: ParseEndpoint.config.buildRequest())
+                request: ParseEndpoint.config.buildRequest(),
+                session: session)
             .map { .success($0.params) }
             .catchError { .just(.failure($0)) }
     )
 }
 
-func requestCurrentSong() -> Observable<RequestProgress<Playlist>> {
+func requestCurrentSong(session: URLSession) -> Observable<RequestProgress<Playlist>> {
     return Observable.concat(
         .just(RequestProgress<Playlist>.started),
         execute(type: ParseQueryResponse<Playlist>.self,
-                request: ParseEndpoint.lastSong.buildRequest())
+                request: ParseEndpoint.lastSong.buildRequest(),
+                session: session)
             .map { $0.results.first.map(RequestProgress<Playlist>.success) ?? .started }
             .catchError { .just(.failure($0)) }
     )
 }
 
-func execute<T: Decodable>(type: T.Type, request: URLRequest) -> Observable<T> {
+func execute<T: Decodable>(type: T.Type, request: URLRequest, session: URLSession) -> Observable<T> {
     Logging.URLRequests = { _ in false }
-    return URLSession.shared
+    return session
         .rx.response(request: request)
         .map { (response, data) in
             guard 200...299 ~= response.statusCode else {
@@ -90,6 +94,7 @@ extension ParseEndpoint {
         var urlRequest = URLRequest(url: url)
         urlRequest.allHTTPHeaderFields = requestHeaders
         urlRequest.httpMethod = method
+        urlRequest.cachePolicy = .useProtocolCachePolicy
         urlRequest.httpBody = body
 
         return urlRequest

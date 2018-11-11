@@ -1,11 +1,6 @@
 import Foundation
 import SwiftRex
 
-public enum Either<A, B> {
-    case left(A)
-    case right(B)
-}
-
 public struct ErrorAction: ActionProtocol {
     public let error: Error
     public let message: Either<EventProtocol, ActionProtocol>
