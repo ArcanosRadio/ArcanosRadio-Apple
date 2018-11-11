@@ -6,10 +6,8 @@ public let radioPlayerReducer = Reducer<MainState> { state, action in
 
     switch radioPlayerAction {
 
-    case .userWantsToPause:
-        return set(state, \.userWantsToListen, false)
-    case .userWantsToResume:
-        return set(state, \.userWantsToListen, true)
+    case let .playerShouldBePlaying(userChoice):
+        return set(state, \.userWantsToListen, userChoice)
     case .retry:
         return state
     case .started:

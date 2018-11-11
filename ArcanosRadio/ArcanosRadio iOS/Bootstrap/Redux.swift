@@ -6,6 +6,7 @@ public let MainMiddleware: () -> ComposedMiddleware<MainState> = {
     return AppLifeCycleMiddleware(trackDeviceOrientation: true, trackBattery: true, trackProximityState: true).lift(\.app)
         <> RouterMiddleware().lift(\.navigation)
         <> SongUpdaterMiddleware()
+        <> MediaRemoteControlMiddleware()
         <> CachedFileMiddleware().lift(\.fileCache.value)
         <> ParseMiddleware().lift(\.currentSong)
         <> RadioPlayerMiddleware()

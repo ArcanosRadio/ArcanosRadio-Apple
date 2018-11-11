@@ -168,6 +168,16 @@
 		D5B267522197E928000991CD /* ReachabilityEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D508B1B6219775CC005A3CB5 /* ReachabilityEvent.swift */; };
 		D5B267532197ED01000991CD /* RadioPlayerAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50144872197D85B00A5A376 /* RadioPlayerAction.swift */; };
 		D5B267542197ED1C000991CD /* RadioPlayerReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D501448B2197DDDB00A5A376 /* RadioPlayerReducer.swift */; };
+		D5B267562197F3EF000991CD /* MediaRemoteControlMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B267552197F3EF000991CD /* MediaRemoteControlMiddleware.swift */; };
+		D5B267582197F56C000991CD /* RadioPlayerEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B267572197F56C000991CD /* RadioPlayerEvent.swift */; };
+		D5B267592197F56C000991CD /* RadioPlayerEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B267572197F56C000991CD /* RadioPlayerEvent.swift */; };
+		D5B2675A2197F56C000991CD /* RadioPlayerEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B267572197F56C000991CD /* RadioPlayerEvent.swift */; };
+		D5B2675B2197F56C000991CD /* RadioPlayerEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B267572197F56C000991CD /* RadioPlayerEvent.swift */; };
+		D5B2675D2197F5BF000991CD /* MediaControlEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B2675C2197F5BF000991CD /* MediaControlEvent.swift */; };
+		D5B2675E2197F5BF000991CD /* MediaControlEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B2675C2197F5BF000991CD /* MediaControlEvent.swift */; };
+		D5B2675F2197F5BF000991CD /* MediaControlEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B2675C2197F5BF000991CD /* MediaControlEvent.swift */; };
+		D5B267602197F5BF000991CD /* MediaControlEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B2675C2197F5BF000991CD /* MediaControlEvent.swift */; };
+		D5B2676221987768000991CD /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5B2676121987768000991CD /* MediaPlayer.framework */; };
 		D5CDD32B216D26A500BD36C4 /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = D59EF618216D23F800C25F0A /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D5CDD32C216D26A600BD36C4 /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = D59EF618216D23F800C25F0A /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D5CDD32D216D26A700BD36C4 /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = D59EF618216D23F800C25F0A /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -266,6 +276,10 @@
 		D59EF635216D246500C25F0A /* Info-tvOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-tvOS.plist"; sourceTree = "<group>"; };
 		D59EF63F216D248300C25F0A /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D59EF642216D248300C25F0A /* Info-macOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-macOS.plist"; sourceTree = "<group>"; };
+		D5B267552197F3EF000991CD /* MediaRemoteControlMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaRemoteControlMiddleware.swift; sourceTree = "<group>"; };
+		D5B267572197F56C000991CD /* RadioPlayerEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioPlayerEvent.swift; sourceTree = "<group>"; };
+		D5B2675C2197F5BF000991CD /* MediaControlEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaControlEvent.swift; sourceTree = "<group>"; };
+		D5B2676121987768000991CD /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		D5DEB1C6218424130050BA0B /* WatchKit+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WatchKit+Extensions.swift"; sourceTree = "<group>"; };
 		D5F34E85218F9FD700773247 /* EmptyInitializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyInitializer.swift; sourceTree = "<group>"; };
 		D5F34E8A218FB0B800773247 /* CachedFileMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedFileMiddleware.swift; sourceTree = "<group>"; };
@@ -284,6 +298,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5B2676221987768000991CD /* MediaPlayer.framework in Frameworks */,
 				D508B1C721979509005A3CB5 /* CoreTelephony.framework in Frameworks */,
 				D508B1A9219763A9005A3CB5 /* SystemConfiguration.framework in Frameworks */,
 				D53DBCCF2173DEBB00F213A9 /* AVFoundation.framework in Frameworks */,
@@ -327,6 +342,7 @@
 		064E59619041EE10291B737D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D5B2676121987768000991CD /* MediaPlayer.framework */,
 				D508B1C621979509005A3CB5 /* CoreTelephony.framework */,
 				D508B1A8219763A9005A3CB5 /* SystemConfiguration.framework */,
 				D508B1AA219763BC005A3CB5 /* SystemConfiguration.framework */,
@@ -420,7 +436,9 @@
 			children = (
 				D50A4608216D3BB10025BC1C /* AppLifeCycleEvent.swift */,
 				D5F34E8F218FB13800773247 /* CachedFileEvent.swift */,
+				D5B2675C2197F5BF000991CD /* MediaControlEvent.swift */,
 				D53725902173A1B900C7400B /* NavigationEvent.swift */,
+				D5B267572197F56C000991CD /* RadioPlayerEvent.swift */,
 				D508B1B6219775CC005A3CB5 /* ReachabilityEvent.swift */,
 				D50A4645216E8F950025BC1C /* RefreshTimerEvent.swift */,
 			);
@@ -435,6 +453,7 @@
 				D5F34E99218FB37300773247 /* CachedFileService.swift */,
 				D57716E721720DD0005C1229 /* CatchErrorMiddleware.swift */,
 				D57716EC217211E6005C1229 /* LoggerMiddleware.swift */,
+				D5B267552197F3EF000991CD /* MediaRemoteControlMiddleware.swift */,
 				D50A4612216D40A60025BC1C /* ParseMiddleware.swift */,
 				D50A4617216D422D0025BC1C /* ParseService.swift */,
 				D50144812197CF5700A5A376 /* RadioPlayerMiddleware.swift */,
@@ -820,11 +839,13 @@
 				D50A4641216E7F740025BC1C /* APIResponseReducer.swift in Sources */,
 				D50A45FF216D32F30025BC1C /* AppLifeCycleMiddleware.swift in Sources */,
 				D50144882197D85B00A5A376 /* RadioPlayerAction.swift in Sources */,
+				D5B267582197F56C000991CD /* RadioPlayerEvent.swift in Sources */,
 				D50A4632216D48B10025BC1C /* StreamingServer.swift in Sources */,
 				D57716E321720AEA005C1229 /* ErrorAction.swift in Sources */,
 				D50A45DF216D31160025BC1C /* MainStore.swift in Sources */,
 				D50A4609216D3BB10025BC1C /* AppLifeCycleEvent.swift in Sources */,
 				D50A45D6216D2F930025BC1C /* Artist.swift in Sources */,
+				D5B267562197F3EF000991CD /* MediaRemoteControlMiddleware.swift in Sources */,
 				D537259B2173A31B00C7400B /* NavigationReducer.swift in Sources */,
 				D50A45DA216D2FAD0025BC1C /* Playlist.swift in Sources */,
 				D53725962173A21400C7400B /* Sitemap.swift in Sources */,
@@ -842,6 +863,7 @@
 				D50A4618216D422D0025BC1C /* ParseService.swift in Sources */,
 				D5F34E90218FB13800773247 /* CachedFileEvent.swift in Sources */,
 				D551DD982173E03E0086636D /* RadioPlayer.swift in Sources */,
+				D5B2675D2197F5BF000991CD /* MediaControlEvent.swift in Sources */,
 				D53725912173A1B900C7400B /* NavigationEvent.swift in Sources */,
 				D50A4655216EAF040025BC1C /* SongUpdaterReducer.swift in Sources */,
 				D50A45DC216D307E0025BC1C /* MainState.swift in Sources */,
@@ -862,6 +884,7 @@
 				D53725972173A21400C7400B /* Sitemap.swift in Sources */,
 				D50A463D216D552C0025BC1C /* Parse.swift in Sources */,
 				D5B267532197ED01000991CD /* RadioPlayerAction.swift in Sources */,
+				D5B267592197F56C000991CD /* RadioPlayerEvent.swift in Sources */,
 				D52FE7312183D47C000DA781 /* FP.swift in Sources */,
 				D57716EE217211E6005C1229 /* LoggerMiddleware.swift in Sources */,
 				D50A4624216D441A0025BC1C /* AppLifeCycleReducer.swift in Sources */,
@@ -895,6 +918,7 @@
 				D50A462E216D453F0025BC1C /* Transient.swift in Sources */,
 				D50A4651216EAE790025BC1C /* SongUpdaterAction.swift in Sources */,
 				D50A4619216D422D0025BC1C /* ParseService.swift in Sources */,
+				D5B2675E2197F5BF000991CD /* MediaControlEvent.swift in Sources */,
 				D50A4656216EAF040025BC1C /* SongUpdaterReducer.swift in Sources */,
 				D50A45EB216D31710025BC1C /* Playlist.swift in Sources */,
 				D50A4638216D4C050025BC1C /* APIProgress.swift in Sources */,
@@ -915,6 +939,7 @@
 				D5F34E88218F9FD700773247 /* EmptyInitializer.swift in Sources */,
 				D50A45E9216D31700025BC1C /* Song.swift in Sources */,
 				D50A45F3216D319B0025BC1C /* MainStateProvider.swift in Sources */,
+				D5B2675F2197F5BF000991CD /* MediaControlEvent.swift in Sources */,
 				D50A4643216E7F740025BC1C /* APIResponseReducer.swift in Sources */,
 				D50A4601216D32F30025BC1C /* AppLifeCycleMiddleware.swift in Sources */,
 				D50A4634216D48B10025BC1C /* StreamingServer.swift in Sources */,
@@ -941,6 +966,7 @@
 				D50A461A216D422D0025BC1C /* ParseService.swift in Sources */,
 				D5F34E92218FB13800773247 /* CachedFileEvent.swift in Sources */,
 				D53DBCCC2173DE6C00F213A9 /* RadioPlayer.swift in Sources */,
+				D5B2675A2197F56C000991CD /* RadioPlayerEvent.swift in Sources */,
 				D53725932173A1B900C7400B /* NavigationEvent.swift in Sources */,
 				D50A4657216EAF040025BC1C /* SongUpdaterReducer.swift in Sources */,
 				D50A45E8216D31700025BC1C /* Playlist.swift in Sources */,
@@ -967,6 +993,7 @@
 				D50A464E216E978F0025BC1C /* SongUpdaterMiddleware.swift in Sources */,
 				D50A45E6216D316F0025BC1C /* Song.swift in Sources */,
 				D50144852197CF5700A5A376 /* RadioPlayerMiddleware.swift in Sources */,
+				D5B2675B2197F56C000991CD /* RadioPlayerEvent.swift in Sources */,
 				D50A45F4216D319B0025BC1C /* MainStateProvider.swift in Sources */,
 				D53725942173A1B900C7400B /* NavigationEvent.swift in Sources */,
 				D50A4644216E7F740025BC1C /* APIResponseReducer.swift in Sources */,
@@ -996,6 +1023,7 @@
 				D508B1C221977651005A3CB5 /* NavigationAction.swift in Sources */,
 				D537259E2173A31B00C7400B /* NavigationReducer.swift in Sources */,
 				D50A4630216D453F0025BC1C /* Transient.swift in Sources */,
+				D5B267602197F5BF000991CD /* MediaControlEvent.swift in Sources */,
 				D50A4653216EAE790025BC1C /* SongUpdaterAction.swift in Sources */,
 				D50A461B216D422D0025BC1C /* ParseService.swift in Sources */,
 				D50A4658216EAF040025BC1C /* SongUpdaterReducer.swift in Sources */,

@@ -3,29 +3,6 @@ import Foundation
 import RxSwift
 import SwiftRex
 
-public enum RadioPlayerEvent: EventProtocol, Equatable {
-    case stopped
-    case failure(Error?)
-    case playing
-    case paused
-    case notEnoughBuffer
-    case evaluatingBufferingRate
-    case noItemToPlay
-}
-
-public func == (lhs: RadioPlayerEvent, rhs: RadioPlayerEvent) -> Bool {
-    switch (lhs, rhs) {
-    case (.stopped, .stopped): return true
-    case let (.failure(lhs), .failure(rhs)): return lhs?.localizedDescription == rhs?.localizedDescription
-    case (.playing, .playing): return true
-    case (.paused, .paused): return true
-    case (.notEnoughBuffer, .notEnoughBuffer): return true
-    case (.evaluatingBufferingRate, .evaluatingBufferingRate): return true
-    case (.noItemToPlay, .noItemToPlay): return true
-    default: return false
-    }
-}
-
 public class RadioPlayer: ObservableType {
     public typealias E = RadioPlayerEvent
     private let pipe = BehaviorSubject<RadioPlayerEvent>(value: .stopped)
@@ -36,7 +13,7 @@ public class RadioPlayer: ObservableType {
 
     private var streaming: AVPlayerItem?
     private var player: AVPlayer?
-    private var session: AVAudioSession?
+    private var session: AVAudioSession = AVAudioSession.sharedInstance()
     private var disposeBag = DisposeBag()
 
     public init() { }
@@ -46,7 +23,6 @@ public class RadioPlayer: ObservableType {
 
         streaming = .init(url: url)
         player = AVPlayer(playerItem: streaming)
-        session = AVAudioSession.sharedInstance()
 
         guard let player = self.player, let streaming = self.streaming else { return }
 
@@ -81,9 +57,13 @@ public class RadioPlayer: ObservableType {
         player.replaceCurrentItem(with: streaming)
         player.play()
 
+        activateSession()
+    }
+
+    public func activateSession() {
         do {
-            try session!.setCategory(.playback, mode: .default, options: [.mixWithOthers])
-            try session!.setActive(true, options: [])
+            try session.setCategory(.playback, mode: .default, options: [])
+            try session.setActive(true, options: [])
         } catch {
             pipe.onNext(RadioPlayerEvent.failure(error))
         }

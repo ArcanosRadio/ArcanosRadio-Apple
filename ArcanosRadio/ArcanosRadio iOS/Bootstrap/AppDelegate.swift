@@ -6,6 +6,11 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
     fileprivate let store = MainStore()
     var window: UIWindow?
+
+    override func remoteControlReceived(with event: UIEvent?) {
+        guard let event = event else { return }
+        store.dispatch(event)
+    }
 }
 
 func inject<T>(_ type: T.Type) -> T {

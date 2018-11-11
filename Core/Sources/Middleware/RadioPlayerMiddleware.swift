@@ -12,6 +12,8 @@ public final class RadioPlayerMiddleware: Middleware {
         radioPlayer
             .subscribe(onNext: { [weak self] action in (self?.actionHandler as? EventHandler)?.dispatch(action) })
             .disposed(by: disposeBag)
+
+        radioPlayer.activateSession()
     }
 
     public func handle(event: EventProtocol, getState: @escaping () -> StateType, next: @escaping (EventProtocol, @escaping () -> StateType) -> Void) {
@@ -19,27 +21,31 @@ public final class RadioPlayerMiddleware: Middleware {
             next(event, getState)
         }
 
-
         let state = getState()
 
-        if state.connectionState == .none
-            && [ReachabilityEvent.cellular, .wifi].contains(event as? ReachabilityEvent) {
+        switch event {
+        case ReachabilityEvent.cellular where state.connectionState == .none,
+             ReachabilityEvent.wifi where state.connectionState == .none:
             actionHandler?.trigger(RadioPlayerAction.retry)
-        }
-
-        guard let radioPlayerEvent = event as? RadioPlayerEvent else { return }
-
-        switch radioPlayerEvent {
-        case .paused, .notEnoughBuffer, .noItemToPlay, .failure, .evaluatingBufferingRate, .stopped:
+        case RadioPlayerEvent.paused,
+             RadioPlayerEvent.notEnoughBuffer,
+             RadioPlayerEvent.noItemToPlay,
+             RadioPlayerEvent.failure,
+             RadioPlayerEvent.evaluatingBufferingRate,
+             RadioPlayerEvent.stopped:
             if state.isPlaying && state.userWantsToListen {
                 actionHandler?.trigger(RadioPlayerAction.retry)
             }
             if state.isPlaying {
                 actionHandler?.trigger(RadioPlayerAction.stopped)
             }
-
-        case .playing:
+        case RadioPlayerEvent.playing:
             actionHandler?.trigger(RadioPlayerAction.started)
+        case MediaControlEvent.userWantsToPause:
+            actionHandler?.trigger(RadioPlayerAction.playerShouldBePlaying(false))
+        case MediaControlEvent.userWantsToResume:
+            actionHandler?.trigger(RadioPlayerAction.playerShouldBePlaying(true))
+        default: break
         }
     }
 
@@ -67,13 +73,16 @@ public final class RadioPlayerMiddleware: Middleware {
             radioPlayer.configure(url: streamingServer.streamingUrl)
             radioPlayer.play()
 
-        case RadioPlayerAction.userWantsToResume:
+        case let RadioPlayerAction.playerShouldBePlaying(userChoice) where userChoice:
             guard !radioPlayer.isPlaying,
                 state.connectionState != .none else { return }
 
             radioPlayer.play()
 
-        case ReachabilityEvent.error, ReachabilityEvent.notConfigure, ReachabilityEvent.offline, RadioPlayerAction.userWantsToPause:
+        case ReachabilityEvent.error, ReachabilityEvent.notConfigure, ReachabilityEvent.offline:
+            radioPlayer.stop()
+
+        case let RadioPlayerAction.playerShouldBePlaying(userChoice) where !userChoice:
             radioPlayer.stop()
 
         default: break
