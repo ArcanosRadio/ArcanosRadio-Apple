@@ -182,6 +182,8 @@
 		D5B2676721988353000991CD /* Either.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B2676521988353000991CD /* Either.swift */; };
 		D5B2676821988353000991CD /* Either.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B2676521988353000991CD /* Either.swift */; };
 		D5B2676921988353000991CD /* Either.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B2676521988353000991CD /* Either.swift */; };
+		D5B2676A21989722000991CD /* MediaRemoteControlMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B267552197F3EF000991CD /* MediaRemoteControlMiddleware.swift */; };
+		D5B2676B21989722000991CD /* MediaRemoteControlMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B267552197F3EF000991CD /* MediaRemoteControlMiddleware.swift */; };
 		D5CDD32B216D26A500BD36C4 /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = D59EF618216D23F800C25F0A /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D5CDD32C216D26A600BD36C4 /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = D59EF618216D23F800C25F0A /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D5CDD32D216D26A700BD36C4 /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = D59EF618216D23F800C25F0A /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -984,6 +986,7 @@
 				D5F34E8D218FB0B800773247 /* CachedFileMiddleware.swift in Sources */,
 				D508B1B8219775CC005A3CB5 /* ReachabilityEvent.swift in Sources */,
 				D508B1B02197641F005A3CB5 /* ReachabilityMiddleware.swift in Sources */,
+				D5B2676A21989722000991CD /* MediaRemoteControlMiddleware.swift in Sources */,
 				D508B1A621976359005A3CB5 /* Reachability.swift in Sources */,
 				D501448D2197DDDB00A5A376 /* RadioPlayerReducer.swift in Sources */,
 			);
@@ -1017,6 +1020,7 @@
 				D57716E621720AEA005C1229 /* ErrorAction.swift in Sources */,
 				D50A45EF216D31750025BC1C /* MainState.swift in Sources */,
 				D50A460C216D3BB10025BC1C /* AppLifeCycleEvent.swift in Sources */,
+				D5B2676B21989722000991CD /* MediaRemoteControlMiddleware.swift in Sources */,
 				D5F34E98218FB1AC00773247 /* CachedFileAction.swift in Sources */,
 				D50A45E4216D316F0025BC1C /* Artist.swift in Sources */,
 				D5F34E9D218FB37300773247 /* CachedFileService.swift in Sources */,

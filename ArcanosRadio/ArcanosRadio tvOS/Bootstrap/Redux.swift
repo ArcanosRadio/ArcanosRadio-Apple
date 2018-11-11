@@ -3,10 +3,13 @@ import Foundation
 import SwiftRex
 
 public let MainMiddleware: () -> ComposedMiddleware<MainState> = {
-    return AppLifeCycleMiddleware(trackDeviceOrientation: true, trackBattery: true, trackProximityState: true).lift(\.app)
+    return AppLifeCycleMiddleware(trackDeviceOrientation: false, trackBattery: false, trackProximityState: false).lift(\.app)
         <> RouterMiddleware().lift(\.navigation)
-        <> SongUpdaterMiddleware().lift(\.currentSong)
+        <> SongUpdaterMiddleware()
+        <> MediaRemoteControlMiddleware()
+        <> CachedFileMiddleware().lift(\.fileCache.value)
         <> ParseMiddleware().lift(\.currentSong)
+        <> RadioPlayerMiddleware()
         <> DirectLineMiddleware()
         <> LoggerMiddleware(eventFilter: { _, _ in true },
                             actionFilter: { _, _ in true },
@@ -15,14 +18,18 @@ public let MainMiddleware: () -> ComposedMiddleware<MainState> = {
         <> CatchErrorMiddleware { errorAction, state in
             print("Error: \(errorAction.error) on \(errorAction.message)")
             return .cauterize
-    }
+        }
+        <> ReachabilityMiddleware().lift(\.connectionState)
 }
 
 public let MainReducer: () -> Reducer<MainState> = {
     return appLifeCycleReducer.lift(\.app)
         <> apiResponseReducer
         <> songUpdaterReducer.lift(\.currentSong)
+        <> cachedFileReducer.lift(\.fileCache.value)
         <> navigationReducer.lift(\.navigation)
+        <> reachabilityReducer.lift(\.connectionState)
+        <> radioPlayerReducer
 }
 
 extension MainStore {

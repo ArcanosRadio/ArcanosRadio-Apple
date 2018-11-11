@@ -42,7 +42,7 @@ public final class MediaRemoteControlMiddleware: Middleware {
             assert(Thread.current.isMainThread, "Not in MainThread when handle action RadioPlayerAction.started")
             commandCenter.playCommand.isEnabled = false
             commandCenter.pauseCommand.isEnabled = true
-            if #available(iOS 11.0, *) {
+            if #available(iOS 11.0, tvOS 11.0, *) {
                 nowPlayingInfoCenter.playbackState = MPNowPlayingPlaybackState.playing
             }
 
@@ -50,7 +50,7 @@ public final class MediaRemoteControlMiddleware: Middleware {
             assert(Thread.current.isMainThread, "Not in MainThread when handle action RadioPlayerAction.stopped")
             commandCenter.playCommand.isEnabled = true
             commandCenter.pauseCommand.isEnabled = false
-            if #available(iOS 11.0, *) {
+            if #available(iOS 11.0, tvOS 11.0, *) {
                 nowPlayingInfoCenter.playbackState = MPNowPlayingPlaybackState.paused
             }
 

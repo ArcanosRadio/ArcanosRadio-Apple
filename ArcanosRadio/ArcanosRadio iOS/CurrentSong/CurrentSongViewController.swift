@@ -13,8 +13,8 @@ final class CurrentSongViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let songChanges = stateProvider[\.currentSong].distinctUntilChanged()
-        let cacheChanges = stateProvider[\.fileCache.value].distinctUntilChanged { $0.count }
+        let songChanges = stateProvider.map(get(\.currentSong)).distinctUntilChanged()
+        let cacheChanges = stateProvider.map(get(\.fileCache.value)).distinctUntilChanged(get(\.count))
 
         Observable.combineLatest(songChanges, cacheChanges)
             .asDriver(onErrorJustReturn: (nil, [:]))
