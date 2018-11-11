@@ -5,13 +5,13 @@ import SwiftRex
 public let MainMiddleware: () -> ComposedMiddleware<MainState> = {
     return AppLifeCycleMiddleware(trackDeviceOrientation: true, trackBattery: true, trackProximityState: true).lift(\.app)
         <> RouterMiddleware().lift(\.navigation)
-        <> SongUpdaterMiddleware().lift(\.currentSong)
+        <> SongUpdaterMiddleware()
         <> CachedFileMiddleware().lift(\.fileCache.value)
         <> ParseMiddleware().lift(\.currentSong)
         <> RadioPlayerMiddleware()
         <> DirectLineMiddleware()
-        <> LoggerMiddleware(eventFilter: { _, event in event is ReachabilityEvent },
-                            actionFilter: { _, _ in false },
+        <> LoggerMiddleware(eventFilter: { _, _ in true },
+                            actionFilter: { _, _ in true },
                             debugOnly: true,
                             stateTransformer: { _ in "" })
         <> CatchErrorMiddleware { errorAction, state in

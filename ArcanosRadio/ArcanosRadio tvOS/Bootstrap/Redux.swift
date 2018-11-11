@@ -8,10 +8,10 @@ public let MainMiddleware: () -> ComposedMiddleware<MainState> = {
         <> SongUpdaterMiddleware().lift(\.currentSong)
         <> ParseMiddleware().lift(\.currentSong)
         <> DirectLineMiddleware()
-//        <> LoggerMiddleware(eventFilter: { _, _ in true },
-//                            actionFilter: { _, _ in true },
-//                            debugOnly: true,
-//                            stateTransformer: { _ in "" })
+        <> LoggerMiddleware(eventFilter: { _, _ in true },
+                            actionFilter: { _, _ in true },
+                            debugOnly: true,
+                            stateTransformer: { _ in "" })
         <> CatchErrorMiddleware { errorAction, state in
             print("Error: \(errorAction.error) on \(errorAction.message)")
             return .cauterize

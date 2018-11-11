@@ -34,7 +34,9 @@ public final class RadioPlayerMiddleware: Middleware {
             if state.isPlaying && state.userWantsToListen {
                 actionHandler?.trigger(RadioPlayerAction.retry)
             }
-            actionHandler?.trigger(RadioPlayerAction.stopped)
+            if state.isPlaying {
+                actionHandler?.trigger(RadioPlayerAction.stopped)
+            }
 
         case .playing:
             actionHandler?.trigger(RadioPlayerAction.started)

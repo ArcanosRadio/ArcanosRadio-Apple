@@ -3,6 +3,7 @@ import RxSwift
 import SwiftRex
 
 public final class SongUpdaterMiddleware: Middleware {
+    public typealias StateType = MainState
     public var actionHandler: ActionHandler?
     private var eventHandler: EventHandler? {
         return actionHandler as? EventHandler
@@ -10,13 +11,13 @@ public final class SongUpdaterMiddleware: Middleware {
     private let disposeBag = DisposeBag()
     private var timerSubscription: Disposable?
 
-    public func handle(event: EventProtocol, getState: @escaping () -> Playlist?, next: @escaping (EventProtocol, @escaping () -> Playlist?) -> Void) {
+    public func handle(event: EventProtocol, getState: @escaping () -> StateType, next: @escaping (EventProtocol, @escaping () -> StateType) -> Void) {
         defer {
             next(event, getState)
         }
     }
 
-    public func handle(action: ActionProtocol, getState: @escaping () -> Playlist?, next: @escaping (ActionProtocol, @escaping () -> Playlist?) -> Void) {
+    public func handle(action: ActionProtocol, getState: @escaping () -> StateType, next: @escaping (ActionProtocol, @escaping () -> StateType) -> Void) {
         defer {
             next(action, getState)
         }
@@ -24,17 +25,17 @@ public final class SongUpdaterMiddleware: Middleware {
         switch action {
         case let playlistAction as RequestProgress<Playlist>:
             handle(playlistAction: playlistAction, getState: getState, next: next)
-        case let streamingServerAction as RequestProgress<StreamingServer>:
-            handle(serverAction: streamingServerAction, getState: getState, next: next)
+        case let radioPlayerAction as RadioPlayerAction:
+            handle(radioPlayerAction: radioPlayerAction, getState: getState, next: next)
         default:
             break
         }
     }
 
-    private func handle(playlistAction: RequestProgress<Playlist>, getState: @escaping () -> Playlist?, next: @escaping (ActionProtocol, @escaping () -> Playlist?) -> Void) {
+    private func handle(playlistAction: RequestProgress<Playlist>, getState: @escaping () -> StateType, next: @escaping (ActionProtocol, @escaping () -> StateType) -> Void) {
         playlistAction.analysis(
             onSuccess: { playlist in
-                guard playlist != getState() else { return }
+                guard playlist != getState().currentSong else { return }
                 actionHandler?.trigger(SongUpdaterAction.songHasChanged(playlist))
 
                 guard let eventHandler = eventHandler else { return }
@@ -56,29 +57,28 @@ public final class SongUpdaterMiddleware: Middleware {
             }, onFailure: handleError(playlistAction))
     }
 
-    private func handle(serverAction: RequestProgress<StreamingServer>, getState: @escaping () -> Playlist?, next: @escaping (ActionProtocol, @escaping () -> Playlist?) -> Void) {
-        serverAction.analysis(
-            onSuccess: { server in
+    private func handle(radioPlayerAction: RadioPlayerAction, getState: @escaping () -> StateType, next: @escaping (ActionProtocol, @escaping () -> StateType) -> Void) {
+        switch radioPlayerAction {
+        case .started:
+            if let server = getState().streamingServer?.value {
                 createTimer(timeInterval: server.poolingTimeActive)
-            },
-            onFailure: handleError(serverAction))
+            }
+        case .stopped:
+            timerSubscription?.dispose()
+            timerSubscription = nil
+        default: break
+        }
     }
 
     public init() { }
 
     private func createTimer(timeInterval: TimeInterval) {
+        let timer = Observable<Int>.interval(timeInterval, scheduler: ConcurrentDispatchQueueScheduler(qos: .background)).map { _ in }
+
         timerSubscription?.dispose()
-        timerSubscription =
-            Observable<Void>
-                .concat(
-                    .just(()),
-                    Observable<Int>
-                        .interval(timeInterval,
-                                  scheduler: ConcurrentDispatchQueueScheduler(qos: .background))
-                        .map { _ in }
-                ).subscribe(onNext: { [weak self] in
-                    self?.eventHandler?.dispatch(RefreshTimerEvent.tick)
-                })
+        timerSubscription = Observable<Void>.concat(.just(()), timer).subscribe(onNext: { [weak self] in
+            self?.eventHandler?.dispatch(RefreshTimerEvent.tick)
+        })
     }
 }
 

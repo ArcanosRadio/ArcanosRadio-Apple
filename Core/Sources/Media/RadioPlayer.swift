@@ -31,9 +31,7 @@ public class RadioPlayer: ObservableType {
     private let pipe = BehaviorSubject<RadioPlayerEvent>(value: .stopped)
 
     public func subscribe<O>(_ observer: O) -> Disposable where O: ObserverType, O.E == RadioPlayerEvent {
-        return pipe
-            .debug()
-            .subscribe(observer)
+        return pipe.subscribe(observer)
     }
 
     private var streaming: AVPlayerItem?

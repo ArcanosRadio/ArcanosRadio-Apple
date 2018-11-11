@@ -165,6 +165,9 @@
 		D57716EF217211E6005C1229 /* LoggerMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57716EC217211E6005C1229 /* LoggerMiddleware.swift */; };
 		D57716F0217211E6005C1229 /* LoggerMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57716EC217211E6005C1229 /* LoggerMiddleware.swift */; };
 		D59EF61A216D23F800C25F0A /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = D59EF618216D23F800C25F0A /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D5B267522197E928000991CD /* ReachabilityEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D508B1B6219775CC005A3CB5 /* ReachabilityEvent.swift */; };
+		D5B267532197ED01000991CD /* RadioPlayerAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50144872197D85B00A5A376 /* RadioPlayerAction.swift */; };
+		D5B267542197ED1C000991CD /* RadioPlayerReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D501448B2197DDDB00A5A376 /* RadioPlayerReducer.swift */; };
 		D5CDD32B216D26A500BD36C4 /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = D59EF618216D23F800C25F0A /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D5CDD32C216D26A600BD36C4 /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = D59EF618216D23F800C25F0A /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D5CDD32D216D26A700BD36C4 /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = D59EF618216D23F800C25F0A /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -858,11 +861,14 @@
 			files = (
 				D53725972173A21400C7400B /* Sitemap.swift in Sources */,
 				D50A463D216D552C0025BC1C /* Parse.swift in Sources */,
+				D5B267532197ED01000991CD /* RadioPlayerAction.swift in Sources */,
 				D52FE7312183D47C000DA781 /* FP.swift in Sources */,
 				D57716EE217211E6005C1229 /* LoggerMiddleware.swift in Sources */,
 				D50A4624216D441A0025BC1C /* AppLifeCycleReducer.swift in Sources */,
 				D50A464C216E978F0025BC1C /* SongUpdaterMiddleware.swift in Sources */,
 				D5DEB1C7218424130050BA0B /* WatchKit+Extensions.swift in Sources */,
+				D5B267522197E928000991CD /* ReachabilityEvent.swift in Sources */,
+				D5B267542197ED1C000991CD /* RadioPlayerReducer.swift in Sources */,
 				D50A45EC216D31710025BC1C /* Song.swift in Sources */,
 				D50A45F2216D319B0025BC1C /* MainStateProvider.swift in Sources */,
 				D53725922173A1B900C7400B /* NavigationEvent.swift in Sources */,
