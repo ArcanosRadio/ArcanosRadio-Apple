@@ -13,15 +13,17 @@ final class CurrentSongViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        radioPlayer
+            .subscribe(onNext: { _ in })
+            .disposed(by: disposeBag)
 
         stateProvider[\.streamingServer]
             .distinctUntilChanged()
             .subscribe(onNext: { [weak self] server in
                 if case let .success(streamingServer)? = server {
-                    self?.radioPlayer.configure(url: streamingServer.streamingUrl)
-                    self?.radioPlayer.play()
+                    self?.play(url: streamingServer.streamingUrl)
                 } else {
-                    self?.radioPlayer.stop()
+                    self?.stop()
                 }
             }).disposed(by: disposeBag)
 
@@ -54,6 +56,15 @@ final class CurrentSongViewController: UIViewController {
         songLabel.text = playlist.song.songName
         lyricsLabel.text = lyrics
         albumArtImageView.image = albumArt
+    }
+
+    private func play(url: URL) {
+        radioPlayer.configure(url: url)
+        radioPlayer.play()
+    }
+
+    private func stop() {
+        radioPlayer.stop()
     }
 }
 
