@@ -11,7 +11,7 @@ public class RadioPlayer: ObservableType {
         return pipe.subscribe(observer)
     }
 
-    private var asset: AVURLAsset?
+    private var asset: AVAsset?
     private var streaming: AVPlayerItem?
     private var player: AVPlayer?
     private var session: AVAudioSession = AVAudioSession.sharedInstance()
@@ -65,7 +65,16 @@ public class RadioPlayer: ObservableType {
 
     public func activateSession() {
         do {
-            try session.setCategory(.playback, mode: .default, options: [])
+            if #available(iOS 11.0, tvOS 11.0, *) {
+                try session.setCategory(.playback,
+                                        mode: .default,
+                                        policy: .longForm,
+                                        options: [])
+            } else {
+                try session.setCategory(.playback,
+                                        mode: .default,
+                                        options: [.allowAirPlay, .allowBluetooth, .allowBluetoothA2DP])
+            }
             try session.setActive(true, options: [])
         } catch {
             pipe.onNext(RadioPlayerEvent.failure(error))
