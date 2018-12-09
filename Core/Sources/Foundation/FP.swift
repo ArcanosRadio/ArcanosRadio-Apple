@@ -39,3 +39,24 @@ public func map<A, B>(_ a: A, _ transform: (A) -> B) -> B {
 public func id<T>(_ t: T) -> T {
     return t
 }
+
+public func replace<A, B>(with b: B) -> (A) -> B {
+    return { _ in
+        return b
+    }
+}
+
+public func zip<A, B>(_ lhs: A?, _ rhs: B?) -> (A, B)? {
+    switch (lhs, rhs) {
+    case let (lhs?, rhs?): return (lhs, rhs)
+    default: return nil
+    }
+}
+
+public func curry<A, B, C>(_ fn: @escaping (A, B) -> C) -> (A) -> (B) -> C {
+    return { a in
+        return { b in
+            return fn(a, b)
+        }
+    }
+}

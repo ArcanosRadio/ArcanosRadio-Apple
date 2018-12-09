@@ -22,19 +22,20 @@ final class CurrentSongViewController: UIViewController {
     @IBOutlet private weak var appleMusicButton: UIButton!
     @IBOutlet private weak var toolbar: UIStackView!
     private var airplayButton: UIView!
-
-    @available(iOS 11.0, *)
-    private lazy var routeDetector: AVRouteDetector = {
-        return AVRouteDetector()
-    }()
-
     private let disposeBag = DisposeBag()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        configureUI()
+        dataBindings()
+    }
+
+    private func configureUI() {
         if #available(iOS 11.0, *) {
-            airplayButton = AVRoutePickerView(frame: .init(x: 0, y: 0, width: 24, height: 24))
+            let routePickerView = AVRoutePickerView(frame: .init(x: 0, y: 0, width: 24, height: 24))
+            routePickerView.delegate = self
+            airplayButton = routePickerView
         } else {
             let volumeView = MPVolumeView(frame:CGRect(x: 0, y: 0, width: 24, height: 24))
             volumeView.showsRouteButton = true
@@ -47,6 +48,22 @@ final class CurrentSongViewController: UIViewController {
         airplayButton.tintColor = .black
         toolbar.insertArrangedSubview(airplayButton, at: 0)
 
+        configureUserInput()
+    }
+
+    private func configureUserInput() {
+        let dispatch: (EventProtocol) -> Void = { [weak self] in self?.eventHandler.dispatch($0) }
+
+        shareButton.rx.tap
+            .map { [weak shareButton] in shareButton }
+            .filter { $0 != nil }.map { $0! }
+            .map(Either<UIView, CGRect>.left)
+            .map(curry(NavigationEvent.requestShareSheet)(self))
+            .subscribe(onNext: dispatch)
+            .disposed(by: disposeBag)
+    }
+
+    private func dataBindings() {
         let songChanges = stateProvider.map(get(\.currentSong)).distinctUntilChanged()
         let cacheChanges = stateProvider.map(get(\.fileCache.value)).distinctUntilChanged(get(\.count))
 
@@ -54,9 +71,6 @@ final class CurrentSongViewController: UIViewController {
             .asDriver(onErrorJustReturn: (nil, [:]))
             .drive(onNext: { [weak self] (playlist, cache) in
                 guard let playlist = playlist else { return }
-//                let lyrics = (playlist.song.lyrics?.url.absoluteString)
-//                    .flatMap { cache[$0]?() }
-//                    .flatMap { String(data: $0, encoding: .utf8) }
                 let albumArt = (playlist.song.albumArt?.url.absoluteString)
                     .flatMap { cache[$0]?() }
                     .flatMap(UIImage.init(data:))
@@ -81,3 +95,14 @@ final class CurrentSongViewController: UIViewController {
 
 extension CurrentSongViewController: HasStateProvider { }
 extension CurrentSongViewController: HasEventHandler { }
+
+@available(iOS 11.0, *)
+extension CurrentSongViewController: AVRoutePickerViewDelegate {
+    public func routePickerViewWillBeginPresentingRoutes(_ routePickerView: AVRoutePickerView) {
+        eventHandler.dispatch(NavigationEvent.requestNavigation(.airplayPicker))
+    }
+
+    public func routePickerViewDidEndPresentingRoutes(_ routePickerView: AVRoutePickerView) {
+        eventHandler.dispatch(NavigationEvent.requestNavigation(.currentSong))
+    }
+}

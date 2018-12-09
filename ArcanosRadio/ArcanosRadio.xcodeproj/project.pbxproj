@@ -25,6 +25,7 @@
 		D521A9DD216D287700261BE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D521A9DC216D287700261BE3 /* Assets.xcassets */; };
 		D52FE7352183FAA3000DA781 /* CurrentSong.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D52FE7342183FAA3000DA781 /* CurrentSong.storyboard */; };
 		D52FE7372183FACD000DA781 /* CurrentSong.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52FE7362183FACD000DA781 /* CurrentSong.swift */; };
+		D5334EB121BDA1BF005D2038 /* ShareSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5334EB021BDA1BF005D2038 /* ShareSheetViewController.swift */; };
 		D53725762173860300C7400B /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D53725752173860300C7400B /* Core.framework */; };
 		D53725772173860300C7400B /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D53725752173860300C7400B /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D537257A21738EA500C7400B /* Redux.swift in Sources */ = {isa = PBXBuildFile; fileRef = D537257921738EA500C7400B /* Redux.swift */; };
@@ -149,6 +150,7 @@
 		D521A9DE216D287700261BE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D52FE7342183FAA3000DA781 /* CurrentSong.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CurrentSong.storyboard; sourceTree = "<group>"; };
 		D52FE7362183FACD000DA781 /* CurrentSong.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentSong.swift; sourceTree = "<group>"; };
+		D5334EB021BDA1BF005D2038 /* ShareSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheetViewController.swift; sourceTree = "<group>"; };
 		D53725752173860300C7400B /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D537257921738EA500C7400B /* Redux.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Redux.swift; sourceTree = "<group>"; };
 		D537258C21739D2400C7400B /* CurrentSongViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrentSongViewController.xib; sourceTree = "<group>"; };
@@ -270,6 +272,7 @@
 				D508B1C5219793DC005A3CB5 /* ArcanosRadio.entitlements */,
 				D537258A21739CA500C7400B /* Bootstrap */,
 				D537258B21739D0200C7400B /* CurrentSong */,
+				D5334EAF21BDA17F005D2038 /* ShareSheet */,
 			);
 			path = "ArcanosRadio iOS";
 			sourceTree = "<group>";
@@ -303,6 +306,14 @@
 				D5DEB1C92184AC240050BA0B /* CurrentSong */,
 			);
 			path = "ArcanosRadio tvOS";
+			sourceTree = "<group>";
+		};
+		D5334EAF21BDA17F005D2038 /* ShareSheet */ = {
+			isa = PBXGroup;
+			children = (
+				D5334EB021BDA1BF005D2038 /* ShareSheetViewController.swift */,
+			);
+			path = ShareSheet;
 			sourceTree = "<group>";
 		};
 		D537258A21739CA500C7400B /* Bootstrap */ = {
@@ -705,6 +716,7 @@
 				D537258F2173A0F700C7400B /* RouterMiddleware.swift in Sources */,
 				D537257A21738EA500C7400B /* Redux.swift in Sources */,
 				D521A99A216D27BA00261BE3 /* CurrentSongViewController.swift in Sources */,
+				D5334EB121BDA1BF005D2038 /* ShareSheetViewController.swift in Sources */,
 				D521A998216D27BA00261BE3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
