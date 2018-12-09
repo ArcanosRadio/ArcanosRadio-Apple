@@ -11,6 +11,7 @@ public class RadioPlayer: ObservableType {
         return pipe.subscribe(observer)
     }
 
+    private var asset: AVURLAsset?
     private var streaming: AVPlayerItem?
     private var player: AVPlayer?
     private var session: AVAudioSession = AVAudioSession.sharedInstance()
@@ -21,8 +22,9 @@ public class RadioPlayer: ObservableType {
     public func configure(url: URL) {
         disposeBag = DisposeBag()
 
-        streaming = .init(url: url)
-        player = AVPlayer(playerItem: streaming)
+        asset = .init(url: url)
+        streaming = .init(asset: asset!)
+        player = AVPlayer()
 
         guard let player = self.player, let streaming = self.streaming else { return }
 
@@ -51,11 +53,12 @@ public class RadioPlayer: ObservableType {
 
     public func play() {
         guard let player = player, let streaming = streaming else { return }
+        guard player.rate != 1.0 else { return }
 
         player.allowsExternalPlayback = true
         player.replaceCurrentItem(with: nil)
-        player.replaceCurrentItem(with: streaming)
         player.play()
+        player.replaceCurrentItem(with: streaming)
 
         activateSession()
     }

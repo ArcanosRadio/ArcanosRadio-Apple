@@ -5,9 +5,15 @@ import WatchKit
 class ExtensionDelegate: NSObject, WKExtensionDelegate {
 
     fileprivate let store = MainStore()
+    private var radio: RadioPlayer!
 
     func applicationDidFinishLaunching() {
         // Perform any final initialization of your application.
+        radio = RadioPlayer()
+        if #available(watchOS 5.0, *) {
+            radio.activateSession()
+            radio.play()
+        }
     }
 
     func applicationDidBecomeActive() {
