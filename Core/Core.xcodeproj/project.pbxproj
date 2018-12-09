@@ -184,9 +184,11 @@
 		D5B2676921988353000991CD /* Either.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B2676521988353000991CD /* Either.swift */; };
 		D5B2676A21989722000991CD /* MediaRemoteControlMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B267552197F3EF000991CD /* MediaRemoteControlMiddleware.swift */; };
 		D5B2676B21989722000991CD /* MediaRemoteControlMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B267552197F3EF000991CD /* MediaRemoteControlMiddleware.swift */; };
+		D5B42FBD2198A2210025EE95 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5B42FBC2198A2200025EE95 /* MediaPlayer.framework */; };
 		D5CDD32B216D26A500BD36C4 /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = D59EF618216D23F800C25F0A /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D5CDD32C216D26A600BD36C4 /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = D59EF618216D23F800C25F0A /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D5CDD32D216D26A700BD36C4 /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = D59EF618216D23F800C25F0A /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D5D32CA821A0484100D0A71B /* RadioPlayerWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D32CA721A0484100D0A71B /* RadioPlayerWatch.swift */; };
 		D5DEB1C7218424130050BA0B /* WatchKit+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DEB1C6218424130050BA0B /* WatchKit+Extensions.swift */; };
 		D5DEB1D22184B5BF0050BA0B /* UIKit+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D537257E2173925200C7400B /* UIKit+Extensions.swift */; };
 		D5F34E86218F9FD700773247 /* EmptyInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F34E85218F9FD700773247 /* EmptyInitializer.swift */; };
@@ -217,14 +219,21 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		019ED0C1D9CED25D8F0D28F8 /* Pods-Core iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Core iOS.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-Core iOS/Pods-Core iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		0EAF7444FC5A1BCEE12B3465 /* Pods-Core macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Core macOS.release.xcconfig"; path = "../Pods/Target Support Files/Pods-Core macOS/Pods-Core macOS.release.xcconfig"; sourceTree = "<group>"; };
 		169CC66174D8E54FB370942D /* Pods-Core macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Core macOS.debug.xcconfig"; path = "Target Support Files/Pods-Core macOS/Pods-Core macOS.debug.xcconfig"; sourceTree = "<group>"; };
 		1E1D91E298EC8EB427F0F7CD /* Pods-Core macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Core macOS.release.xcconfig"; path = "Target Support Files/Pods-Core macOS/Pods-Core macOS.release.xcconfig"; sourceTree = "<group>"; };
 		2A9501EB0FC6E9BDE0B1C198 /* Pods_Core_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Core_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3746C3CFF5405334D8CD88F2 /* Pods-Core tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Core tvOS.release.xcconfig"; path = "Target Support Files/Pods-Core tvOS/Pods-Core tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		72057BA05828C3C452A6DD93 /* Pods_Core_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Core_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7707400BC8C8FA2EBCD7CFD6 /* Pods_Core_watchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Core_watchOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8209A24DF0F69E6413E2761F /* Pods-Core macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Core macOS.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-Core macOS/Pods-Core macOS.debug.xcconfig"; sourceTree = "<group>"; };
 		880927043EF9282E1EE07A6C /* Pods-Core iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Core iOS.debug.xcconfig"; path = "Target Support Files/Pods-Core iOS/Pods-Core iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		967AF16CA6F753A6E57E43D3 /* Pods-Core tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Core tvOS.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-Core tvOS/Pods-Core tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		996DD63D50EA6F02A680DAD6 /* Pods-Core iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Core iOS.release.xcconfig"; path = "../Pods/Target Support Files/Pods-Core iOS/Pods-Core iOS.release.xcconfig"; sourceTree = "<group>"; };
 		B8EDF74F03E6A849C19A42E4 /* Pods-Core watchOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Core watchOS.release.xcconfig"; path = "Target Support Files/Pods-Core watchOS/Pods-Core watchOS.release.xcconfig"; sourceTree = "<group>"; };
+		C42C6733F8153485ECFEA8C5 /* Pods-Core watchOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Core watchOS.release.xcconfig"; path = "../Pods/Target Support Files/Pods-Core watchOS/Pods-Core watchOS.release.xcconfig"; sourceTree = "<group>"; };
+		C96D39CFEAC9CCBBAAF8F59F /* Pods-Core watchOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Core watchOS.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-Core watchOS/Pods-Core watchOS.debug.xcconfig"; sourceTree = "<group>"; };
 		D50144812197CF5700A5A376 /* RadioPlayerMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioPlayerMiddleware.swift; sourceTree = "<group>"; };
 		D50144872197D85B00A5A376 /* RadioPlayerAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioPlayerAction.swift; sourceTree = "<group>"; };
 		D501448B2197DDDB00A5A376 /* RadioPlayerReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioPlayerReducer.swift; sourceTree = "<group>"; };
@@ -287,6 +296,8 @@
 		D5B2675C2197F5BF000991CD /* MediaControlEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaControlEvent.swift; sourceTree = "<group>"; };
 		D5B2676121987768000991CD /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		D5B2676521988353000991CD /* Either.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Either.swift; sourceTree = "<group>"; };
+		D5B42FBC2198A2200025EE95 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.1.sdk/System/Library/Frameworks/MediaPlayer.framework; sourceTree = DEVELOPER_DIR; };
+		D5D32CA721A0484100D0A71B /* RadioPlayerWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioPlayerWatch.swift; sourceTree = "<group>"; };
 		D5DEB1C6218424130050BA0B /* WatchKit+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WatchKit+Extensions.swift"; sourceTree = "<group>"; };
 		D5F34E85218F9FD700773247 /* EmptyInitializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyInitializer.swift; sourceTree = "<group>"; };
 		D5F34E8A218FB0B800773247 /* CachedFileMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedFileMiddleware.swift; sourceTree = "<group>"; };
@@ -298,6 +309,7 @@
 		E93DBC2D13B2B6E8BE3F6D68 /* Pods_Core_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Core_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3EB95A34FA8028502F7CFC3 /* Pods-Core tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Core tvOS.debug.xcconfig"; path = "Target Support Files/Pods-Core tvOS/Pods-Core tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		F67F5BF90199FA74CB51A39A /* Pods-Core iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Core iOS.release.xcconfig"; path = "Target Support Files/Pods-Core iOS/Pods-Core iOS.release.xcconfig"; sourceTree = "<group>"; };
+		FE85686E731EEB7F095E4181 /* Pods-Core tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Core tvOS.release.xcconfig"; path = "../Pods/Target Support Files/Pods-Core tvOS/Pods-Core tvOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -327,6 +339,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5B42FBD2198A2210025EE95 /* MediaPlayer.framework in Frameworks */,
 				D508B1AB219763BC005A3CB5 /* SystemConfiguration.framework in Frameworks */,
 				D53DBCD32173DEC700F213A9 /* AVFoundation.framework in Frameworks */,
 				3EC8198A7D963C8DC903E3D4 /* Pods_Core_tvOS.framework in Frameworks */,
@@ -350,6 +363,7 @@
 			isa = PBXGroup;
 			children = (
 				D5B2676121987768000991CD /* MediaPlayer.framework */,
+				D5B42FBC2198A2200025EE95 /* MediaPlayer.framework */,
 				D508B1C621979509005A3CB5 /* CoreTelephony.framework */,
 				D508B1A8219763A9005A3CB5 /* SystemConfiguration.framework */,
 				D508B1AA219763BC005A3CB5 /* SystemConfiguration.framework */,
@@ -378,6 +392,14 @@
 				3746C3CFF5405334D8CD88F2 /* Pods-Core tvOS.release.xcconfig */,
 				D8BD29EDC070D04BC602FCDB /* Pods-Core watchOS.debug.xcconfig */,
 				B8EDF74F03E6A849C19A42E4 /* Pods-Core watchOS.release.xcconfig */,
+				019ED0C1D9CED25D8F0D28F8 /* Pods-Core iOS.debug.xcconfig */,
+				996DD63D50EA6F02A680DAD6 /* Pods-Core iOS.release.xcconfig */,
+				8209A24DF0F69E6413E2761F /* Pods-Core macOS.debug.xcconfig */,
+				0EAF7444FC5A1BCEE12B3465 /* Pods-Core macOS.release.xcconfig */,
+				967AF16CA6F753A6E57E43D3 /* Pods-Core tvOS.debug.xcconfig */,
+				FE85686E731EEB7F095E4181 /* Pods-Core tvOS.release.xcconfig */,
+				C96D39CFEAC9CCBBAAF8F59F /* Pods-Core watchOS.debug.xcconfig */,
+				C42C6733F8153485ECFEA8C5 /* Pods-Core watchOS.release.xcconfig */,
 			);
 			name = Pods;
 			path = ../Pods;
@@ -502,6 +524,7 @@
 			isa = PBXGroup;
 			children = (
 				D53DBCC92173DE6C00F213A9 /* RadioPlayer.swift */,
+				D5D32CA721A0484100D0A71B /* RadioPlayerWatch.swift */,
 			);
 			path = Media;
 			sourceTree = "<group>";
@@ -926,6 +949,7 @@
 				D50A4605216D3A240025BC1C /* ResourceState.swift in Sources */,
 				D537259C2173A31B00C7400B /* NavigationReducer.swift in Sources */,
 				D50A462E216D453F0025BC1C /* Transient.swift in Sources */,
+				D5D32CA821A0484100D0A71B /* RadioPlayerWatch.swift in Sources */,
 				D50A4651216EAE790025BC1C /* SongUpdaterAction.swift in Sources */,
 				D50A4619216D422D0025BC1C /* ParseService.swift in Sources */,
 				D5B2675E2197F5BF000991CD /* MediaControlEvent.swift in Sources */,
@@ -1174,7 +1198,7 @@
 		};
 		D59EF61E216D23F800C25F0A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 880927043EF9282E1EE07A6C /* Pods-Core iOS.debug.xcconfig */;
+			baseConfigurationReference = 019ED0C1D9CED25D8F0D28F8 /* Pods-Core iOS.debug.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
@@ -1203,7 +1227,7 @@
 		};
 		D59EF61F216D23F800C25F0A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F67F5BF90199FA74CB51A39A /* Pods-Core iOS.release.xcconfig */;
+			baseConfigurationReference = 996DD63D50EA6F02A680DAD6 /* Pods-Core iOS.release.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
@@ -1231,7 +1255,7 @@
 		};
 		D59EF62B216D242C00C25F0A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D8BD29EDC070D04BC602FCDB /* Pods-Core watchOS.debug.xcconfig */;
+			baseConfigurationReference = C96D39CFEAC9CCBBAAF8F59F /* Pods-Core watchOS.debug.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
@@ -1261,7 +1285,7 @@
 		};
 		D59EF62C216D242C00C25F0A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B8EDF74F03E6A849C19A42E4 /* Pods-Core watchOS.release.xcconfig */;
+			baseConfigurationReference = C42C6733F8153485ECFEA8C5 /* Pods-Core watchOS.release.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
@@ -1290,7 +1314,7 @@
 		};
 		D59EF638216D246500C25F0A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F3EB95A34FA8028502F7CFC3 /* Pods-Core tvOS.debug.xcconfig */;
+			baseConfigurationReference = 967AF16CA6F753A6E57E43D3 /* Pods-Core tvOS.debug.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
@@ -1320,7 +1344,7 @@
 		};
 		D59EF639216D246500C25F0A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3746C3CFF5405334D8CD88F2 /* Pods-Core tvOS.release.xcconfig */;
+			baseConfigurationReference = FE85686E731EEB7F095E4181 /* Pods-Core tvOS.release.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
@@ -1349,7 +1373,7 @@
 		};
 		D59EF645216D248300C25F0A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 169CC66174D8E54FB370942D /* Pods-Core macOS.debug.xcconfig */;
+			baseConfigurationReference = 8209A24DF0F69E6413E2761F /* Pods-Core macOS.debug.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
@@ -1380,7 +1404,7 @@
 		};
 		D59EF646216D248300C25F0A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1E1D91E298EC8EB427F0F7CD /* Pods-Core macOS.release.xcconfig */;
+			baseConfigurationReference = 0EAF7444FC5A1BCEE12B3465 /* Pods-Core macOS.release.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;

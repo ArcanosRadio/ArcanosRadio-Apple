@@ -12,7 +12,6 @@
 		9D105224306376F7106C478B /* Pods_ArcanosRadio_watchOS_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B38959C0B28E87E87D114625 /* Pods_ArcanosRadio_watchOS_Extension.framework */; };
 		D508B1C421979386005A3CB5 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D508B1C321979385005A3CB5 /* CoreTelephony.framework */; };
 		D50A45D1216D2EBB0025BC1C /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D50A45D0216D2EBB0025BC1C /* Core.framework */; };
-		D50A45D3216D2EC20025BC1C /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D50A45D2216D2EC20025BC1C /* Core.framework */; };
 		D521A998216D27BA00261BE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D521A997216D27BA00261BE3 /* AppDelegate.swift */; };
 		D521A99A216D27BA00261BE3 /* CurrentSongViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D521A999216D27BA00261BE3 /* CurrentSongViewController.swift */; };
 		D521A99F216D27BC00261BE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D521A99E216D27BC00261BE3 /* Assets.xcassets */; };
@@ -35,6 +34,10 @@
 		D551DD952173DF410086636D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D551DD942173DF410086636D /* AVFoundation.framework */; };
 		D551DD972173DF470086636D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D551DD962173DF470086636D /* AVFoundation.framework */; };
 		D5B267642198777C000991CD /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5B267632198777B000991CD /* MediaPlayer.framework */; };
+		D5B42FBB2198A2090025EE95 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5B42FBA2198A2090025EE95 /* MediaPlayer.framework */; };
+		D5B42FBF2198A2330025EE95 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5B42FBE2198A2330025EE95 /* SystemConfiguration.framework */; };
+		D5B42FC02198A2920025EE95 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D50A45CE216D2EB30025BC1C /* Core.framework */; };
+		D5B42FC12198A2920025EE95 /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D50A45CE216D2EB30025BC1C /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D5DEB1CB2184AC3B0050BA0B /* CurrentSongViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5DEB1CA2184AC3B0050BA0B /* CurrentSongViewController.xib */; };
 		D5DEB1CD2184ACAD0050BA0B /* CurrentSongViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DEB1CC2184ACAD0050BA0B /* CurrentSongViewController.swift */; };
 		D5DEB1CF2184B3C00050BA0B /* Redux.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DEB1CE2184B3C00050BA0B /* Redux.swift */; };
@@ -92,16 +95,32 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D5B42FC22198A2920025EE95 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D5B42FC12198A2920025EE95 /* Core.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		00FDAD7F218C5BD9620DC451 /* Pods-ArcanosRadio iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArcanosRadio iOS.release.xcconfig"; path = "Target Support Files/Pods-ArcanosRadio iOS/Pods-ArcanosRadio iOS.release.xcconfig"; sourceTree = "<group>"; };
 		056010C02C10B48B112A2E66 /* Pods-ArcanosRadio watchOS Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArcanosRadio watchOS Extension.release.xcconfig"; path = "Target Support Files/Pods-ArcanosRadio watchOS Extension/Pods-ArcanosRadio watchOS Extension.release.xcconfig"; sourceTree = "<group>"; };
+		0C3CF23F98A1B44C02A344E0 /* Pods-ArcanosRadio tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArcanosRadio tvOS.release.xcconfig"; path = "../Pods/Target Support Files/Pods-ArcanosRadio tvOS/Pods-ArcanosRadio tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		3A031F33B7D37C22923C583D /* Pods-ArcanosRadio watchOS Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArcanosRadio watchOS Extension.release.xcconfig"; path = "../Pods/Target Support Files/Pods-ArcanosRadio watchOS Extension/Pods-ArcanosRadio watchOS Extension.release.xcconfig"; sourceTree = "<group>"; };
 		5BA629040A2998DA57AC7C22 /* Pods_ArcanosRadio_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ArcanosRadio_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6315C34189EF2BE7F2D2F265 /* Pods-ArcanosRadio tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArcanosRadio tvOS.release.xcconfig"; path = "Target Support Files/Pods-ArcanosRadio tvOS/Pods-ArcanosRadio tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		671983C450B31EBCA97924BE /* Pods-ArcanosRadio iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArcanosRadio iOS.release.xcconfig"; path = "../Pods/Target Support Files/Pods-ArcanosRadio iOS/Pods-ArcanosRadio iOS.release.xcconfig"; sourceTree = "<group>"; };
+		A66C5048A75A55A2F4ED8486 /* Pods-ArcanosRadio tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArcanosRadio tvOS.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-ArcanosRadio tvOS/Pods-ArcanosRadio tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		ACF388E29928EF6FA26C28DE /* Pods-ArcanosRadio iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArcanosRadio iOS.debug.xcconfig"; path = "Target Support Files/Pods-ArcanosRadio iOS/Pods-ArcanosRadio iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		AF3AFCAA5917A03E0350131B /* Pods_ArcanosRadio_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ArcanosRadio_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B38959C0B28E87E87D114625 /* Pods_ArcanosRadio_watchOS_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ArcanosRadio_watchOS_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B93A2B1FE9B52DD5CCB2D3FD /* Pods-ArcanosRadio watchOS Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArcanosRadio watchOS Extension.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-ArcanosRadio watchOS Extension/Pods-ArcanosRadio watchOS Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		BF5B6190CF839339D2478823 /* Pods_ArcanosRadio_watchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ArcanosRadio_watchOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFBA09D4D8AFFE8C27FD3047 /* Pods-ArcanosRadio tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArcanosRadio tvOS.debug.xcconfig"; path = "Target Support Files/Pods-ArcanosRadio tvOS/Pods-ArcanosRadio tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		C73C34FDBA3059B5CEFAA3F2 /* Pods-ArcanosRadio watchOS Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArcanosRadio watchOS Extension.debug.xcconfig"; path = "Target Support Files/Pods-ArcanosRadio watchOS Extension/Pods-ArcanosRadio watchOS Extension.debug.xcconfig"; sourceTree = "<group>"; };
@@ -138,10 +157,13 @@
 		D551DD942173DF410086636D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS5.0.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
 		D551DD962173DF470086636D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
 		D5B267632198777B000991CD /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/MediaPlayer.framework; sourceTree = DEVELOPER_DIR; };
+		D5B42FBA2198A2090025EE95 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.1.sdk/System/Library/Frameworks/MediaPlayer.framework; sourceTree = DEVELOPER_DIR; };
+		D5B42FBE2198A2330025EE95 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.1.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
 		D5DEB1CA2184AC3B0050BA0B /* CurrentSongViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrentSongViewController.xib; sourceTree = "<group>"; };
 		D5DEB1CC2184ACAD0050BA0B /* CurrentSongViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentSongViewController.swift; sourceTree = "<group>"; };
 		D5DEB1CE2184B3C00050BA0B /* Redux.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Redux.swift; sourceTree = "<group>"; };
 		D5DEB1D02184B3D90050BA0B /* RouterMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterMiddleware.swift; sourceTree = "<group>"; };
+		E8812A922C289229E6BF4A03 /* Pods-ArcanosRadio iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArcanosRadio iOS.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-ArcanosRadio iOS/Pods-ArcanosRadio iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,8 +200,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5B42FBF2198A2330025EE95 /* SystemConfiguration.framework in Frameworks */,
+				D5B42FC02198A2920025EE95 /* Core.framework in Frameworks */,
+				D5B42FBB2198A2090025EE95 /* MediaPlayer.framework in Frameworks */,
 				D551DD972173DF470086636D /* AVFoundation.framework in Frameworks */,
-				D50A45D3216D2EC20025BC1C /* Core.framework in Frameworks */,
 				0CA88393E9D229938A92AC23 /* Pods_ArcanosRadio_tvOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -196,6 +220,12 @@
 				6315C34189EF2BE7F2D2F265 /* Pods-ArcanosRadio tvOS.release.xcconfig */,
 				C73C34FDBA3059B5CEFAA3F2 /* Pods-ArcanosRadio watchOS Extension.debug.xcconfig */,
 				056010C02C10B48B112A2E66 /* Pods-ArcanosRadio watchOS Extension.release.xcconfig */,
+				E8812A922C289229E6BF4A03 /* Pods-ArcanosRadio iOS.debug.xcconfig */,
+				671983C450B31EBCA97924BE /* Pods-ArcanosRadio iOS.release.xcconfig */,
+				A66C5048A75A55A2F4ED8486 /* Pods-ArcanosRadio tvOS.debug.xcconfig */,
+				0C3CF23F98A1B44C02A344E0 /* Pods-ArcanosRadio tvOS.release.xcconfig */,
+				B93A2B1FE9B52DD5CCB2D3FD /* Pods-ArcanosRadio watchOS Extension.debug.xcconfig */,
+				3A031F33B7D37C22923C583D /* Pods-ArcanosRadio watchOS Extension.release.xcconfig */,
 			);
 			name = Pods;
 			path = ../Pods;
@@ -204,7 +234,9 @@
 		9717CB35DDE7C3F3C1DE4F51 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D5B42FBE2198A2330025EE95 /* SystemConfiguration.framework */,
 				D5B267632198777B000991CD /* MediaPlayer.framework */,
+				D5B42FBA2198A2090025EE95 /* MediaPlayer.framework */,
 				D508B1C321979385005A3CB5 /* CoreTelephony.framework */,
 				D551DD922173DF340086636D /* AVFoundation.framework */,
 				D551DD942173DF410086636D /* AVFoundation.framework */,
@@ -400,6 +432,7 @@
 				D521A9D0216D287500261BE3 /* Frameworks */,
 				D521A9D1216D287500261BE3 /* Resources */,
 				8C900AD93B0C2D3C48410F4F /* [CP] Embed Pods Frameworks */,
+				D5B42FC22198A2920025EE95 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -520,7 +553,8 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ArcanosRadio iOS/Pods-ArcanosRadio iOS-frameworks.sh",
+				"${SRCROOT}/../Pods/Target Support Files/Pods-ArcanosRadio iOS/Pods-ArcanosRadio iOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic-iOS/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa-iOS/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift-iOS/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftRex-iOS/SwiftRex.framework",
@@ -529,13 +563,14 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftRex.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ArcanosRadio iOS/Pods-ArcanosRadio iOS-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-ArcanosRadio iOS/Pods-ArcanosRadio iOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		0DB030C355205260C58D4428 /* [CP] Embed Pods Frameworks */ = {
@@ -546,7 +581,8 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ArcanosRadio watchOS Extension/Pods-ArcanosRadio watchOS Extension-frameworks.sh",
+				"${SRCROOT}/../Pods/Target Support Files/Pods-ArcanosRadio watchOS Extension/Pods-ArcanosRadio watchOS Extension-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic-watchOS/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa-watchOS/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift-watchOS/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftRex-watchOS/SwiftRex.framework",
@@ -555,13 +591,14 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftRex.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ArcanosRadio watchOS Extension/Pods-ArcanosRadio watchOS Extension-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-ArcanosRadio watchOS Extension/Pods-ArcanosRadio watchOS Extension-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		47F009881BCDFFD0B699600D /* [CP] Check Pods Manifest.lock */ = {
@@ -594,7 +631,8 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ArcanosRadio tvOS/Pods-ArcanosRadio tvOS-frameworks.sh",
+				"${SRCROOT}/../Pods/Target Support Files/Pods-ArcanosRadio tvOS/Pods-ArcanosRadio tvOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic-tvOS/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa-tvOS/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift-tvOS/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftRex-tvOS/SwiftRex.framework",
@@ -603,13 +641,14 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftRex.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ArcanosRadio tvOS/Pods-ArcanosRadio tvOS-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-ArcanosRadio tvOS/Pods-ArcanosRadio tvOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		95AF9AE7AE98B767E892183B /* [CP] Check Pods Manifest.lock */ = {
@@ -719,7 +758,7 @@
 /* Begin XCBuildConfiguration section */
 		D521A9A4216D27BC00261BE3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ACF388E29928EF6FA26C28DE /* Pods-ArcanosRadio iOS.debug.xcconfig */;
+			baseConfigurationReference = E8812A922C289229E6BF4A03 /* Pods-ArcanosRadio iOS.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -793,7 +832,7 @@
 		};
 		D521A9A5216D27BC00261BE3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 00FDAD7F218C5BD9620DC451 /* Pods-ArcanosRadio iOS.release.xcconfig */;
+			baseConfigurationReference = 671983C450B31EBCA97924BE /* Pods-ArcanosRadio iOS.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -861,7 +900,7 @@
 		};
 		D521A9C8216D284400261BE3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C73C34FDBA3059B5CEFAA3F2 /* Pods-ArcanosRadio watchOS Extension.debug.xcconfig */;
+			baseConfigurationReference = B93A2B1FE9B52DD5CCB2D3FD /* Pods-ArcanosRadio watchOS Extension.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
@@ -936,7 +975,7 @@
 		};
 		D521A9C9216D284400261BE3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 056010C02C10B48B112A2E66 /* Pods-ArcanosRadio watchOS Extension.release.xcconfig */;
+			baseConfigurationReference = 3A031F33B7D37C22923C583D /* Pods-ArcanosRadio watchOS Extension.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
@@ -1143,7 +1182,7 @@
 		};
 		D521A9E0216D287700261BE3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BFBA09D4D8AFFE8C27FD3047 /* Pods-ArcanosRadio tvOS.debug.xcconfig */;
+			baseConfigurationReference = A66C5048A75A55A2F4ED8486 /* Pods-ArcanosRadio tvOS.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
@@ -1217,7 +1256,7 @@
 		};
 		D521A9E1216D287700261BE3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6315C34189EF2BE7F2D2F265 /* Pods-ArcanosRadio tvOS.release.xcconfig */;
+			baseConfigurationReference = 0C3CF23F98A1B44C02A344E0 /* Pods-ArcanosRadio tvOS.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
