@@ -8,11 +8,7 @@ fileprivate final class ShareTextViewController: UIActivityViewController {
 
         let songName = playlist.song.songName
         let artistName = playlist.song.artist.artistName
-
-        let text = NSLocalizedString("SHARE_TEXT", comment: "Text when user shares current song")
-            .replacingOccurrences(of: "${song}", with: songName)
-            .replacingOccurrences(of: "${artist}", with: artistName)
-            .replacingOccurrences(of: "${shareUrl}", with: shareUrl)
+        let text = L10n.shareText(songName, artistName, shareUrl)
 
         super.init(activityItems: [text], applicationActivities: nil)
 
