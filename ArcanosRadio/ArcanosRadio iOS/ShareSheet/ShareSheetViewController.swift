@@ -34,7 +34,7 @@ final class ShareSheetViewController {
     }
 
     private func present(from vc: UIViewController, sourceView: UIView?, sourceRect: CGRect, onPresented: @escaping () -> Void) {
-        weak var weakSelf = self
+        let onDone = self.done
         stateProvider
             .map { zip($0.currentSong, $0.streamingServer?.value?.shareUrl) }
             .unwrap()
@@ -46,7 +46,7 @@ final class ShareSheetViewController {
                                                                       sourceRect: sourceRect)
 
                 shareTextViewController.completionWithItemsHandler = { activityType, completed, returnedItems, activityError in
-                    weakSelf?.done()
+                    onDone()
                 }
 
                 vc.present(shareTextViewController, animated: true) {
