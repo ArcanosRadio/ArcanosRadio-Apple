@@ -133,7 +133,7 @@
 		D50A45CE216D2EB30025BC1C /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D50A45D0216D2EBB0025BC1C /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D50A45D2216D2EC20025BC1C /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D521A994216D27BA00261BE3 /* ArcanosRadio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArcanosRadio.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D521A994216D27BA00261BE3 /* Arcanos Radio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Arcanos Radio.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D521A997216D27BA00261BE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D521A999216D27BA00261BE3 /* CurrentSongViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentSongViewController.swift; sourceTree = "<group>"; };
 		D521A99E216D27BC00261BE3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -147,7 +147,7 @@
 		D521A9C0216D284400261BE3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D521A9C2216D284400261BE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D521A9C3216D284400261BE3 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
-		D521A9D3216D287500261BE3 /* ArcanosRadio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArcanosRadio.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D521A9D3216D287500261BE3 /* Arcanos Radio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Arcanos Radio.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D521A9D5216D287500261BE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D521A9DC216D287700261BE3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D521A9DE216D287700261BE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -265,10 +265,10 @@
 		D521A995216D27BA00261BE3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D521A994216D27BA00261BE3 /* ArcanosRadio.app */,
+				D521A994216D27BA00261BE3 /* Arcanos Radio.app */,
 				D521A9A9216D284200261BE3 /* ArcanosRadio.app */,
 				D521A9B5216D284300261BE3 /* ArcanosRadio Extension.appex */,
-				D521A9D3216D287500261BE3 /* ArcanosRadio.app */,
+				D521A9D3216D287500261BE3 /* Arcanos Radio.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -405,7 +405,7 @@
 			);
 			name = "ArcanosRadio iOS";
 			productName = "ArcanosRadio iOS";
-			productReference = D521A994216D27BA00261BE3 /* ArcanosRadio.app */;
+			productReference = D521A994216D27BA00261BE3 /* Arcanos Radio.app */;
 			productType = "com.apple.product-type.application";
 		};
 		D521A9A8216D284200261BE3 /* ArcanosRadio watchOS */ = {
@@ -462,7 +462,7 @@
 			);
 			name = "ArcanosRadio tvOS";
 			productName = "ArcanosRadio tvOS";
-			productReference = D521A9D3216D287500261BE3 /* ArcanosRadio.app */;
+			productReference = D521A9D3216D287500261BE3 /* Arcanos Radio.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -876,7 +876,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = de.developercity.beta.ArcanosRadio;
-				PRODUCT_NAME = ArcanosRadio;
+				PRODUCT_NAME = "Arcanos Radio";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -943,7 +943,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = de.developercity.beta.ArcanosRadio;
-				PRODUCT_NAME = ArcanosRadio;
+				PRODUCT_NAME = "Arcanos Radio";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -1299,7 +1299,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.developercity.beta.ArcanosRadio-tvOS";
-				PRODUCT_NAME = ArcanosRadio;
+				PRODUCT_NAME = "Arcanos Radio";
 				SDKROOT = appletvos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1366,7 +1366,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.developercity.beta.ArcanosRadio-tvOS";
-				PRODUCT_NAME = ArcanosRadio;
+				PRODUCT_NAME = "Arcanos Radio";
 				SDKROOT = appletvos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
