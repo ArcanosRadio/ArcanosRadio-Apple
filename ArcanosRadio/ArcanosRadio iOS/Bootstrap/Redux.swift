@@ -11,8 +11,8 @@ public let MainMiddleware: () -> ComposedMiddleware<MainState> = {
         <> ParseMiddleware().lift(\.currentSong)
         <> RadioPlayerMiddleware()
         <> DirectLineMiddleware()
-        <> LoggerMiddleware(eventFilter: { _, _ in true },
-                            actionFilter: { _, _ in true },
+        <> LoggerMiddleware(eventFilter: { _, ev in !(ev is RefreshTimerEvent) },
+                            actionFilter: { _, ac in !(ac is RequestProgress<Playlist>) },
                             debugOnly: true,
                             stateTransformer: { _ in "" })
         <> CatchErrorMiddleware { errorAction, state in
