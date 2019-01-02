@@ -132,6 +132,10 @@
 		D52FE7322183D47C000DA781 /* FP.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52FE72F2183D47C000DA781 /* FP.swift */; };
 		D52FE7332183D47C000DA781 /* FP.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52FE72F2183D47C000DA781 /* FP.swift */; };
 		D52FE7392183FE95000DA781 /* WatchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D52FE7382183FE95000DA781 /* WatchKit.framework */; };
+		D536812D21DD7209007771DF /* RxSwift+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D536812C21DD7209007771DF /* RxSwift+Extensions.swift */; };
+		D536812E21DD7209007771DF /* RxSwift+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D536812C21DD7209007771DF /* RxSwift+Extensions.swift */; };
+		D536812F21DD7209007771DF /* RxSwift+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D536812C21DD7209007771DF /* RxSwift+Extensions.swift */; };
+		D536813021DD7209007771DF /* RxSwift+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D536812C21DD7209007771DF /* RxSwift+Extensions.swift */; };
 		D537257F2173925200C7400B /* UIKit+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D537257E2173925200C7400B /* UIKit+Extensions.swift */; };
 		D53725912173A1B900C7400B /* NavigationEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53725902173A1B900C7400B /* NavigationEvent.swift */; };
 		D53725922173A1B900C7400B /* NavigationEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53725902173A1B900C7400B /* NavigationEvent.swift */; };
@@ -270,6 +274,7 @@
 		D50A4654216EAF040025BC1C /* SongUpdaterReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongUpdaterReducer.swift; sourceTree = "<group>"; };
 		D52FE72F2183D47C000DA781 /* FP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FP.swift; sourceTree = "<group>"; };
 		D52FE7382183FE95000DA781 /* WatchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS5.0.sdk/System/Library/Frameworks/WatchKit.framework; sourceTree = DEVELOPER_DIR; };
+		D536812C21DD7209007771DF /* RxSwift+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RxSwift+Extensions.swift"; sourceTree = "<group>"; };
 		D537257E2173925200C7400B /* UIKit+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKit+Extensions.swift"; sourceTree = "<group>"; };
 		D53725902173A1B900C7400B /* NavigationEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationEvent.swift; sourceTree = "<group>"; };
 		D53725952173A21400C7400B /* Sitemap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sitemap.swift; sourceTree = "<group>"; };
@@ -513,6 +518,7 @@
 				D5B2676521988353000991CD /* Either.swift */,
 				D5F34E85218F9FD700773247 /* EmptyInitializer.swift */,
 				D52FE72F2183D47C000DA781 /* FP.swift */,
+				D536812C21DD7209007771DF /* RxSwift+Extensions.swift */,
 				D50A462C216D453F0025BC1C /* Transient.swift */,
 				D537257E2173925200C7400B /* UIKit+Extensions.swift */,
 				D5DEB1C6218424130050BA0B /* WatchKit+Extensions.swift */,
@@ -904,6 +910,7 @@
 				D5F34E8B218FB0B800773247 /* CachedFileMiddleware.swift in Sources */,
 				D508B1B7219775CC005A3CB5 /* ReachabilityEvent.swift in Sources */,
 				D508B1AF2197641F005A3CB5 /* ReachabilityMiddleware.swift in Sources */,
+				D536812D21DD7209007771DF /* RxSwift+Extensions.swift in Sources */,
 				D508B1A421976359005A3CB5 /* Reachability.swift in Sources */,
 				D501448C2197DDDB00A5A376 /* RadioPlayerReducer.swift in Sources */,
 			);
@@ -935,6 +942,7 @@
 				D50A4633216D48B10025BC1C /* StreamingServer.swift in Sources */,
 				D57716E421720AEA005C1229 /* ErrorAction.swift in Sources */,
 				D50A45ED216D31730025BC1C /* MainState.swift in Sources */,
+				D536812E21DD7209007771DF /* RxSwift+Extensions.swift in Sources */,
 				D5F34E96218FB1AC00773247 /* CachedFileAction.swift in Sources */,
 				D50A460A216D3BB10025BC1C /* AppLifeCycleEvent.swift in Sources */,
 				D5B2676721988353000991CD /* Either.swift in Sources */,
@@ -1011,6 +1019,7 @@
 				D508B1B8219775CC005A3CB5 /* ReachabilityEvent.swift in Sources */,
 				D508B1B02197641F005A3CB5 /* ReachabilityMiddleware.swift in Sources */,
 				D5B2676A21989722000991CD /* MediaRemoteControlMiddleware.swift in Sources */,
+				D536812F21DD7209007771DF /* RxSwift+Extensions.swift in Sources */,
 				D508B1A621976359005A3CB5 /* Reachability.swift in Sources */,
 				D501448D2197DDDB00A5A376 /* RadioPlayerReducer.swift in Sources */,
 			);
@@ -1033,6 +1042,7 @@
 				D5B2675B2197F56C000991CD /* RadioPlayerEvent.swift in Sources */,
 				D50A45F4216D319B0025BC1C /* MainStateProvider.swift in Sources */,
 				D53725942173A1B900C7400B /* NavigationEvent.swift in Sources */,
+				D536813021DD7209007771DF /* RxSwift+Extensions.swift in Sources */,
 				D50A4644216E7F740025BC1C /* APIResponseReducer.swift in Sources */,
 				D52FE7332183D47C000DA781 /* FP.swift in Sources */,
 				D50A4602216D32F30025BC1C /* AppLifeCycleMiddleware.swift in Sources */,

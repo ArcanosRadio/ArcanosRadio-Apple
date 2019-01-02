@@ -56,7 +56,7 @@ final class CurrentSongViewController: UIViewController {
 
         shareButton.rx.tap
             .map { [weak shareButton] in shareButton }
-            .filter { $0 != nil }.map { $0! }
+            .unwrap()
             .map(Either<UIView, CGRect>.left)
             .map(curry(NavigationEvent.requestShareSheet)(self))
             .subscribe(onNext: dispatch)

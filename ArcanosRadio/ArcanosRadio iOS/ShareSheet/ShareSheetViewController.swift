@@ -37,7 +37,7 @@ final class ShareSheetViewController {
         weak var weakSelf = self
         stateProvider
             .map { zip($0.currentSong, $0.streamingServer?.value?.shareUrl) }
-            .filter { $0 != nil }.map { $0! }
+            .unwrap()
             .take(1)
             .subscribe(onNext: { currentSong, shareUrl in
                 let shareTextViewController = ShareTextViewController(playlist: currentSong,

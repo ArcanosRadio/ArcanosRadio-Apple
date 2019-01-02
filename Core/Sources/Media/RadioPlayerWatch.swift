@@ -39,7 +39,7 @@ public class RadioPlayer {
 //                case (.unknown, _, nil): return RadioPlayerEvent.stopped
 //                default: fatalError()
 //                }
-//            }.filter { $0 != nil }.map { $0! }
+//            }.unwrap()
 //            .distinctUntilChanged()
 //            .bind(to: pipe)
 //            .disposed(by: disposeBag)
