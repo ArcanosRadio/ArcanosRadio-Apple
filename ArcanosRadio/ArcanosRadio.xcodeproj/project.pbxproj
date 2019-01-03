@@ -29,6 +29,7 @@
 		D536812221DD5BD3007771DF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D536812421DD5BD3007771DF /* Localizable.strings */; };
 		D536812921DD6012007771DF /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = D536812721DD6012007771DF /* Assets.swift */; };
 		D536812A21DD6012007771DF /* LocalizableStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D536812821DD6012007771DF /* LocalizableStrings.swift */; };
+		D536813321DD922F007771DF /* AirplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D536813221DD922F007771DF /* AirplayViewController.swift */; };
 		D53725762173860300C7400B /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D53725752173860300C7400B /* Core.framework */; };
 		D53725772173860300C7400B /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D53725752173860300C7400B /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D537257A21738EA500C7400B /* Redux.swift in Sources */ = {isa = PBXBuildFile; fileRef = D537257921738EA500C7400B /* Redux.swift */; };
@@ -158,6 +159,7 @@
 		D536812621DD5C99007771DF /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		D536812721DD6012007771DF /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		D536812821DD6012007771DF /* LocalizableStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizableStrings.swift; sourceTree = "<group>"; };
+		D536813221DD922F007771DF /* AirplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirplayViewController.swift; sourceTree = "<group>"; };
 		D53725752173860300C7400B /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D537257921738EA500C7400B /* Redux.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Redux.swift; sourceTree = "<group>"; };
 		D537258C21739D2400C7400B /* CurrentSongViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrentSongViewController.xib; sourceTree = "<group>"; };
@@ -277,6 +279,7 @@
 			isa = PBXGroup;
 			children = (
 				D508B1C5219793DC005A3CB5 /* ArcanosRadio.entitlements */,
+				D536813121DD9212007771DF /* Airplay */,
 				D537258A21739CA500C7400B /* Bootstrap */,
 				D537258B21739D0200C7400B /* CurrentSong */,
 				D5334EAF21BDA17F005D2038 /* ShareSheet */,
@@ -321,6 +324,14 @@
 				D5334EB021BDA1BF005D2038 /* ShareSheetViewController.swift */,
 			);
 			path = ShareSheet;
+			sourceTree = "<group>";
+		};
+		D536813121DD9212007771DF /* Airplay */ = {
+			isa = PBXGroup;
+			children = (
+				D536813221DD922F007771DF /* AirplayViewController.swift */,
+			);
+			path = Airplay;
 			sourceTree = "<group>";
 		};
 		D537258A21739CA500C7400B /* Bootstrap */ = {
@@ -745,6 +756,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D536813321DD922F007771DF /* AirplayViewController.swift in Sources */,
 				D537258F2173A0F700C7400B /* RouterMiddleware.swift in Sources */,
 				D537257A21738EA500C7400B /* Redux.swift in Sources */,
 				D536812A21DD6012007771DF /* LocalizableStrings.swift in Sources */,

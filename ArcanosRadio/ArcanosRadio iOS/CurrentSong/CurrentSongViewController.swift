@@ -1,6 +1,4 @@
-import AVKit
 import Core
-import MediaPlayer
 import RxSwift
 import SwiftRex
 import UIKit
@@ -21,7 +19,6 @@ final class CurrentSongViewController: UIViewController {
     @IBOutlet private weak var spotifyButton: UIButton!
     @IBOutlet private weak var appleMusicButton: UIButton!
     @IBOutlet private weak var toolbar: UIStackView!
-    private var airplayButton: UIView!
     private let disposeBag = DisposeBag()
 
     override func viewDidLoad() {
@@ -32,21 +29,13 @@ final class CurrentSongViewController: UIViewController {
     }
 
     private func configureUI() {
-        if #available(iOS 11.0, *) {
-            let routePickerView = AVRoutePickerView(frame: .init(x: 0, y: 0, width: 24, height: 24))
-            routePickerView.delegate = self
-            airplayButton = routePickerView
-        } else {
-            let volumeView = MPVolumeView(frame:CGRect(x: 0, y: 0, width: 24, height: 24))
-            volumeView.showsRouteButton = true
-            volumeView.showsVolumeSlider = false
-            airplayButton = volumeView
-        }
+        let airplayViewController = AirplayViewController(frame: .init(x: 0, y: 0, width: 24, height: 24))
+        addChild(airplayViewController)
 
-        airplayButton.widthAnchor.constraint(equalToConstant: 24)
-        airplayButton.heightAnchor.constraint(equalToConstant: 24)
-        airplayButton.tintColor = .black
-        toolbar.insertArrangedSubview(airplayButton, at: 0)
+        airplayViewController.view.widthAnchor.constraint(equalToConstant: 24)
+        airplayViewController.view.heightAnchor.constraint(equalToConstant: 24)
+        airplayViewController.view.tintColor = .black
+        toolbar.insertArrangedSubview(airplayViewController.view, at: 0)
 
         configureUserInput()
     }
@@ -95,14 +84,3 @@ final class CurrentSongViewController: UIViewController {
 
 extension CurrentSongViewController: HasStateProvider { }
 extension CurrentSongViewController: HasEventHandler { }
-
-@available(iOS 11.0, *)
-extension CurrentSongViewController: AVRoutePickerViewDelegate {
-    public func routePickerViewWillBeginPresentingRoutes(_ routePickerView: AVRoutePickerView) {
-        eventHandler.dispatch(NavigationEvent.requestNavigation(.airplayPicker))
-    }
-
-    public func routePickerViewDidEndPresentingRoutes(_ routePickerView: AVRoutePickerView) {
-        eventHandler.dispatch(NavigationEvent.requestNavigation(.currentSong))
-    }
-}

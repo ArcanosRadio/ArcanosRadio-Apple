@@ -1,7 +1,7 @@
 import Core
-import UIKit
 import RxSwift
 import SwiftRex
+import UIKit
 
 fileprivate final class ShareSongViewController: UIActivityViewController {
     init(playlist: Playlist, shareUrl: String, sourceView: UIView?, sourceRect: CGRect) {
