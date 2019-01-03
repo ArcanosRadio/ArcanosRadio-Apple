@@ -34,7 +34,7 @@ final class CurrentSongViewController: UIViewController {
 
         airplayViewController.view.widthAnchor.constraint(equalToConstant: 24)
         airplayViewController.view.heightAnchor.constraint(equalToConstant: 24)
-        airplayViewController.view.tintColor = .black
+        airplayViewController.view.tintColor = ColorName.bodyBackground.color
         toolbar.insertArrangedSubview(airplayViewController.view, at: 0)
 
         configureUserInput()

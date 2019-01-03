@@ -1,0 +1,4 @@
+# Body
+BodyBackground   : ffffff
+BodyTint         : 000000
+BodyText         : 000000

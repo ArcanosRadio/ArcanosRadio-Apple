@@ -2,10 +2,15 @@ strings:
   inputs: Bootstrap/en.lproj/Localizable.strings
   outputs:
     - templateName: structured-swift4
-      output: Bootstrap/LocalizableStrings.swift
+      output: Bootstrap/Generated/LocalizableStrings.swift
 xcassets:
   inputs:
     - Bootstrap/Assets.xcassets
   outputs:
     - templateName: swift4
-      output: Bootstrap/Assets.swift
+      output: Bootstrap/Generated/Assets.swift
+colors:
+  inputs: ../Color.txt
+  outputs:
+    templateName: swift4
+    output: Bootstrap/Generated/Colors.swift

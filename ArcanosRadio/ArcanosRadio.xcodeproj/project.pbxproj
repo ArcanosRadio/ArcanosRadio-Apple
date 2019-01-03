@@ -27,9 +27,10 @@
 		D52FE7372183FACD000DA781 /* CurrentSong.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52FE7362183FACD000DA781 /* CurrentSong.swift */; };
 		D5334EB121BDA1BF005D2038 /* ShareSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5334EB021BDA1BF005D2038 /* ShareSheetViewController.swift */; };
 		D536812221DD5BD3007771DF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D536812421DD5BD3007771DF /* Localizable.strings */; };
-		D536812921DD6012007771DF /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = D536812721DD6012007771DF /* Assets.swift */; };
-		D536812A21DD6012007771DF /* LocalizableStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D536812821DD6012007771DF /* LocalizableStrings.swift */; };
 		D536813321DD922F007771DF /* AirplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D536813221DD922F007771DF /* AirplayViewController.swift */; };
+		D536813B21DDA0BB007771DF /* LocalizableStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D536813821DDA0BB007771DF /* LocalizableStrings.swift */; };
+		D536813C21DDA0BB007771DF /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = D536813921DDA0BB007771DF /* Assets.swift */; };
+		D536813D21DDA0BB007771DF /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D536813A21DDA0BB007771DF /* Colors.swift */; };
 		D53725762173860300C7400B /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D53725752173860300C7400B /* Core.framework */; };
 		D53725772173860300C7400B /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D53725752173860300C7400B /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D537257A21738EA500C7400B /* Redux.swift in Sources */ = {isa = PBXBuildFile; fileRef = D537257921738EA500C7400B /* Redux.swift */; };
@@ -157,9 +158,11 @@
 		D5334EB021BDA1BF005D2038 /* ShareSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheetViewController.swift; sourceTree = "<group>"; };
 		D536812321DD5BD3007771DF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D536812621DD5C99007771DF /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		D536812721DD6012007771DF /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
-		D536812821DD6012007771DF /* LocalizableStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizableStrings.swift; sourceTree = "<group>"; };
 		D536813221DD922F007771DF /* AirplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirplayViewController.swift; sourceTree = "<group>"; };
+		D536813421DD9F5E007771DF /* Color.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Color.txt; sourceTree = "<group>"; };
+		D536813821DDA0BB007771DF /* LocalizableStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizableStrings.swift; sourceTree = "<group>"; };
+		D536813921DDA0BB007771DF /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		D536813A21DDA0BB007771DF /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		D53725752173860300C7400B /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D537257921738EA500C7400B /* Redux.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Redux.swift; sourceTree = "<group>"; };
 		D537258C21739D2400C7400B /* CurrentSongViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrentSongViewController.xib; sourceTree = "<group>"; };
@@ -334,16 +337,25 @@
 			path = Airplay;
 			sourceTree = "<group>";
 		};
+		D536813721DDA098007771DF /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				D536813921DDA0BB007771DF /* Assets.swift */,
+				D536813A21DDA0BB007771DF /* Colors.swift */,
+				D536813821DDA0BB007771DF /* LocalizableStrings.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
 		D537258A21739CA500C7400B /* Bootstrap */ = {
 			isa = PBXGroup;
 			children = (
+				D536813721DDA098007771DF /* Generated */,
 				D521A997216D27BA00261BE3 /* AppDelegate.swift */,
-				D536812721DD6012007771DF /* Assets.swift */,
 				D521A99E216D27BC00261BE3 /* Assets.xcassets */,
 				D521A9A3216D27BC00261BE3 /* Info.plist */,
 				D521A9A0216D27BC00261BE3 /* LaunchScreen.storyboard */,
 				D536812421DD5BD3007771DF /* Localizable.strings */,
-				D536812821DD6012007771DF /* LocalizableStrings.swift */,
 				D537257921738EA500C7400B /* Redux.swift */,
 				D537258E2173A0F700C7400B /* RouterMiddleware.swift */,
 			);
@@ -362,6 +374,7 @@
 		D5CDD32E216D276E00BD36C4 = {
 			isa = PBXGroup;
 			children = (
+				D536813421DD9F5E007771DF /* Color.txt */,
 				D521A996216D27BA00261BE3 /* ArcanosRadio iOS */,
 				D521A9AA216D284200261BE3 /* ArcanosRadio watchOS */,
 				D521A9B9216D284300261BE3 /* ArcanosRadio watchOS Extension */,
@@ -757,10 +770,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D536813321DD922F007771DF /* AirplayViewController.swift in Sources */,
+				D536813D21DDA0BB007771DF /* Colors.swift in Sources */,
 				D537258F2173A0F700C7400B /* RouterMiddleware.swift in Sources */,
+				D536813C21DDA0BB007771DF /* Assets.swift in Sources */,
+				D536813B21DDA0BB007771DF /* LocalizableStrings.swift in Sources */,
 				D537257A21738EA500C7400B /* Redux.swift in Sources */,
-				D536812A21DD6012007771DF /* LocalizableStrings.swift in Sources */,
-				D536812921DD6012007771DF /* Assets.swift in Sources */,
 				D521A99A216D27BA00261BE3 /* CurrentSongViewController.swift in Sources */,
 				D5334EB121BDA1BF005D2038 /* ShareSheetViewController.swift in Sources */,
 				D521A998216D27BA00261BE3 /* AppDelegate.swift in Sources */,
