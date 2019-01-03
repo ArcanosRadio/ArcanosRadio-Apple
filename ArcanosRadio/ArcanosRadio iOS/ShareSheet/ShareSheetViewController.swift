@@ -47,8 +47,13 @@ struct ShareSongController {
                                                                           shareUrl: shareUrl,
                                                                           sourceView: sourceView,
                                                                           sourceRect: sourceRect)
+                    let cancel = Disposables.create {
+                        shareTextViewController.dismiss(animated: false, completion: nil)
+                    }
 
                     shareTextViewController.completionWithItemsHandler = { activityType, completed, returnedItems, activityError in
+                        guard !cancel.isDisposed else { return }
+
                         observer.on(.next(.done(activityType: activityType,
                                                 completed: completed,
                                                 returnedItems: returnedItems,
@@ -57,12 +62,12 @@ struct ShareSongController {
                     }
 
                     vc.present(shareTextViewController, animated: true) {
+                        guard !cancel.isDisposed else { return }
+                        
                         observer.on(.next(.presented))
                     }
 
-                    return Disposables.create {
-                        shareTextViewController.dismiss(animated: false, completion: nil)
-                    }
+                    return cancel
                 }
             }
     }
