@@ -12,5 +12,5 @@ xcassets:
 colors:
   inputs: ../Color.txt
   outputs:
-    templateName: swift4
+    templatePath: ../../Template/Colors.stencil
     output: Bootstrap/Generated/Colors.swift

@@ -30,12 +30,9 @@ final class CurrentSongViewController: UIViewController {
 
     private func configureUI() {
         let airplayViewController = AirplayViewController(frame: .init(x: 0, y: 0, width: 24, height: 24))
-        addChild(airplayViewController)
-
-        airplayViewController.view.widthAnchor.constraint(equalToConstant: 24)
-        airplayViewController.view.heightAnchor.constraint(equalToConstant: 24)
-        airplayViewController.view.tintColor = ColorName.bodyBackground.color
+        airplayViewController.view.tintColor = .named(.bodyTint)
         toolbar.insertArrangedSubview(airplayViewController.view, at: 0)
+        addChild(airplayViewController)
 
         configureUserInput()
     }
