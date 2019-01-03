@@ -3,7 +3,7 @@ import UIKit
 import RxSwift
 import SwiftRex
 
-fileprivate final class ShareTextViewController: UIActivityViewController {
+fileprivate final class ShareSongViewController: UIActivityViewController {
     init(playlist: Playlist, shareUrl: String, sourceView: UIView?, sourceRect: CGRect) {
 
         let songName = playlist.song.songName
@@ -17,44 +17,56 @@ fileprivate final class ShareTextViewController: UIActivityViewController {
     }
 }
 
-final class ShareSheetViewController {
-    let disposeBag = DisposeBag()
-    let done: () -> Void
+enum ShareSongEvent {
+    case presented
+    case done(activityType: UIActivity.ActivityType?, completed: Bool, returnedItems: [Any]?, activityError: Error?)
+}
 
-    init(done: @escaping () -> Void) {
-        self.done = done
-    }
+struct ShareSongController {
+    init() { }
 
-    func present(from vc: UIViewController, sourceView: UIView, onPresented: @escaping () -> Void) {
-        present(from: vc, sourceView: sourceView, sourceRect: sourceView.bounds, onPresented: onPresented)
-    }
-
-    func present(from vc: UIViewController, sourceRect: CGRect, onPresented: @escaping () -> Void) {
-        present(from: vc, sourceView: nil, sourceRect: sourceRect, onPresented: onPresented)
-    }
-
-    private func present(from vc: UIViewController, sourceView: UIView?, sourceRect: CGRect, onPresented: @escaping () -> Void) {
-        let onDone = self.done
-        stateProvider
+    func present(from vc: UIViewController, position: Either<UIView, CGRect>) -> Observable<ShareSongEvent> {
+        return stateProvider
             .map { zip($0.currentSong, $0.streamingServer?.value?.shareUrl) }
             .unwrap()
             .take(1)
-            .subscribe(onNext: { currentSong, shareUrl in
-                let shareTextViewController = ShareTextViewController(playlist: currentSong,
-                                                                      shareUrl: shareUrl,
-                                                                      sourceView: sourceView,
-                                                                      sourceRect: sourceRect)
+            .flatMap { (currentSong: Playlist, shareUrl: String) -> Observable<ShareSongEvent> in
+                Observable.create { observer in
+                    var sourceView: UIView? = nil
+                    let sourceRect: CGRect
 
-                shareTextViewController.completionWithItemsHandler = { activityType, completed, returnedItems, activityError in
-                    onDone()
-                }
+                    switch position {
+                    case let .left(v):
+                        sourceRect = v.bounds
+                        sourceView = v
+                    case let .right(r):
+                        sourceRect = r
+                    }
 
-                vc.present(shareTextViewController, animated: true) {
-                    onPresented()
+                    let shareTextViewController = ShareSongViewController(playlist: currentSong,
+                                                                          shareUrl: shareUrl,
+                                                                          sourceView: sourceView,
+                                                                          sourceRect: sourceRect)
+
+                    shareTextViewController.completionWithItemsHandler = { activityType, completed, returnedItems, activityError in
+                        observer.on(.next(.done(activityType: activityType,
+                                                completed: completed,
+                                                returnedItems: returnedItems,
+                                                activityError: activityError)))
+                        observer.on(.completed)
+                    }
+
+                    vc.present(shareTextViewController, animated: true) {
+                        observer.on(.next(.presented))
+                    }
+
+                    return Disposables.create {
+                        shareTextViewController.dismiss(animated: false, completion: nil)
+                    }
                 }
-            }).disposed(by: disposeBag)
+            }
     }
 }
 
-extension ShareSheetViewController: HasEventHandler { }
-extension ShareSheetViewController: HasStateProvider { }
+extension ShareSongController: HasEventHandler { }
+extension ShareSongController: HasStateProvider { }

@@ -30,20 +30,17 @@ public final class RouterMiddleware: Middleware {
                 break
             }
         case let NavigationEvent.requestShareSheet(viewController, position):
-            let shareSheet = ShareSheetViewController { [weak self] in
-                next(NavigationEvent.requestNavigation(source), getState)
-                self?.actionHandler?.trigger(NavigationAction.navigationDidEnd(source))
-            }
-            switch position {
-            case let .left(view):
-                shareSheet.present(from: viewController, sourceView: view) { [weak self] in
-                    self?.actionHandler?.trigger(NavigationAction.navigationDidEnd(.shareCurrentSong))
-                }
-            case let .right(rect):
-                shareSheet.present(from: viewController, sourceRect: rect) { [weak self] in
-                    self?.actionHandler?.trigger(NavigationAction.navigationDidEnd(.shareCurrentSong))
-                }
-            }
+            _ = ShareSongController()
+                .present(from: viewController, position: position)
+                .subscribe(onNext: { [weak self] event in
+                    switch event {
+                    case .presented:
+                        self?.actionHandler?.trigger(NavigationAction.navigationDidEnd(.shareCurrentSong))
+                    case .done:
+                        next(NavigationEvent.requestNavigation(source), getState)
+                        self?.actionHandler?.trigger(NavigationAction.navigationDidEnd(source))
+                    }
+                })
         default:
             break
         }
