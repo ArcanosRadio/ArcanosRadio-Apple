@@ -91,7 +91,7 @@ public let MainMiddleware: () -> ComposedMiddleware<MainState> = {
 }
 
 public let MainReducer: () -> Reducer<MainState> = {
-    return appLifeCycleReducer.lift(\.app)
+    return Reducer.appLifeCycle.lift(\.app)
 //        <> apiResponseReducer
 //        <> songUpdaterReducer.lift(\.currentSong)
 //        <> navigationReducer.lift(\.navigation)
