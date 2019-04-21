@@ -28,7 +28,7 @@ public let MainReducer: () -> Reducer<MainState> = {
     return Reducer.appLifeCycle.lift(\.app)
         <> Reducer.apiResponse
         <> Reducer.songUpdater.lift(\.currentSong)
-        <> cachedFileReducer.lift(\.fileCache.value)
+        <> Reducer.cachedFile.lift(\.fileCache.value)
         <> navigationReducer.lift(\.navigation)
         <> Reducer.reachability.lift(\.connectionState)
         <> radioPlayerReducer
