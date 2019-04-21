@@ -63,7 +63,7 @@ struct ShareSongController {
 
                     vc.present(shareTextViewController, animated: true) {
                         guard !cancel.isDisposed else { return }
-                        
+
                         observer.on(.next(.presented))
                     }
 

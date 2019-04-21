@@ -112,6 +112,7 @@ extension AVPlayer.Status: CustomDebugStringConvertible {
         case .failed: return "failed"
         case .readyToPlay: return "readyToPlay"
         case .unknown: return "unknown"
+        @unknown default: return "unknown"
         }
     }
 }
@@ -122,6 +123,7 @@ extension AVPlayer.TimeControlStatus: CustomDebugStringConvertible {
         case .paused: return "paused"
         case .playing: return "playing"
         case .waitingToPlayAtSpecifiedRate: return "waitingToPlayAtSpecifiedRate"
+        @unknown default: return "unknown"
         }
     }
 }
@@ -132,6 +134,7 @@ extension AVPlayerItem.Status: CustomDebugStringConvertible {
         case .failed: return "failed"
         case .readyToPlay: return "readyToPlay"
         case .unknown: return "unknown"
+        @unknown default: return "unknown"
         }
     }
 }

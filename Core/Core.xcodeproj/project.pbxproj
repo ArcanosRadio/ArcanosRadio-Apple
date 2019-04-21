@@ -19,21 +19,9 @@
 		D501448C2197DDDB00A5A376 /* RadioPlayerReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D501448B2197DDDB00A5A376 /* RadioPlayerReducer.swift */; };
 		D501448D2197DDDB00A5A376 /* RadioPlayerReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D501448B2197DDDB00A5A376 /* RadioPlayerReducer.swift */; };
 		D501448E2197DDDB00A5A376 /* RadioPlayerReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D501448B2197DDDB00A5A376 /* RadioPlayerReducer.swift */; };
-		D508B1A421976359005A3CB5 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = D508B1A321976359005A3CB5 /* Reachability.swift */; };
-		D508B1A621976359005A3CB5 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = D508B1A321976359005A3CB5 /* Reachability.swift */; };
-		D508B1A721976359005A3CB5 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = D508B1A321976359005A3CB5 /* Reachability.swift */; };
 		D508B1A9219763A9005A3CB5 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D508B1A8219763A9005A3CB5 /* SystemConfiguration.framework */; };
 		D508B1AB219763BC005A3CB5 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D508B1AA219763BC005A3CB5 /* SystemConfiguration.framework */; };
 		D508B1AD219763C4005A3CB5 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D508B1AC219763C4005A3CB5 /* SystemConfiguration.framework */; };
-		D508B1AF2197641F005A3CB5 /* ReachabilityMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D508B1AE2197641F005A3CB5 /* ReachabilityMiddleware.swift */; };
-		D508B1B02197641F005A3CB5 /* ReachabilityMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D508B1AE2197641F005A3CB5 /* ReachabilityMiddleware.swift */; };
-		D508B1B12197641F005A3CB5 /* ReachabilityMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D508B1AE2197641F005A3CB5 /* ReachabilityMiddleware.swift */; };
-		D508B1B7219775CC005A3CB5 /* ReachabilityEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D508B1B6219775CC005A3CB5 /* ReachabilityEvent.swift */; };
-		D508B1B8219775CC005A3CB5 /* ReachabilityEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D508B1B6219775CC005A3CB5 /* ReachabilityEvent.swift */; };
-		D508B1B9219775CC005A3CB5 /* ReachabilityEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D508B1B6219775CC005A3CB5 /* ReachabilityEvent.swift */; };
-		D508B1BB2197760B005A3CB5 /* ReachabilityReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D508B1BA2197760B005A3CB5 /* ReachabilityReducer.swift */; };
-		D508B1BC2197760B005A3CB5 /* ReachabilityReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D508B1BA2197760B005A3CB5 /* ReachabilityReducer.swift */; };
-		D508B1BD2197760B005A3CB5 /* ReachabilityReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D508B1BA2197760B005A3CB5 /* ReachabilityReducer.swift */; };
 		D508B1BF21977651005A3CB5 /* NavigationAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D508B1BE21977651005A3CB5 /* NavigationAction.swift */; };
 		D508B1C021977651005A3CB5 /* NavigationAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D508B1BE21977651005A3CB5 /* NavigationAction.swift */; };
 		D508B1C121977651005A3CB5 /* NavigationAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D508B1BE21977651005A3CB5 /* NavigationAction.swift */; };
@@ -164,12 +152,7 @@
 		D57716E921720DD0005C1229 /* CatchErrorMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57716E721720DD0005C1229 /* CatchErrorMiddleware.swift */; };
 		D57716EA21720DD0005C1229 /* CatchErrorMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57716E721720DD0005C1229 /* CatchErrorMiddleware.swift */; };
 		D57716EB21720DD0005C1229 /* CatchErrorMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57716E721720DD0005C1229 /* CatchErrorMiddleware.swift */; };
-		D57716ED217211E6005C1229 /* LoggerMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57716EC217211E6005C1229 /* LoggerMiddleware.swift */; };
-		D57716EE217211E6005C1229 /* LoggerMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57716EC217211E6005C1229 /* LoggerMiddleware.swift */; };
-		D57716EF217211E6005C1229 /* LoggerMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57716EC217211E6005C1229 /* LoggerMiddleware.swift */; };
-		D57716F0217211E6005C1229 /* LoggerMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57716EC217211E6005C1229 /* LoggerMiddleware.swift */; };
 		D59EF61A216D23F800C25F0A /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = D59EF618216D23F800C25F0A /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D5B267522197E928000991CD /* ReachabilityEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D508B1B6219775CC005A3CB5 /* ReachabilityEvent.swift */; };
 		D5B267532197ED01000991CD /* RadioPlayerAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50144872197D85B00A5A376 /* RadioPlayerAction.swift */; };
 		D5B267542197ED1C000991CD /* RadioPlayerReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D501448B2197DDDB00A5A376 /* RadioPlayerReducer.swift */; };
 		D5B267562197F3EF000991CD /* MediaRemoteControlMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B267552197F3EF000991CD /* MediaRemoteControlMiddleware.swift */; };
@@ -241,13 +224,9 @@
 		D50144812197CF5700A5A376 /* RadioPlayerMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioPlayerMiddleware.swift; sourceTree = "<group>"; };
 		D50144872197D85B00A5A376 /* RadioPlayerAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioPlayerAction.swift; sourceTree = "<group>"; };
 		D501448B2197DDDB00A5A376 /* RadioPlayerReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioPlayerReducer.swift; sourceTree = "<group>"; };
-		D508B1A321976359005A3CB5 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		D508B1A8219763A9005A3CB5 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		D508B1AA219763BC005A3CB5 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.1.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
 		D508B1AC219763C4005A3CB5 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
-		D508B1AE2197641F005A3CB5 /* ReachabilityMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityMiddleware.swift; sourceTree = "<group>"; };
-		D508B1B6219775CC005A3CB5 /* ReachabilityEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityEvent.swift; sourceTree = "<group>"; };
-		D508B1BA2197760B005A3CB5 /* ReachabilityReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityReducer.swift; sourceTree = "<group>"; };
 		D508B1BE21977651005A3CB5 /* NavigationAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationAction.swift; sourceTree = "<group>"; };
 		D508B1C621979509005A3CB5 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		D50A45D5216D2F930025BC1C /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
@@ -286,7 +265,6 @@
 		D53DBCD42173DECE00F213A9 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
 		D57716E221720AEA005C1229 /* ErrorAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorAction.swift; sourceTree = "<group>"; };
 		D57716E721720DD0005C1229 /* CatchErrorMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatchErrorMiddleware.swift; sourceTree = "<group>"; };
-		D57716EC217211E6005C1229 /* LoggerMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerMiddleware.swift; sourceTree = "<group>"; };
 		D59EF615216D23F800C25F0A /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D59EF618216D23F800C25F0A /* Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Core.h; sourceTree = "<group>"; };
 		D59EF619216D23F800C25F0A /* Info-iOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-iOS.plist"; sourceTree = "<group>"; };
@@ -473,7 +451,6 @@
 				D5B2675C2197F5BF000991CD /* MediaControlEvent.swift */,
 				D53725902173A1B900C7400B /* NavigationEvent.swift */,
 				D5B267572197F56C000991CD /* RadioPlayerEvent.swift */,
-				D508B1B6219775CC005A3CB5 /* ReachabilityEvent.swift */,
 				D50A4645216E8F950025BC1C /* RefreshTimerEvent.swift */,
 			);
 			path = Event;
@@ -486,13 +463,10 @@
 				D5F34E8A218FB0B800773247 /* CachedFileMiddleware.swift */,
 				D5F34E99218FB37300773247 /* CachedFileService.swift */,
 				D57716E721720DD0005C1229 /* CatchErrorMiddleware.swift */,
-				D57716EC217211E6005C1229 /* LoggerMiddleware.swift */,
 				D5B267552197F3EF000991CD /* MediaRemoteControlMiddleware.swift */,
 				D50A4612216D40A60025BC1C /* ParseMiddleware.swift */,
 				D50A4617216D422D0025BC1C /* ParseService.swift */,
 				D50144812197CF5700A5A376 /* RadioPlayerMiddleware.swift */,
-				D508B1A321976359005A3CB5 /* Reachability.swift */,
-				D508B1AE2197641F005A3CB5 /* ReachabilityMiddleware.swift */,
 				D50A464A216E978F0025BC1C /* SongUpdaterMiddleware.swift */,
 			);
 			path = Middleware;
@@ -506,7 +480,6 @@
 				D5F34E9E218FC02B00773247 /* CachedFileReducer.swift */,
 				D537259A2173A31B00C7400B /* NavigationReducer.swift */,
 				D501448B2197DDDB00A5A376 /* RadioPlayerReducer.swift */,
-				D508B1BA2197760B005A3CB5 /* ReachabilityReducer.swift */,
 				D50A4654216EAF040025BC1C /* SongUpdaterReducer.swift */,
 			);
 			path = Reducer;
@@ -722,6 +695,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = D59EF60B216D23F800C25F0A;
 			productRefGroup = D59EF616216D23F800C25F0A /* Products */;
@@ -865,7 +839,6 @@
 			files = (
 				D537257F2173925200C7400B /* UIKit+Extensions.swift in Sources */,
 				D50A463C216D552C0025BC1C /* Parse.swift in Sources */,
-				D57716ED217211E6005C1229 /* LoggerMiddleware.swift in Sources */,
 				D50144822197CF5700A5A376 /* RadioPlayerMiddleware.swift in Sources */,
 				D50A4623216D441A0025BC1C /* AppLifeCycleReducer.swift in Sources */,
 				D5F34E9F218FC02B00773247 /* CachedFileReducer.swift in Sources */,
@@ -892,7 +865,6 @@
 				D50A4646216E8F950025BC1C /* RefreshTimerEvent.swift in Sources */,
 				D50A4628216D443B0025BC1C /* AppState.swift in Sources */,
 				D50A4613216D40A60025BC1C /* ParseMiddleware.swift in Sources */,
-				D508B1BB2197760B005A3CB5 /* ReachabilityReducer.swift in Sources */,
 				D52FE7302183D47C000DA781 /* FP.swift in Sources */,
 				D50A4604216D383E0025BC1C /* ResourceState.swift in Sources */,
 				D50A462D216D453F0025BC1C /* Transient.swift in Sources */,
@@ -908,10 +880,7 @@
 				D5B2676621988353000991CD /* Either.swift in Sources */,
 				D57716E821720DD0005C1229 /* CatchErrorMiddleware.swift in Sources */,
 				D5F34E8B218FB0B800773247 /* CachedFileMiddleware.swift in Sources */,
-				D508B1B7219775CC005A3CB5 /* ReachabilityEvent.swift in Sources */,
-				D508B1AF2197641F005A3CB5 /* ReachabilityMiddleware.swift in Sources */,
 				D536812D21DD7209007771DF /* RxSwift+Extensions.swift in Sources */,
-				D508B1A421976359005A3CB5 /* Reachability.swift in Sources */,
 				D501448C2197DDDB00A5A376 /* RadioPlayerReducer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -925,11 +894,9 @@
 				D5B267532197ED01000991CD /* RadioPlayerAction.swift in Sources */,
 				D5B267592197F56C000991CD /* RadioPlayerEvent.swift in Sources */,
 				D52FE7312183D47C000DA781 /* FP.swift in Sources */,
-				D57716EE217211E6005C1229 /* LoggerMiddleware.swift in Sources */,
 				D50A4624216D441A0025BC1C /* AppLifeCycleReducer.swift in Sources */,
 				D50A464C216E978F0025BC1C /* SongUpdaterMiddleware.swift in Sources */,
 				D5DEB1C7218424130050BA0B /* WatchKit+Extensions.swift in Sources */,
-				D5B267522197E928000991CD /* ReachabilityEvent.swift in Sources */,
 				D5B267542197ED1C000991CD /* RadioPlayerReducer.swift in Sources */,
 				D50A45EC216D31710025BC1C /* Song.swift in Sources */,
 				D50A45F2216D319B0025BC1C /* MainStateProvider.swift in Sources */,
@@ -973,7 +940,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D50A463E216D552C0025BC1C /* Parse.swift in Sources */,
-				D57716EF217211E6005C1229 /* LoggerMiddleware.swift in Sources */,
 				D50A4625216D441A0025BC1C /* AppLifeCycleReducer.swift in Sources */,
 				D50144842197CF5700A5A376 /* RadioPlayerMiddleware.swift in Sources */,
 				D50A464D216E978F0025BC1C /* SongUpdaterMiddleware.swift in Sources */,
@@ -1000,7 +966,6 @@
 				D50A462A216D443B0025BC1C /* AppState.swift in Sources */,
 				D5DEB1D22184B5BF0050BA0B /* UIKit+Extensions.swift in Sources */,
 				D50A4615216D40A60025BC1C /* ParseMiddleware.swift in Sources */,
-				D508B1BC2197760B005A3CB5 /* ReachabilityReducer.swift in Sources */,
 				D52FE7322183D47C000DA781 /* FP.swift in Sources */,
 				D50A4606216D3A250025BC1C /* ResourceState.swift in Sources */,
 				D50A462F216D453F0025BC1C /* Transient.swift in Sources */,
@@ -1016,11 +981,8 @@
 				D50A4639216D4C050025BC1C /* APIProgress.swift in Sources */,
 				D57716EA21720DD0005C1229 /* CatchErrorMiddleware.swift in Sources */,
 				D5F34E8D218FB0B800773247 /* CachedFileMiddleware.swift in Sources */,
-				D508B1B8219775CC005A3CB5 /* ReachabilityEvent.swift in Sources */,
-				D508B1B02197641F005A3CB5 /* ReachabilityMiddleware.swift in Sources */,
 				D5B2676A21989722000991CD /* MediaRemoteControlMiddleware.swift in Sources */,
 				D536812F21DD7209007771DF /* RxSwift+Extensions.swift in Sources */,
-				D508B1A621976359005A3CB5 /* Reachability.swift in Sources */,
 				D501448D2197DDDB00A5A376 /* RadioPlayerReducer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1031,8 +993,6 @@
 			files = (
 				D53725992173A21400C7400B /* Sitemap.swift in Sources */,
 				D50A463F216D552C0025BC1C /* Parse.swift in Sources */,
-				D508B1A721976359005A3CB5 /* Reachability.swift in Sources */,
-				D57716F0217211E6005C1229 /* LoggerMiddleware.swift in Sources */,
 				D50A4626216D441A0025BC1C /* AppLifeCycleReducer.swift in Sources */,
 				D501448E2197DDDB00A5A376 /* RadioPlayerReducer.swift in Sources */,
 				D5B2676921988353000991CD /* Either.swift in Sources */,
@@ -1046,7 +1006,6 @@
 				D50A4644216E7F740025BC1C /* APIResponseReducer.swift in Sources */,
 				D52FE7332183D47C000DA781 /* FP.swift in Sources */,
 				D50A4602216D32F30025BC1C /* AppLifeCycleMiddleware.swift in Sources */,
-				D508B1B9219775CC005A3CB5 /* ReachabilityEvent.swift in Sources */,
 				D5F34E8E218FB0B800773247 /* CachedFileMiddleware.swift in Sources */,
 				D501448A2197D85B00A5A376 /* RadioPlayerAction.swift in Sources */,
 				D50A4635216D48B10025BC1C /* StreamingServer.swift in Sources */,
@@ -1062,8 +1021,6 @@
 				D50A45E2216D31160025BC1C /* MainStore.swift in Sources */,
 				D50A4649216E8F950025BC1C /* RefreshTimerEvent.swift in Sources */,
 				D5F34E93218FB13800773247 /* CachedFileEvent.swift in Sources */,
-				D508B1B12197641F005A3CB5 /* ReachabilityMiddleware.swift in Sources */,
-				D508B1BD2197760B005A3CB5 /* ReachabilityReducer.swift in Sources */,
 				D5F34EA2218FC02B00773247 /* CachedFileReducer.swift in Sources */,
 				D50A462B216D443B0025BC1C /* AppState.swift in Sources */,
 				D50A4616216D40A60025BC1C /* ParseMiddleware.swift in Sources */,
@@ -1143,6 +1100,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -1200,6 +1158,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1208,7 +1167,7 @@
 		};
 		D59EF61E216D23F800C25F0A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 019ED0C1D9CED25D8F0D28F8 /* Pods-Core iOS.debug.xcconfig */;
+			baseConfigurationReference = 880927043EF9282E1EE07A6C /* Pods-Core iOS.debug.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
@@ -1230,14 +1189,13 @@
 				PRODUCT_NAME = Core;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		D59EF61F216D23F800C25F0A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 996DD63D50EA6F02A680DAD6 /* Pods-Core iOS.release.xcconfig */;
+			baseConfigurationReference = F67F5BF90199FA74CB51A39A /* Pods-Core iOS.release.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
@@ -1258,14 +1216,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "de.developercity.Core-iOS";
 				PRODUCT_NAME = Core;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 		D59EF62B216D242C00C25F0A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C96D39CFEAC9CCBBAAF8F59F /* Pods-Core watchOS.debug.xcconfig */;
+			baseConfigurationReference = D8BD29EDC070D04BC602FCDB /* Pods-Core watchOS.debug.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
@@ -1287,7 +1244,6 @@
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 4.0;
 			};
@@ -1295,7 +1251,7 @@
 		};
 		D59EF62C216D242C00C25F0A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C42C6733F8153485ECFEA8C5 /* Pods-Core watchOS.release.xcconfig */;
+			baseConfigurationReference = B8EDF74F03E6A849C19A42E4 /* Pods-Core watchOS.release.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
@@ -1316,7 +1272,6 @@
 				PRODUCT_NAME = Core;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 4.0;
 			};
@@ -1324,7 +1279,7 @@
 		};
 		D59EF638216D246500C25F0A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 967AF16CA6F753A6E57E43D3 /* Pods-Core tvOS.debug.xcconfig */;
+			baseConfigurationReference = F3EB95A34FA8028502F7CFC3 /* Pods-Core tvOS.debug.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
@@ -1346,7 +1301,6 @@
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 10.0;
 			};
@@ -1354,7 +1308,7 @@
 		};
 		D59EF639216D246500C25F0A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FE85686E731EEB7F095E4181 /* Pods-Core tvOS.release.xcconfig */;
+			baseConfigurationReference = 3746C3CFF5405334D8CD88F2 /* Pods-Core tvOS.release.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
@@ -1375,7 +1329,6 @@
 				PRODUCT_NAME = Core;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 10.0;
 			};
@@ -1383,7 +1336,7 @@
 		};
 		D59EF645216D248300C25F0A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8209A24DF0F69E6413E2761F /* Pods-Core macOS.debug.xcconfig */;
+			baseConfigurationReference = 169CC66174D8E54FB370942D /* Pods-Core macOS.debug.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
@@ -1408,13 +1361,12 @@
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
 		D59EF646216D248300C25F0A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0EAF7444FC5A1BCEE12B3465 /* Pods-Core macOS.release.xcconfig */;
+			baseConfigurationReference = 1E1D91E298EC8EB427F0F7CD /* Pods-Core macOS.release.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
@@ -1438,7 +1390,6 @@
 				PRODUCT_NAME = Core;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};

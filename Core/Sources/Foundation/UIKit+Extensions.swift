@@ -10,6 +10,7 @@ extension UIInterfaceOrientation: CustomDebugStringConvertible {
         case .portrait: return "portrait"
         case .portraitUpsideDown: return "portraitUpsideDown"
         case .unknown: return "unknown"
+        @unknown default: return "unknown"
         }
     }
 }
@@ -24,6 +25,7 @@ extension UIDeviceOrientation: CustomDebugStringConvertible {
         case .portrait: return "portrait"
         case .portraitUpsideDown: return "portraitUpsideDown"
         case .unknown: return "unknown"
+        @unknown default: return "unknown"
         }
     }
 }
@@ -35,6 +37,7 @@ extension UIDevice.BatteryState: CustomDebugStringConvertible {
         case .full: return "full"
         case .unknown: return "unknown"
         case .unplugged: return "unplugged"
+        @unknown default: return "unknown"
         }
     }
 }
@@ -68,6 +71,7 @@ extension UIUserInterfaceSizeClass: CustomDebugStringConvertible {
         case .compact: return "compact"
         case .regular: return "regular"
         case .unspecified: return "unspecified"
+        @unknown default: return "unknown"
         }
     }
 }
@@ -78,6 +82,7 @@ extension UIApplication.State: CustomDebugStringConvertible {
         case .active: return "active"
         case .background: return "background"
         case .inactive: return "inactive"
+        @unknown default: return "unknown"
         }
     }
 }
@@ -90,6 +95,7 @@ extension UIUserInterfaceIdiom: CustomDebugStringConvertible {
         case .phone: return "iPhone"
         case .tv: return "Apple TV"
         case .unspecified: return "Unspecified"
+        @unknown default: return "unknown"
         }
     }
 }
@@ -97,29 +103,6 @@ extension UIUserInterfaceIdiom: CustomDebugStringConvertible {
 extension UIUserInterfaceSizeClass: Codable, Equatable { }
 extension UIApplication.State: Codable, Equatable { }
 extension UIUserInterfaceIdiom: Codable { }
-
-extension UIEdgeInsets: Codable {
-    enum CodingKeys: CodingKey {
-        case top, left, bottom, right
-    }
-
-    public init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: CodingKeys.self)
-        let topValue = try container.decode(CGFloat.self, forKey: .top)
-        let leftValue = try container.decode(CGFloat.self, forKey: .left)
-        let bottomValue = try container.decode(CGFloat.self, forKey: .bottom)
-        let rightValue = try container.decode(CGFloat.self, forKey: .right)
-        self.init(top: topValue, left: leftValue, bottom: bottomValue, right: rightValue)
-    }
-
-    public func encode(to encoder: Encoder) throws {
-        var container = encoder.container(keyedBy: CodingKeys.self)
-        try container.encode(top, forKey: .top)
-        try container.encode(left, forKey: .left)
-        try container.encode(bottom, forKey: .bottom)
-        try container.encode(right, forKey: .right)
-    }
-}
 
 public struct SizeClass: Codable, Equatable {
     public let vertical: UIUserInterfaceSizeClass

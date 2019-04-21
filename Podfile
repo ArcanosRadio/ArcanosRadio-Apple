@@ -3,15 +3,21 @@ workspace 'Arcanos.xcworkspace'
 use_frameworks!
 
 def shared_pods
-  pod 'RxSwift', '4.4.0', :inhibit_warnings => true
-  pod 'RxCocoa', '4.4.0', :inhibit_warnings => true
-  pod 'SwiftRex', '0.3.1'
+  pod 'RxSwift', '4.5.0', :inhibit_warnings => true
+  pod 'RxCocoa', '4.5.0', :inhibit_warnings => true
+  pod 'SwiftRex/UsingRxSwift', '0.4.0'
+  pod 'SwiftRex-LoggerMiddleware/UsingRxSwift'
+end
+
+def shared_pods_with_reachability
+  shared_pods
+  pod 'SwiftRex-ReachabilityMiddleware/UsingRxSwift'
 end
 
 target 'Core iOS' do
   platform :ios, '10.0'
   project 'Core/Core.xcodeproj'
-  shared_pods
+  shared_pods_with_reachability
 end
 
 target 'Core watchOS' do
@@ -23,19 +29,19 @@ end
 target 'Core tvOS' do
   platform :tvos, '10.0'
   project 'Core/Core.xcodeproj'
-  shared_pods
+  shared_pods_with_reachability
 end
 
 target 'Core macOS' do
   platform :macos, '10.12'
   project 'Core/Core.xcodeproj'
-  shared_pods
+  shared_pods_with_reachability
 end
 
 target 'ArcanosRadio iOS' do
   platform :ios, '10.0'
   project 'ArcanosRadio/ArcanosRadio.xcodeproj'
-  shared_pods
+  shared_pods_with_reachability
   # pod 'RxDataSources'
 end
 
@@ -48,7 +54,7 @@ end
 target 'ArcanosRadio tvOS' do
   platform :tvos, '10.0'
   project 'ArcanosRadio/ArcanosRadio.xcodeproj'
-  shared_pods
+  shared_pods_with_reachability
   # pod 'RxDataSources'
 end
 

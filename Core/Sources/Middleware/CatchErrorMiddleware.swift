@@ -18,9 +18,7 @@ public class CatchErrorMiddleware<StateType>: Middleware {
     private let errorHandler: (ErrorAction, StateType) -> PropagateErrorAction
 
     public func handle(event: EventProtocol, getState: @escaping () -> StateType, next: @escaping (EventProtocol, @escaping () -> StateType) -> Void) {
-        defer {
-            next(event, getState)
-        }
+        next(event, getState)
     }
 
     public func handle(action: ActionProtocol, getState: @escaping () -> StateType, next: @escaping (ActionProtocol, @escaping () -> StateType) -> Void) {

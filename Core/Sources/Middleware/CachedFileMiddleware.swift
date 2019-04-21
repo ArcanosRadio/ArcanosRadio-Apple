@@ -5,7 +5,7 @@ public final class CachedFileMiddleware: SideEffectMiddleware {
     public typealias StateType = [String: () -> Data]
     public var actionHandler: ActionHandler?
     public var allowEventToPropagate = true
-    public var disposeBag = DisposeBag()
+    public var subscriptionOwner = DisposeBag()
     private var cache = NSCache<NSString, NSData>()
     private let session: URLSession
     private let urlCache: URLCache

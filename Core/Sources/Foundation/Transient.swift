@@ -12,10 +12,8 @@ public struct Transient<Wrapped>: Equatable, Hashable, Encodable {
         return true
     }
 
-    public var hashValue: Int {
-        // Transient values do not contribute to the hash value. (This could be any
-        // constant.)
-        return 0
+    public func hash(into hasher: inout Hasher) {
+        // Transient values do not contribute to the hash value.
     }
 
     public init(_ value: Wrapped) {

@@ -413,8 +413,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D521A9A6216D27BC00261BE3 /* Build configuration list for PBXNativeTarget "ArcanosRadio iOS" */;
 			buildPhases = (
-				D536812B21DD6061007771DF /* Swiftgen */,
 				95AF9AE7AE98B767E892183B /* [CP] Check Pods Manifest.lock */,
+				D536812B21DD6061007771DF /* Swiftgen */,
 				D521A990216D27BA00261BE3 /* Sources */,
 				D521A991216D27BA00261BE3 /* Frameworks */,
 				D521A992216D27BA00261BE3 /* Resources */,
@@ -601,24 +601,28 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/../Pods/Target Support Files/Pods-ArcanosRadio iOS/Pods-ArcanosRadio iOS-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/RxAtomic-iOS/RxAtomic.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-ArcanosRadio iOS/Pods-ArcanosRadio iOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift-iOS/Reachability.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa-iOS/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift-iOS/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftRex-LoggerMiddleware-iOS/SwiftRex_LoggerMiddleware.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftRex-ReachabilityMiddleware-iOS/SwiftRex_ReachabilityMiddleware.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftRex-iOS/SwiftRex.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftRex_LoggerMiddleware.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftRex_ReachabilityMiddleware.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftRex.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-ArcanosRadio iOS/Pods-ArcanosRadio iOS-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ArcanosRadio iOS/Pods-ArcanosRadio iOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		0DB030C355205260C58D4428 /* [CP] Embed Pods Frameworks */ = {
@@ -629,24 +633,24 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/../Pods/Target Support Files/Pods-ArcanosRadio watchOS Extension/Pods-ArcanosRadio watchOS Extension-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/RxAtomic-watchOS/RxAtomic.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-ArcanosRadio watchOS Extension/Pods-ArcanosRadio watchOS Extension-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa-watchOS/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift-watchOS/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftRex-LoggerMiddleware-watchOS/SwiftRex_LoggerMiddleware.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftRex-watchOS/SwiftRex.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftRex_LoggerMiddleware.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftRex.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-ArcanosRadio watchOS Extension/Pods-ArcanosRadio watchOS Extension-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ArcanosRadio watchOS Extension/Pods-ArcanosRadio watchOS Extension-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		47F009881BCDFFD0B699600D /* [CP] Check Pods Manifest.lock */ = {
@@ -679,24 +683,28 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/../Pods/Target Support Files/Pods-ArcanosRadio tvOS/Pods-ArcanosRadio tvOS-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/RxAtomic-tvOS/RxAtomic.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-ArcanosRadio tvOS/Pods-ArcanosRadio tvOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift-tvOS/Reachability.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa-tvOS/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift-tvOS/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftRex-LoggerMiddleware-tvOS/SwiftRex_LoggerMiddleware.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftRex-ReachabilityMiddleware-tvOS/SwiftRex_ReachabilityMiddleware.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftRex-tvOS/SwiftRex.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftRex_LoggerMiddleware.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftRex_ReachabilityMiddleware.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftRex.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-ArcanosRadio tvOS/Pods-ArcanosRadio tvOS-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ArcanosRadio tvOS/Pods-ArcanosRadio tvOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		95AF9AE7AE98B767E892183B /* [CP] Check Pods Manifest.lock */ = {
@@ -839,7 +847,7 @@
 /* Begin XCBuildConfiguration section */
 		D521A9A4216D27BC00261BE3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E8812A922C289229E6BF4A03 /* Pods-ArcanosRadio iOS.debug.xcconfig */;
+			baseConfigurationReference = ACF388E29928EF6FA26C28DE /* Pods-ArcanosRadio iOS.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -906,14 +914,13 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		D521A9A5216D27BC00261BE3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 671983C450B31EBCA97924BE /* Pods-ArcanosRadio iOS.release.xcconfig */;
+			baseConfigurationReference = 00FDAD7F218C5BD9620DC451 /* Pods-ArcanosRadio iOS.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -973,7 +980,6 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -981,7 +987,7 @@
 		};
 		D521A9C8216D284400261BE3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B93A2B1FE9B52DD5CCB2D3FD /* Pods-ArcanosRadio watchOS Extension.debug.xcconfig */;
+			baseConfigurationReference = C73C34FDBA3059B5CEFAA3F2 /* Pods-ArcanosRadio watchOS Extension.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
@@ -1048,7 +1054,6 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 4.0;
 			};
@@ -1056,7 +1061,7 @@
 		};
 		D521A9C9216D284400261BE3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3A031F33B7D37C22923C583D /* Pods-ArcanosRadio watchOS Extension.release.xcconfig */;
+			baseConfigurationReference = 056010C02C10B48B112A2E66 /* Pods-ArcanosRadio watchOS Extension.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
@@ -1116,7 +1121,6 @@
 				SKIP_INSTALL = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 4;
 				VALIDATE_PRODUCT = YES;
 				WATCHOS_DEPLOYMENT_TARGET = 4.0;
@@ -1189,7 +1193,6 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 4.0;
 			};
@@ -1254,7 +1257,6 @@
 				SKIP_INSTALL = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 4;
 				VALIDATE_PRODUCT = YES;
 				WATCHOS_DEPLOYMENT_TARGET = 4.0;
@@ -1263,7 +1265,7 @@
 		};
 		D521A9E0216D287700261BE3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A66C5048A75A55A2F4ED8486 /* Pods-ArcanosRadio tvOS.debug.xcconfig */;
+			baseConfigurationReference = BFBA09D4D8AFFE8C27FD3047 /* Pods-ArcanosRadio tvOS.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
@@ -1329,7 +1331,6 @@
 				SDKROOT = appletvos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 10.0;
 			};
@@ -1337,7 +1338,7 @@
 		};
 		D521A9E1216D287700261BE3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0C3CF23F98A1B44C02A344E0 /* Pods-ArcanosRadio tvOS.release.xcconfig */;
+			baseConfigurationReference = 6315C34189EF2BE7F2D2F265 /* Pods-ArcanosRadio tvOS.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
@@ -1396,7 +1397,6 @@
 				SDKROOT = appletvos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 10.0;
 				VALIDATE_PRODUCT = YES;
@@ -1434,6 +1434,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -1466,6 +1467,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

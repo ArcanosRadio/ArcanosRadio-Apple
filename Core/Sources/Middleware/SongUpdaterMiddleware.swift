@@ -12,9 +12,7 @@ public final class SongUpdaterMiddleware: Middleware {
     private var timerSubscription: Disposable?
 
     public func handle(event: EventProtocol, getState: @escaping () -> StateType, next: @escaping (EventProtocol, @escaping () -> StateType) -> Void) {
-        defer {
-            next(event, getState)
-        }
+        next(event, getState)
     }
 
     public func handle(action: ActionProtocol, getState: @escaping () -> StateType, next: @escaping (ActionProtocol, @escaping () -> StateType) -> Void) {

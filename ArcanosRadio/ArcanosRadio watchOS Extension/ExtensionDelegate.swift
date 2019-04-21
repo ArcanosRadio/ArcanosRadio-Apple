@@ -1,5 +1,6 @@
 import Core
 import SwiftRex
+import SwiftRex_LoggerMiddleware
 import WatchKit
 
 class ExtensionDelegate: NSObject, WKExtensionDelegate {

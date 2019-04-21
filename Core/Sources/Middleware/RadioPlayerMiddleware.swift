@@ -1,4 +1,5 @@
 import Foundation
+import SwiftRex_ReachabilityMiddleware
 import RxSwift
 import SwiftRex
 

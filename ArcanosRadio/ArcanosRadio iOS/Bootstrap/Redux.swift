@@ -1,6 +1,8 @@
 import Core
 import Foundation
 import SwiftRex
+import SwiftRex_LoggerMiddleware
+import SwiftRex_ReachabilityMiddleware
 
 public let MainMiddleware: () -> ComposedMiddleware<MainState> = {
     return AppLifeCycleMiddleware(trackDeviceOrientation: false, trackBattery: false, trackProximityState: false).lift(\.app)
@@ -28,7 +30,7 @@ public let MainReducer: () -> Reducer<MainState> = {
         <> songUpdaterReducer.lift(\.currentSong)
         <> cachedFileReducer.lift(\.fileCache.value)
         <> navigationReducer.lift(\.navigation)
-        <> reachabilityReducer.lift(\.connectionState)
+        <> Reducer.reachability.lift(\.connectionState)
         <> radioPlayerReducer
 }
 

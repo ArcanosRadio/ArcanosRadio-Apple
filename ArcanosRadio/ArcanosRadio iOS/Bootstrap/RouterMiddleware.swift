@@ -47,9 +47,7 @@ public final class RouterMiddleware: Middleware {
     }
 
     public func handle(action: ActionProtocol, getState: @escaping () -> Sitemap, next: @escaping (ActionProtocol, @escaping () -> Sitemap) -> Void) {
-        defer {
-            next(action, getState)
-        }
+        next(action, getState)
     }
 
     public init() { }

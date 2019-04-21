@@ -1,30 +1,40 @@
 PODS:
-  - RxAtomic (4.4.0)
-  - RxCocoa (4.4.0):
-    - RxSwift (~> 4.0)
-  - RxSwift (4.4.0):
-    - RxAtomic (~> 4.4)
-  - SwiftRex (0.3.1):
+  - ReachabilitySwift (4.3.1)
+  - RxCocoa (4.5.0):
+    - RxSwift (>= 4.4.2, ~> 4.4)
+  - RxSwift (4.5.0)
+  - SwiftRex-LoggerMiddleware/UsingRxSwift (0.1.1):
+    - SwiftRex/UsingRxSwift
+  - SwiftRex-ReachabilityMiddleware/UsingRxSwift (0.1.1):
+    - ReachabilitySwift
+    - SwiftRex/UsingRxSwift
+  - SwiftRex/UsingRxSwift (0.4.0):
     - RxSwift
 
 DEPENDENCIES:
-  - RxCocoa (= 4.4.0)
-  - RxSwift (= 4.4.0)
-  - SwiftRex (= 0.3.1)
+  - RxCocoa (= 4.5.0)
+  - RxSwift (= 4.5.0)
+  - SwiftRex-LoggerMiddleware/UsingRxSwift
+  - SwiftRex-ReachabilityMiddleware/UsingRxSwift
+  - SwiftRex/UsingRxSwift (= 0.4.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
-    - RxAtomic
+    - ReachabilitySwift
     - RxCocoa
     - RxSwift
     - SwiftRex
+    - SwiftRex-LoggerMiddleware
+    - SwiftRex-ReachabilityMiddleware
 
 SPEC CHECKSUMS:
-  RxAtomic: eacf60db868c96bfd63320e28619fe29c179656f
-  RxCocoa: df63ebf7b9a70d6b4eeea407ed5dd4efc8979749
-  RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973
-  SwiftRex: 93b8d05c1d40e200a12cbf8bad3148566c885bbc
+  ReachabilitySwift: 4032e2f59586e11e3b0ebe15b167abdd587a388b
+  RxCocoa: cbf70265dc65a981d4ac982e513c10cf23df24a0
+  RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
+  SwiftRex: 02fa2d1af67e522ac501b09cabf1dc04f4c12467
+  SwiftRex-LoggerMiddleware: ada4eed7821492098233b2832ba80d262ac878cc
+  SwiftRex-ReachabilityMiddleware: e618abd0331c10ebaee64aa00d3fb8eccf1cf734
 
-PODFILE CHECKSUM: 4815f43ede5e7da4387096224520debc140530ce
+PODFILE CHECKSUM: 3fb92b7b61f0329f27329b78155d1d7656fd8dfb
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.6.1

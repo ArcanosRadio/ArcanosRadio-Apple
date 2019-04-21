@@ -5,7 +5,7 @@ public final class ParseMiddleware: SideEffectMiddleware {
     public typealias StateType = Playlist?
     public var actionHandler: ActionHandler?
     public var allowEventToPropagate = true
-    public var disposeBag = DisposeBag()
+    public var subscriptionOwner = DisposeBag()
     private let session: URLSession
     private let cache: URLCache
 

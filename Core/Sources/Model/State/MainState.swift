@@ -1,4 +1,7 @@
 import Foundation
+#if canImport(Reachability)
+import Reachability
+#endif
 
 public struct MainState: Equatable, Codable {
     public var app: AppState = .init()
@@ -9,7 +12,7 @@ public struct MainState: Equatable, Codable {
     public var userWantsToListen: Bool = true
     public var isPlaying: Bool = false
     #if os(iOS) || os(macOS) || os(tvOS)
-    public var connectionState: Reachability.Connection = Reachability.Connection.none
+    public var connectionState: Reachability.Connection = .none
     #endif
 
     public init() { }

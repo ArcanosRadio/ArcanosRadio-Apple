@@ -10,15 +10,11 @@ public final class AppLifeCycleMiddleware: Middleware {
     private let disposeBag = DisposeBag()
 
     public func handle(event: EventProtocol, getState: @escaping () -> AppState, next: @escaping (EventProtocol, @escaping () -> AppState) -> Void) {
-        defer {
-            next(event, getState)
-        }
+        next(event, getState)
     }
 
     public func handle(action: ActionProtocol, getState: @escaping () -> AppState, next: @escaping (ActionProtocol, @escaping () -> AppState) -> Void) {
-        defer {
-            next(action, getState)
-        }
+        next(action, getState)
     }
 
     public init(trackDeviceOrientation: Bool = false, trackBattery: Bool = false, trackProximityState: Bool = false) {

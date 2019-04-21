@@ -14,7 +14,7 @@
 
 // MARK: - Colors
 
-internal extension Color {
+extension Color {
     // swiftlint:disable identifier_name line_length type_body_length
     internal struct ColorName {
         internal let rgbaValue: UInt32
