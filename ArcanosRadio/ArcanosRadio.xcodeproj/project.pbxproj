@@ -44,6 +44,7 @@
 		D5B42FBF2198A2330025EE95 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5B42FBE2198A2330025EE95 /* SystemConfiguration.framework */; };
 		D5B42FC02198A2920025EE95 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D50A45CE216D2EB30025BC1C /* Core.framework */; };
 		D5B42FC12198A2920025EE95 /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D50A45CE216D2EB30025BC1C /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D5D1347C226CDAC3009B9493 /* Redux.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D1347B226CDAC3009B9493 /* Redux.swift */; };
 		D5DEB1CB2184AC3B0050BA0B /* CurrentSongViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5DEB1CA2184AC3B0050BA0B /* CurrentSongViewController.xib */; };
 		D5DEB1CD2184ACAD0050BA0B /* CurrentSongViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DEB1CC2184ACAD0050BA0B /* CurrentSongViewController.swift */; };
 		D5DEB1CF2184B3C00050BA0B /* Redux.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DEB1CE2184B3C00050BA0B /* Redux.swift */; };
@@ -173,6 +174,7 @@
 		D5B267632198777B000991CD /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/MediaPlayer.framework; sourceTree = DEVELOPER_DIR; };
 		D5B42FBA2198A2090025EE95 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.1.sdk/System/Library/Frameworks/MediaPlayer.framework; sourceTree = DEVELOPER_DIR; };
 		D5B42FBE2198A2330025EE95 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.1.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
+		D5D1347B226CDAC3009B9493 /* Redux.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Redux.swift; sourceTree = "<group>"; };
 		D5DEB1CA2184AC3B0050BA0B /* CurrentSongViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrentSongViewController.xib; sourceTree = "<group>"; };
 		D5DEB1CC2184ACAD0050BA0B /* CurrentSongViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentSongViewController.swift; sourceTree = "<group>"; };
 		D5DEB1CE2184B3C00050BA0B /* Redux.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Redux.swift; sourceTree = "<group>"; };
@@ -303,11 +305,12 @@
 		D521A9B9216D284300261BE3 /* ArcanosRadio watchOS Extension */ = {
 			isa = PBXGroup;
 			children = (
+				D521A9C0216D284400261BE3 /* Assets.xcassets */,
 				D52FE7362183FACD000DA781 /* CurrentSong.swift */,
 				D521A9BC216D284300261BE3 /* ExtensionDelegate.swift */,
-				D521A9C0216D284400261BE3 /* Assets.xcassets */,
 				D521A9C2216D284400261BE3 /* Info.plist */,
 				D521A9C3216D284400261BE3 /* PushNotificationPayload.apns */,
+				D5D1347B226CDAC3009B9493 /* Redux.swift */,
 			);
 			path = "ArcanosRadio watchOS Extension";
 			sourceTree = "<group>";
@@ -795,6 +798,7 @@
 			files = (
 				D52FE7372183FACD000DA781 /* CurrentSong.swift in Sources */,
 				D521A9BD216D284300261BE3 /* ExtensionDelegate.swift in Sources */,
+				D5D1347C226CDAC3009B9493 /* Redux.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
