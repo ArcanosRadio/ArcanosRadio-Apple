@@ -5,7 +5,7 @@ import SwiftRex_LoggerMiddleware
 import SwiftRex_ReachabilityMiddleware
 
 public let mainMiddleware: () -> ComposedMiddleware<MainState> = {
-    return AppLifeCycleMiddleware(trackDeviceOrientation: false, trackBattery: false, trackProximityState: false).lift(\.app)
+    AppLifeCycleMiddleware(trackDeviceOrientation: false, trackBattery: false, trackProximityState: false).lift(\.app)
         <> RouterMiddleware().lift(\.navigation)
         <> SongUpdaterMiddleware()
         <> MediaRemoteControlMiddleware()

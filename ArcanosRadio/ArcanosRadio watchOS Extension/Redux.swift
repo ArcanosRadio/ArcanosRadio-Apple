@@ -4,7 +4,7 @@ import SwiftRex
 import SwiftRex_LoggerMiddleware
 
 public let mainMiddleware: () -> ComposedMiddleware<MainState> = {
-    return AppLifeCycleMiddleware(trackDeviceOrientation: true, trackBattery: true, trackProximityState: true).lift(\.app)
+    AppLifeCycleMiddleware(trackDeviceOrientation: true, trackBattery: true, trackProximityState: true).lift(\.app)
 //        <> RouterMiddleware().lift(\.navigation)
 //        <> SongUpdaterMiddleware().lift(\.currentSong)
 //        <> ParseMiddleware().lift(\.currentSong)
