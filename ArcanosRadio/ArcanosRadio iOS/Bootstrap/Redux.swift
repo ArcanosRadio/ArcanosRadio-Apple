@@ -24,8 +24,8 @@ public let MainMiddleware: () -> ComposedMiddleware<MainState> = {
         <> ReachabilityMiddleware().lift(\.connectionState)
 }
 
-public let MainReducer: () -> Reducer<MainState> = {
-    return Reducer.appLifeCycle.lift(\.app)
+private let mainReducer = {
+    Reducer.appLifeCycle.lift(\.app)
         <> Reducer.apiResponse
         <> Reducer.songUpdater.lift(\.currentSong)
         <> Reducer.cachedFile.lift(\.fileCache.value)
@@ -37,7 +37,7 @@ public let MainReducer: () -> Reducer<MainState> = {
 extension MainStore {
     public convenience init() {
         self.init(initialState: .init(),
-                  reducer: MainReducer(),
+                  reducer: mainReducer(),
                   middleware: MainMiddleware())
     }
 }
