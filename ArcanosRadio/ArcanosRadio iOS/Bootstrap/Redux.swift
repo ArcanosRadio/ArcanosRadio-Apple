@@ -4,7 +4,7 @@ import SwiftRex
 import SwiftRex_LoggerMiddleware
 import SwiftRex_ReachabilityMiddleware
 
-public let MainMiddleware: () -> ComposedMiddleware<MainState> = {
+public let mainMiddleware: () -> ComposedMiddleware<MainState> = {
     return AppLifeCycleMiddleware(trackDeviceOrientation: false, trackBattery: false, trackProximityState: false).lift(\.app)
         <> RouterMiddleware().lift(\.navigation)
         <> SongUpdaterMiddleware()
@@ -38,7 +38,7 @@ extension MainStore {
     public convenience init() {
         self.init(initialState: .init(),
                   reducer: mainReducer(),
-                  middleware: MainMiddleware())
+                  middleware: mainMiddleware())
     }
 }
 
