@@ -27,7 +27,7 @@ public let MainMiddleware: () -> ComposedMiddleware<MainState> = {
 public let MainReducer: () -> Reducer<MainState> = {
     return Reducer.appLifeCycle.lift(\.app)
         <> Reducer.apiResponse
-        <> songUpdaterReducer.lift(\.currentSong)
+        <> Reducer.songUpdater.lift(\.currentSong)
         <> cachedFileReducer.lift(\.fileCache.value)
         <> navigationReducer.lift(\.navigation)
         <> Reducer.reachability.lift(\.connectionState)
