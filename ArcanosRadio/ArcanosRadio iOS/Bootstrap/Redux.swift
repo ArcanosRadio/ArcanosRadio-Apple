@@ -31,7 +31,7 @@ public let MainReducer: () -> Reducer<MainState> = {
         <> Reducer.cachedFile.lift(\.fileCache.value)
         <> Reducer.navigation.lift(\.navigation)
         <> Reducer.reachability.lift(\.connectionState)
-        <> radioPlayerReducer
+        <> Reducer.radioPlayer
 }
 
 extension MainStore {
